@@ -1,0 +1,112 @@
+{
+  "experiment": "v039_getup_recovery",
+  "created_at": "2026-08-19T18:36:27.943009+00:00",
+  "contract": "upright start -> stand 3 s -> walk 5 s",
+  "static_prepare": {
+    "controller": "static_prepare_pose_PD",
+    "stand_3s_passed": false,
+    "failure_time_s": 1.04,
+    "final": {
+      "height_m": 0.6058081162866379,
+      "upright_cos": 0.8952614322642798,
+      "root_speed_mps": 0.5476095940036784,
+      "joint_overshoot_rad": 0.0,
+      "stable": false
+    },
+    "samples": [
+      {
+        "time_s": 0.02,
+        "height_m": 0.6625768690892839,
+        "upright_cos": 0.9999990708723052,
+        "root_speed_mps": 0.18133878493744263,
+        "joint_overshoot_rad": 0.0,
+        "stable": true
+      },
+      {
+        "time_s": 0.22,
+        "height_m": 0.6732249248807812,
+        "upright_cos": 0.9996748732123064,
+        "root_speed_mps": 0.537508020143784,
+        "joint_overshoot_rad": 0.0,
+        "stable": true
+      },
+      {
+        "time_s": 0.42,
+        "height_m": 0.6512558901604159,
+        "upright_cos": 0.9826043323745678,
+        "root_speed_mps": 0.6101874244145703,
+        "joint_overshoot_rad": 0.0,
+        "stable": true
+      },
+      {
+        "time_s": 0.62,
+        "height_m": 0.6592201125949729,
+        "upright_cos": 0.9989430841320367,
+        "root_speed_mps": 0.14474955604861967,
+        "joint_overshoot_rad": 0.0,
+        "stable": true
+      },
+      {
+        "time_s": 0.8200000000000001,
+        "height_m": 0.6565847556668485,
+        "upright_cos": 0.9885755130285009,
+        "root_speed_mps": 0.5021373766738181,
+        "joint_overshoot_rad": 0.0,
+        "stable": true
+      },
+      {
+        "time_s": 1.02,
+        "height_m": 0.6129310936151522,
+        "upright_cos": 0.9115239093765618,
+        "root_speed_mps": 0.6002259245215593,
+        "joint_overshoot_rad": 0.0,
+        "stable": true
+      }
+    ]
+  },
+  "official_locomotion_policy": {
+    "controller": "official_T1_pt_12leg_plus_fullbody_PD",
+    "stand_3s_passed": false,
+    "walk_5s_passed": false,
+    "failure_phase": "stand",
+    "failure_time_s": 0.56,
+    "final": {
+      "height_m": 0.5918085140675684,
+      "upright_cos": 0.9728011746079286,
+      "root_speed_mps": 0.5605907786763099,
+      "joint_overshoot_rad": 0.017499049012979162,
+      "stable": false
+    },
+    "samples": [
+      {
+        "time_s": 0.02,
+        "phase": "stand",
+        "height_m": 0.6627851966730199,
+        "upright_cos": 0.9999999062181153,
+        "root_speed_mps": 0.20605136196908674,
+        "joint_overshoot_rad": 0.0,
+        "stable": true
+      },
+      {
+        "time_s": 0.22,
+        "phase": "stand",
+        "height_m": 0.6599883648328861,
+        "upright_cos": 0.9971036574828366,
+        "root_speed_mps": 0.5264051900969308,
+        "joint_overshoot_rad": 0.0,
+        "stable": true
+      },
+      {
+        "time_s": 0.42000000000000004,
+        "phase": "stand",
+        "height_m": 0.6552848816986665,
+        "upright_cos": 0.9915689537054079,
+        "root_speed_mps": 0.25695837262655985,
+        "joint_overshoot_rad": 0.0,
+        "stable": true
+      }
+    ]
+  },
+  "quality_passed": false,
+  "conclusion": "No validated full-body handoff controller is available; a get-up policy cannot be promoted."
+}

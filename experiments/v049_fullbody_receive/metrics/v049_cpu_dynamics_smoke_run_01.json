@@ -1,0 +1,103 @@
+{
+  "schema_version": "v049_cpu_dynamics_smoke_v1",
+  "created_utc": "2026-08-20T07:58:02.028036+00:00",
+  "host": {
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "python": "3.13.15 (main, Aug 14 2026, 15:34:59) [Clang 22.1.3 ]"
+  },
+  "runtime": {
+    "torch": "2.9.1+cu128",
+    "mujoco": "3.11.0",
+    "mujoco_warp": "3.11.0",
+    "warp": "1.16.0",
+    "device": "cpu"
+  },
+  "cases": [
+    {
+      "num_envs": 1,
+      "seed": 49001,
+      "policy_steps": 8,
+      "physics_steps": 32,
+      "observation_shapes": {
+        "actor": [
+          1,
+          81
+        ],
+        "critic": [
+          1,
+          109
+        ]
+      },
+      "contact_probe": null,
+      "checks": {
+        "actor_shape": true,
+        "critic_shape": true,
+        "observations_finite_for_8_steps": true,
+        "rewards_finite_for_8_steps": true,
+        "no_unexpected_baseline_termination": true,
+        "wrong_action_dimension_rejected": true,
+        "nan_action_rejected": true,
+        "extreme_targets_clamped": true
+      },
+      "passed": true
+    },
+    {
+      "num_envs": 4,
+      "seed": 49004,
+      "policy_steps": 8,
+      "physics_steps": 32,
+      "observation_shapes": {
+        "actor": [
+          4,
+          81
+        ],
+        "critic": [
+          4,
+          109
+        ]
+      },
+      "contact_probe": {
+        "foot_contact_latched_from_real_physics": true,
+        "shank_contact_latched_from_real_physics": true,
+        "torso_contact_detected_as_illegal_termination": true,
+        "single_contact_cannot_fake_one_second_success": true,
+        "hold_gate_is_exactly_one_second": true,
+        "post_probe_observations_finite": true,
+        "post_probe_rewards_finite": true
+      },
+      "checks": {
+        "actor_shape": true,
+        "critic_shape": true,
+        "observations_finite_for_8_steps": true,
+        "rewards_finite_for_8_steps": true,
+        "no_unexpected_baseline_termination": true,
+        "wrong_action_dimension_rejected": true,
+        "nan_action_rejected": true,
+        "extreme_targets_clamped": true,
+        "foot_contact_latched_from_real_physics": true,
+        "shank_contact_latched_from_real_physics": true,
+        "torso_contact_detected_as_illegal_termination": true,
+        "single_contact_cannot_fake_one_second_success": true,
+        "hold_gate_is_exactly_one_second": true,
+        "post_probe_observations_finite": true,
+        "post_probe_rewards_finite": true
+      },
+      "passed": true
+    }
+  ],
+  "source_sha256": {
+    "__init__.py": "7b42c3dcf0e71df0f9ef58160c81f21226f1802e234bf215ec6f8cf5ba345407",
+    "mdp.py": "bbec538a2aae9e9c6d76c031256a10f9d9bd0aee94be3e7e2a0b2bccb2e59fc8",
+    "rcss_mjlab_task.py": "41c4f4b256b54543cc50e53b5ead9f63e9c47a8ebf94a5dca055941cd285347d",
+    "scripts/audit_v049_model.py": "2d6b275e6a85b9e582ab074ab4578b3604ae11f0d56fc4e83458a57075ad652a",
+    "scripts/evaluate_v049.py": "efeb9a6bfeb6c580a63c28da2e2dd38c4ebb163542600b77b23cab2affed5974",
+    "scripts/smoke_v049.py": "d9af6c4aa89b9063570b5bfc73aea72258ce88420c141130c233cdaca9390cdd",
+    "scripts/train_v049.py": "ef999ee32eb5474d664f411d911244255b36eae8d03b80e8e270f376977e72ca"
+  },
+  "smoke_passed": true,
+  "training_completed": false,
+  "fixed_validation_passed": false,
+  "heldout_validation_passed": false,
+  "quality_passed": false,
+  "conclusion": "CPU dynamics and real lower-leg/illegal contact probes passed; no receiving skill was trained."
+}

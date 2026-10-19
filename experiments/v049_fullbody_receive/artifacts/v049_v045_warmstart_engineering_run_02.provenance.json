@@ -1,0 +1,398 @@
+{
+  "schema_version": "v049_v045_shape_aware_warmstart_v1",
+  "created_utc": "2026-08-20T08:19:30.718780+00:00",
+  "source_checkpoint": {
+    "path": "<LOCAL>/model_0.pt",
+    "sha256": "300d8f1106372cc522897529d62c5e5ca4407a282ab35184bc19d8f41663941b"
+  },
+  "v045_training_summary": {
+    "path": "<LOCAL>/v049_v045_engineering_source_summary_run_01.json",
+    "sha256": "9fc594f9acdc51e83de8c22c61f758fe4ee3811c5325d8297286ead93cb7b636",
+    "schema_version": "v049_v045_engineering_source_summary_v1"
+  },
+  "v045_candidate_proof": {
+    "path": "<LOCAL>/v045_model800_safety_4096_probe_run_01.json",
+    "sha256": "48b7378a3971715b00c5447cc26655019fb491f5a8a2977869afca4f7b2bf9cf",
+    "schema_version": "v045_model800_safety_4096_probe_v1"
+  },
+  "formal_source_approved": false,
+  "engineering_smoke_only": true,
+  "output_checkpoint": {
+    "path": "<LOCAL>/v049_v045_warmstart_engineering_run_02.pt",
+    "sha256": "cdba3941e2e659a5af536d7305215a16c1e3399e8ab5e823c439e006d5e6fd4b",
+    "size_bytes": 1733657
+  },
+  "target_template": {
+    "path": "<LOCAL>/model_0.pt",
+    "sha256": "61f573d6cf795b2e50e1c4b924b922377cf00d00c2def97acb232dea3aa65dbc"
+  },
+  "observation_layouts": {
+    "v045": {
+      "actor": {
+        "shape": [
+          75
+        ],
+        "terms": [
+          {
+            "name": "base_ang_vel",
+            "shape": [
+              3
+            ],
+            "slice": [
+              0,
+              3
+            ]
+          },
+          {
+            "name": "projected_gravity",
+            "shape": [
+              3
+            ],
+            "slice": [
+              3,
+              6
+            ]
+          },
+          {
+            "name": "joint_pos",
+            "shape": [
+              23
+            ],
+            "slice": [
+              6,
+              29
+            ]
+          },
+          {
+            "name": "joint_vel",
+            "shape": [
+              23
+            ],
+            "slice": [
+              29,
+              52
+            ]
+          },
+          {
+            "name": "actions",
+            "shape": [
+              23
+            ],
+            "slice": [
+              52,
+              75
+            ]
+          }
+        ],
+        "total_dim": 75
+      },
+      "critic": {
+        "shape": [
+          78
+        ],
+        "terms": [
+          {
+            "name": "base_ang_vel",
+            "shape": [
+              3
+            ],
+            "slice": [
+              0,
+              3
+            ]
+          },
+          {
+            "name": "projected_gravity",
+            "shape": [
+              3
+            ],
+            "slice": [
+              3,
+              6
+            ]
+          },
+          {
+            "name": "joint_pos",
+            "shape": [
+              23
+            ],
+            "slice": [
+              6,
+              29
+            ]
+          },
+          {
+            "name": "joint_vel",
+            "shape": [
+              23
+            ],
+            "slice": [
+              29,
+              52
+            ]
+          },
+          {
+            "name": "actions",
+            "shape": [
+              23
+            ],
+            "slice": [
+              52,
+              75
+            ]
+          },
+          {
+            "name": "base_lin_vel",
+            "shape": [
+              3
+            ],
+            "slice": [
+              75,
+              78
+            ]
+          }
+        ],
+        "total_dim": 78
+      }
+    },
+    "v049": {
+      "actor": {
+        "shape": [
+          81
+        ],
+        "terms": [
+          {
+            "name": "base_ang_vel",
+            "shape": [
+              3
+            ],
+            "slice": [
+              0,
+              3
+            ]
+          },
+          {
+            "name": "projected_gravity",
+            "shape": [
+              3
+            ],
+            "slice": [
+              3,
+              6
+            ]
+          },
+          {
+            "name": "joint_pos",
+            "shape": [
+              23
+            ],
+            "slice": [
+              6,
+              29
+            ]
+          },
+          {
+            "name": "joint_vel",
+            "shape": [
+              23
+            ],
+            "slice": [
+              29,
+              52
+            ]
+          },
+          {
+            "name": "last_action",
+            "shape": [
+              23
+            ],
+            "slice": [
+              52,
+              75
+            ]
+          },
+          {
+            "name": "ball_relative_position",
+            "shape": [
+              3
+            ],
+            "slice": [
+              75,
+              78
+            ]
+          },
+          {
+            "name": "ball_relative_velocity",
+            "shape": [
+              3
+            ],
+            "slice": [
+              78,
+              81
+            ]
+          }
+        ],
+        "total_dim": 81
+      },
+      "critic": {
+        "shape": [
+          109
+        ],
+        "terms": [
+          {
+            "name": "base_ang_vel",
+            "shape": [
+              3
+            ],
+            "slice": [
+              0,
+              3
+            ]
+          },
+          {
+            "name": "projected_gravity",
+            "shape": [
+              3
+            ],
+            "slice": [
+              3,
+              6
+            ]
+          },
+          {
+            "name": "joint_pos",
+            "shape": [
+              23
+            ],
+            "slice": [
+              6,
+              29
+            ]
+          },
+          {
+            "name": "joint_vel",
+            "shape": [
+              23
+            ],
+            "slice": [
+              29,
+              52
+            ]
+          },
+          {
+            "name": "last_action",
+            "shape": [
+              23
+            ],
+            "slice": [
+              52,
+              75
+            ]
+          },
+          {
+            "name": "ball_relative_position",
+            "shape": [
+              3
+            ],
+            "slice": [
+              75,
+              78
+            ]
+          },
+          {
+            "name": "ball_relative_velocity",
+            "shape": [
+              3
+            ],
+            "slice": [
+              78,
+              81
+            ]
+          },
+          {
+            "name": "base_linear_velocity_privileged",
+            "shape": [
+              3
+            ],
+            "slice": [
+              81,
+              84
+            ]
+          },
+          {
+            "name": "ball_world_state_privileged",
+            "shape": [
+              9
+            ],
+            "slice": [
+              84,
+              93
+            ]
+          },
+          {
+            "name": "scenario_privileged",
+            "shape": [
+              6
+            ],
+            "slice": [
+              93,
+              99
+            ]
+          },
+          {
+            "name": "receive_state_privileged",
+            "shape": [
+              10
+            ],
+            "slice": [
+              99,
+              109
+            ]
+          }
+        ],
+        "total_dim": 109
+      }
+    }
+  },
+  "mapping_checks": {
+    "live_v045_actor_dim_is_75": true,
+    "live_v045_critic_dim_is_78": true,
+    "live_v049_actor_dim_is_81": true,
+    "live_v049_critic_dim_is_109": true,
+    "actor_first_75_columns_copied_exactly": true,
+    "actor_new_6_columns_are_zero": true,
+    "critic_common_75_columns_copied_exactly": true,
+    "critic_base_lin_75_78_mapped_to_81_84": true,
+    "critic_other_new_columns_are_zero": true,
+    "all_other_actor_layers_and_distribution_copied": true,
+    "all_other_critic_layers_copied": true,
+    "critic_common_normalizer_stats_copied": true,
+    "critic_base_lin_normalizer_stats_remapped": true,
+    "new_normalizer_dimensions_are_neutral": true,
+    "optimizer_state_empty": true,
+    "learning_rate_reset": true,
+    "iteration_reset": true,
+    "curriculum_counter_reset": true
+  },
+  "source_code_sha256": {
+    "experiments/v045_rcss_t1_getup_adaptation/rcss_mjlab_task.py": "62ee0c98bb6050a4836d29b00b5b57a93dbaebabe69a2f66e6549a9c7a40811e",
+    "experiments/v049_fullbody_receive/rcss_mjlab_task.py": "829964e13ba02b2c904f72d512f5008e2cd3f9040574dbcc9b0796c233616921",
+    "experiments/v049_fullbody_receive/mdp.py": "c178c50f72702b9c1179eddbe691a37bf833c6c586a09a312ddc7b59367cf70b",
+    "experiments/v049_fullbody_receive/scripts/prepare_v049_warmstart.py": "571280586b0fc39a380abd7c42d954fd5655b9a1aa752d6c43516a7a88f15d0b",
+    "experiments/v049_fullbody_receive/scripts/train_v049.py": "164de4e91e6520d3cdbecd2a1a01f071fe61983288550c3e40fdae31dc7110ef",
+    "experiments/v049_fullbody_receive/configs/v049_competitive_acceptance.json": "07b29ecbe35e760e3e5b93385ad1159d4ac060dab4cec0ae75f5308dad5a25d0"
+  },
+  "transform": {
+    "actor": "source [0:75] -> target [0:75]; target [75:81] zero",
+    "critic": "source [0:75] -> target [0:75]; source [75:78] -> target [81:84]; all other new columns zero",
+    "compatible_hidden_output_bias_and_distribution_tensors_copied": true,
+    "optimizer_state_reset": true,
+    "iteration_reset": true,
+    "curriculum_counter_reset": true
+  },
+  "formal_training_allowed": false,
+  "training_completed": false,
+  "fixed_validation_passed": false,
+  "heldout_validation_passed": false,
+  "quality_passed": false
+}

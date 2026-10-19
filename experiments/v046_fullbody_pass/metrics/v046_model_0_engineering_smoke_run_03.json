@@ -1,0 +1,243 @@
+{
+  "schema_version": "v046_strict_pass_eval_v1",
+  "created_utc": "2026-08-20T08:15:47.320641+00:00",
+  "evaluation_split": "fixed_validation",
+  "formal_protocol": false,
+  "engineering_smoke": true,
+  "checkpoint": {
+    "path": "<LOCAL>/model_0.pt",
+    "sha256": "ceb6eb3ad4adf21c1f8bca2086a82cb0bd4984ca61633005fcff526787109d68"
+  },
+  "acceptance_config": {
+    "path": "<LOCAL>/v046_competitive_acceptance_v2.json",
+    "sha256": "76b441c4040910fe2a77b2d6555bfdd0c6ee5cc9f30dc5cd8a2edc381f7ece34"
+  },
+  "semantic_audit": {
+    "path": "<LOCAL>/v046_model_semantic_audit_run_06.json",
+    "sha256": "f00eb0bde549a22fca199fd31bc59b45b0172f46521ce89d27a5c53d65d3414e"
+  },
+  "fixed_validation_proof": null,
+  "source_sha256": {
+    "__init__.py": "d790ef2e843fe728bff6476a0aef3e97b1c050287a2099b387802a1f2564e1a0",
+    "mdp/__init__.py": "a17c362915e0da57d4a769a98be29d302aca287aa51981311e9c37f3c9168347",
+    "mdp/actions.py": "3e2571e07eb4deb391082042a59865216da42f83d6bd3d2cd534a8daa5345b52",
+    "mdp/commands.py": "573aa6287ba5b02427aa1005608f52dfafc0d816746774d9c1c9886a5bcdb372",
+    "mdp/observations.py": "d81255e53a0a151b249f6ee07fdd6a4d7c19b9a575cc66ac2d4736f72e302e8e",
+    "mdp/rewards.py": "a05fc0a9c6597eb6e37b3e517357efcfa875901b9709bafa9aa5d047eb3e6b7d",
+    "mdp/terminations.py": "e26a5a60b17906cb28d7d5644707a78e463be19ecbba53636f1da85d404b52fd",
+    "rcss_mjlab_task.py": "26c95900c68192cd33374fbbdfcecc9bd84f4b82d3df507b5b7e0f9dd67eca71",
+    "scripts/audit_v046_model.py": "23ae2679d35bac711edc890bff66224518952ba2e8b03fb3fb0c83fd58ea31df",
+    "scripts/audit_v046_warmstart.py": "deb844348ae0ffc368df0963c68636764943d80994e37ee93c4a030afaf13c0c",
+    "scripts/evaluate_v046.py": "29b7796ac7b7d3da815ad59e431ccb2387bb2fed98b039ca304d4742807a3776",
+    "scripts/prepare_v046_warmstart.py": "f215d08f881e6d373a508efc8fe186eb49334c8e9b581ee60f03d1c995148b7c",
+    "scripts/smoke_v046.py": "392f6ceed817ea31ab800ca11bf84ff1fa140e9af1c275a083a3cf7a9ad9c6f7",
+    "scripts/train_v046.py": "20e918b3bef04715e3a05da1651262e65ae154ade6b68a31851d4b9b3a2e3527",
+    "warmstart.py": "7a39b467f9d473d5147fa746b1445df7231f25ee8f0e99f8a0f049ebb97d01e3"
+  },
+  "source_manifest_sha256": "15699d44a68eaab545f9b6f74f326790466343f2886793b57d80f8752985d171",
+  "seed_start": 460001,
+  "episode_seed_sha256": "552f2bbdf361d9cef2727568d17033d1c5a0b0b0f3547369396a42dd894e2ff8",
+  "scenario_manifest_sha256": "5ff8490bf6c7177e77c2c6916eb94097946053ed28177f6d357678d921dea573",
+  "deterministic_actor": true,
+  "device": "cpu",
+  "summary": {
+    "episodes": 1,
+    "true_foot_contact_rate": 0.0,
+    "pass_success_rate": 0.0,
+    "raw_pass_success_rate": 0.0,
+    "upper_body_ball_contact_rate": 0.0,
+    "fall_rate": 1.0,
+    "joint_limit_violation_rate": 0.0,
+    "actual_torque_limit_violation_rate": 0.0,
+    "nonfinite_rate": 0.0,
+    "incomplete_episode_rate": 0.0,
+    "mean_torque_saturation_fraction": 0.00010869565217391305,
+    "median_direction_error_deg": 1.9761003210364816,
+    "median_relative_distance_error": 0.9301530925654576,
+    "worst_direction_bin_success_rate": 0.0,
+    "worst_distance_bin_success_rate": 0.0
+  },
+  "direction_bin_evidence": {
+    "0": {
+      "episodes": 1,
+      "success_rate": 0.0
+    },
+    "1": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "2": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "3": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "4": {
+      "episodes": 0,
+      "success_rate": 0.0
+    }
+  },
+  "distance_bin_evidence": {
+    "0": {
+      "episodes": 1,
+      "success_rate": 0.0
+    },
+    "1": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "2": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "3": {
+      "episodes": 0,
+      "success_rate": 0.0
+    }
+  },
+  "gate_checks": {
+    "semantic_audit_matches_current_sources": true,
+    "required_episode_count": true,
+    "all_direction_bins_present": false,
+    "all_distance_bins_present": false,
+    "true_foot_contact_rate": false,
+    "strict_pass_success_rate": false,
+    "upper_body_contact_rate": true,
+    "fall_rate": false,
+    "joint_limit_rate": true,
+    "actual_torque_limit_rate": true,
+    "nonfinite_rate": true,
+    "complete_episode_rate": true,
+    "torque_saturation_fraction": true,
+    "median_direction_error": true,
+    "median_relative_distance_error": false,
+    "worst_direction_bin_success": false,
+    "worst_distance_bin_success": false
+  },
+  "engineering_smoke_passed": true,
+  "fixed_validation_passed": false,
+  "heldout_validation_passed": false,
+  "training_completed": false,
+  "video_validation_passed": false,
+  "quality_passed": false,
+  "episodes": [
+    {
+      "seed": 460001,
+      "direction_bin": 0,
+      "distance_bin": 0,
+      "target_angle_deg": -45.65754117939349,
+      "commanded_distance_m": 1.274912387301458,
+      "ball_x_m": 0.3073292297060145,
+      "ball_y_m": 0.15455762847467033,
+      "steps_executed": 400,
+      "required_steps": 400,
+      "episode_complete": true,
+      "unexpected_done": false,
+      "reward_finite": true,
+      "nonfinite_detected": false,
+      "contact_evidence": {
+        "real_foot_ball_contact": false,
+        "foot_channels_touched": [],
+        "peak_foot_force_n": {
+          "left_foot": 0.0,
+          "right_foot": 0.0
+        },
+        "illegal_upper_body_ball_contact": false,
+        "upper_body_channels_touched": [],
+        "peak_upper_body_force_n": {
+          "torso": 0.0,
+          "H1": 0.0,
+          "H2": 0.0,
+          "AL1": 0.0,
+          "AL2": 0.0,
+          "AL3": 0.0,
+          "left_hand_link": 0.0,
+          "AR1": 0.0,
+          "AR2": 0.0,
+          "AR3": 0.0,
+          "right_hand_link": 0.0,
+          "Waist": 0.0
+        }
+      },
+      "pass_evidence": {
+        "raw_contact_distance_corridor_success": false,
+        "strict_safe_success": false,
+        "success_step": null,
+        "maximum_forward_progress_m": 0.08904868750299633,
+        "final_forward_progress_m": 0.07766626328846105,
+        "lateral_error_at_maximum_progress_m": 0.003072461618433053,
+        "final_lateral_error_m": 0.0031957345062539303,
+        "direction_error_at_maximum_progress_deg": 1.9761003210364816,
+        "relative_distance_error": 0.9301530925654576,
+        "maximum_ball_height_m": 0.10963281244039536
+      },
+      "fall_evidence": {
+        "fell": true
+      },
+      "joint_evidence": {
+        "violation": false,
+        "violating_joint_names": [],
+        "maximum_overshoot_rad": 0.0
+      },
+      "actual_torque_evidence": {
+        "limits_nm": {
+          "Head_yaw": 7.0,
+          "Head_pitch": 7.0,
+          "Left_Shoulder_Pitch": 18.0,
+          "Left_Shoulder_Roll": 18.0,
+          "Left_Elbow_Pitch": 18.0,
+          "Left_Elbow_Yaw": 18.0,
+          "Right_Shoulder_Pitch": 18.0,
+          "Right_Shoulder_Roll": 18.0,
+          "Right_Elbow_Pitch": 18.0,
+          "Right_Elbow_Yaw": 18.0,
+          "Waist": 30.0,
+          "Left_Hip_Pitch": 45.0,
+          "Left_Hip_Roll": 30.0,
+          "Left_Hip_Yaw": 30.0,
+          "Left_Knee_Pitch": 60.0,
+          "Left_Ankle_Pitch": 20.0,
+          "Left_Ankle_Roll": 15.0,
+          "Right_Hip_Pitch": 45.0,
+          "Right_Hip_Roll": 30.0,
+          "Right_Hip_Yaw": 30.0,
+          "Right_Knee_Pitch": 60.0,
+          "Right_Ankle_Pitch": 20.0,
+          "Right_Ankle_Roll": 15.0
+        },
+        "maximum_absolute_by_joint_nm": {
+          "Head_yaw": 0.5443658828735352,
+          "Head_pitch": 1.0654691457748413,
+          "Left_Shoulder_Pitch": 5.52020788192749,
+          "Left_Shoulder_Roll": 3.5997047424316406,
+          "Left_Elbow_Pitch": 0.36106643080711365,
+          "Left_Elbow_Yaw": 3.7240047454833984,
+          "Right_Shoulder_Pitch": 18.0,
+          "Right_Shoulder_Roll": 6.774738311767578,
+          "Right_Elbow_Pitch": 2.462618350982666,
+          "Right_Elbow_Yaw": 14.349705696105957,
+          "Waist": 16.046098709106445,
+          "Left_Hip_Pitch": 34.42233657836914,
+          "Left_Hip_Roll": 12.103214263916016,
+          "Left_Hip_Yaw": 1.6954833269119263,
+          "Left_Knee_Pitch": 15.387950897216797,
+          "Left_Ankle_Pitch": 19.475563049316406,
+          "Left_Ankle_Roll": 4.522556304931641,
+          "Right_Hip_Pitch": 25.252910614013672,
+          "Right_Hip_Roll": 16.45077896118164,
+          "Right_Hip_Yaw": 3.2164013385772705,
+          "Right_Knee_Pitch": 21.84154510498047,
+          "Right_Ankle_Pitch": 15.386064529418945,
+          "Right_Ankle_Roll": 5.832162857055664
+        },
+        "limit_violation": false,
+        "violating_joint_names": [],
+        "saturated_joint_sample_fraction": 0.00010869565217391305,
+        "joint_samples": 9200
+      }
+    }
+  ],
+  "conclusion": "Engineering replay completed; this is not passing-skill evidence."
+}

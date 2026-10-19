@@ -1,0 +1,36 @@
+{
+  "experiment": "v039_getup_recovery",
+  "created_at": "2026-08-20T02:35:00+08:00",
+  "config_sha256": "A1C87FA3597743FC164F50CEC44DF67CE7E04CA2143F4A32E342B7DAD36746EE",
+  "checkpoints": [
+    {
+      "name": "v039_stage_00_iter_0001.zip",
+      "sha256": "128300CB6F5B637271D9ED79D243DACE3556CCF125B33FBDDA34BA824E9E585B",
+      "bytes": 2999010,
+      "quality_passed": false,
+      "fixed_validation": "0/20"
+    },
+    {
+      "name": "v039_stage_00_iter_0002.zip",
+      "sha256": "A9D2CE1B6029C3DC793A44635BDD943992DCD80E114291FB16C7EA2EB26E5D64",
+      "bytes": 3001916,
+      "quality_passed": false,
+      "fixed_validation": "0/20",
+      "note": "Preserved reward-hacking failure before the lying-state reward fix."
+    },
+    {
+      "name": "v039_stage_00_iter_0003.zip",
+      "sha256": "80BDD4F1816029F6D0D55C223C004A1B7A40B61A058C37627FE09E755E9996CB",
+      "bytes": 3004149,
+      "quality_passed": false,
+      "fixed_validation": "0/20",
+      "four_pose_diagnostic": {
+        "left_side": "0/5",
+        "right_side": "0/5",
+        "prone": "0/5",
+        "supine": "0/5"
+      }
+    }
+  ],
+  "promoted_checkpoint": null
+}

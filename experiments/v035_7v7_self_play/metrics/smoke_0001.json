@@ -1,0 +1,18 @@
+{
+  "version": "v035_7v7_self_play",
+  "physics_steps": 8,
+  "players": 14,
+  "motors_per_player": 23,
+  "field_m": [
+    55,
+    36
+  ],
+  "half_time_s": 300,
+  "finite_qpos": true,
+  "finite_qvel": true,
+  "finite_ctrl": true,
+  "all_14x23_targets_sent": true,
+  "minimum_height_m": 0.6662328368092993,
+  "minimum_upright": 0.9838407621358726,
+  "standing_players": 14
+}

@@ -1,0 +1,49 @@
+{
+  "match": "7v7 football",
+  "requested_halves": 1,
+  "seconds_per_half": 2.0,
+  "regulation_seconds_when_default": 600,
+  "side_change_implemented": false,
+  "score": {
+    "QiBlue": 0,
+    "QiRed": 0
+  },
+  "winner": "draw",
+  "low_level_model": "<LOCAL>/T1.pt",
+  "left_tactical_model": null,
+  "right_tactical_model": null,
+  "field_runtime_m": [
+    55,
+    36
+  ],
+  "halves": [
+    {
+      "phase": "FIRST_HALF",
+      "left_team": "QiBlue",
+      "right_team": "QiRed",
+      "left_score": 0,
+      "right_score": 0,
+      "start_play_time_s": 0.0,
+      "end_play_time_s": 2.0,
+      "simulated_play_seconds": 2.0,
+      "physics_steps": 100,
+      "wall_seconds": 1.0123150960000018,
+      "final_play_mode": "KickOff_Left",
+      "field_runtime_m": [
+        55,
+        36
+      ],
+      "safety": {
+        "finite_qpos": true,
+        "finite_qvel": true,
+        "finite_ctrl": true,
+        "all_14x23_targets_sent": true,
+        "minimum_height_m": 0.6332049773184325,
+        "minimum_upright": 0.9986550610258191,
+        "standing_players": 14
+      }
+    }
+  ],
+  "timeseries": "<LOCAL>/match_0003_timeseries.csv",
+  "demonstrations": "<LOCAL>/match_0003_demonstrations.npz"
+}

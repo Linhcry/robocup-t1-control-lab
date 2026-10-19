@@ -1,0 +1,40 @@
+{
+  "version": "v042_goalkeeper_ground_block",
+  "smoke_steps": 8,
+  "quality_passed": true,
+  "result": {
+    "success": false,
+    "conceded": false,
+    "goalie_touched": false,
+    "contact_body_parts": [],
+    "initial_shot_speed_mps": 1.0772743203345556,
+    "current_ball_speed_mps": 0.37340824562883357,
+    "current_ball_vx_mps": -0.37128295888564283,
+    "shot_target_y_m": -0.5502606777522546,
+    "goalie_lateral_error_m": 0.6173626025907023,
+    "safe_after_contact_seconds": 0.0,
+    "minimum_upright": 0.9970484255469756,
+    "minimum_height_m": 0.6461034455617661,
+    "fell": false,
+    "episode_steps": 8,
+    "all_23_targets_sent": true,
+    "finite_state": true,
+    "teacher_action": [
+      0.0,
+      -0.75,
+      0.0
+    ],
+    "residual_action": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "executed_action": [
+      0.0,
+      -0.75,
+      0.0
+    ],
+    "seed": 42000,
+    "episode_reward": -0.0805188156447996
+  }
+}

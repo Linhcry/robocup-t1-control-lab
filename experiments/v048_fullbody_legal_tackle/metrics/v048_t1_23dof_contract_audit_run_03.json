@@ -1,0 +1,14 @@
+{
+  "schema_version": "v048_t1_23dof_contract_audit_v1",
+  "version": "v048",
+  "kind": "canonical_t1_23dof_contract_audit",
+  "command": "<LOCAL>/audit_t1_23dof.py",
+  "audit_script_sha256": "4a6e94df818011e26567e959020eb75ffa74695741eb64b707d48af93eb81a13",
+  "v048_task_sha256": "b805e7e418d61cc6bdd2d7e31efabffab7517d4acd1aa8ee4238a9967db22841",
+  "v048_safe_action_sha256": "3587235a930ef8a1416662d996da69693a57668468ca7c0359feb9f3c389ee16",
+  "joint_count": 23,
+  "result": "PASS: T1_23_DOF_CONTRACT",
+  "contract_passed": true,
+  "quality_passed": false,
+  "note": "The canonical 23-DoF order, RCSS actuator mapping and mechanical limits passed after the v048 fail-closed safe action and first-touch tracker changes. This is an engineering audit, not tackle quality evidence."
+}

@@ -1,0 +1,8 @@
+{
+  "version": "v040_pass_receive",
+  "stage": 0,
+  "chunk_timesteps": 256,
+  "total_model_timesteps": 768,
+  "resumed_from": "experiments/v040_pass_receive/checkpoints/v040_policy_iter_0001.zip",
+  "checkpoint": "/mnt/d/机器人足球/training_runs/rcss_t1_training_20260706/experiments/v040_pass_receive/checkpoints/v040_policy_iter_0002.zip"
+}

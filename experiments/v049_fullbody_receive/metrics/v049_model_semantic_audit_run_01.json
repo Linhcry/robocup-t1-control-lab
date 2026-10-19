@@ -1,0 +1,109 @@
+{
+  "schema_version": "v049_model_semantic_audit_v1",
+  "created_utc": "2026-08-20T07:57:54.679380+00:00",
+  "task_id": "Mjlab-Fullbody-Receive-RCSS-T1-v049",
+  "rcss_robot_xml": {
+    "path": "<LOCAL>/robot.xml",
+    "sha256": "b81087d7d04ecfa1064ee5392cc632fc69b4d7de644b3a5318b0c5e12276d083"
+  },
+  "counts": {
+    "robot_bodies_excluding_world": 24,
+    "robot_geoms": 36,
+    "robot_hinge_joints": 23,
+    "robot_actuators": 23,
+    "actor_dim": 81,
+    "critic_dim": 109,
+    "compiled_contact_sensor_channels": 143
+  },
+  "body_contact_partition": {
+    "legal": [
+      "Shank_Left",
+      "left_foot_link",
+      "Shank_Right",
+      "right_foot_link"
+    ],
+    "illegal": [
+      "torso",
+      "H1",
+      "H2",
+      "AL1",
+      "AL2",
+      "AL3",
+      "left_hand_link",
+      "AR1",
+      "AR2",
+      "AR3",
+      "right_hand_link",
+      "Waist",
+      "Hip_Pitch_Left",
+      "Hip_Roll_Left",
+      "Hip_Yaw_Left",
+      "Ankle_Cross_Left",
+      "Hip_Pitch_Right",
+      "Hip_Roll_Right",
+      "Hip_Yaw_Right",
+      "Ankle_Cross_Right"
+    ]
+  },
+  "sources": {
+    "v049_task": {
+      "path": "<LOCAL>/rcss_mjlab_task.py",
+      "sha256": "41c4f4b256b54543cc50e53b5ead9f63e9c47a8ebf94a5dca055941cd285347d"
+    },
+    "v049_mdp": {
+      "path": "<LOCAL>/mdp.py",
+      "sha256": "bbec538a2aae9e9c6d76c031256a10f9d9bd0aee94be3e7e2a0b2bccb2e59fc8"
+    },
+    "v049_evaluator": {
+      "path": "<LOCAL>/evaluate_v049.py",
+      "sha256": "efeb9a6bfeb6c580a63c28da2e2dd38c4ebb163542600b77b23cab2affed5974"
+    },
+    "v049_audit": {
+      "path": "<LOCAL>/audit_v049_model.py",
+      "sha256": "2d6b275e6a85b9e582ab074ab4578b3604ae11f0d56fc4e83458a57075ad652a"
+    },
+    "acceptance_contract": {
+      "path": "<LOCAL>/v049_competitive_acceptance.json",
+      "sha256": "07b29ecbe35e760e3e5b93385ad1159d4ac060dab4cec0ae75f5308dad5a25d0"
+    }
+  },
+  "checks": {
+    "source_and_v049_robot_body_count_match": true,
+    "source_and_v049_robot_geom_count_match": true,
+    "source_and_v049_mass_inertia_match": true,
+    "source_and_v049_geom_physics_match": true,
+    "canonical_23dof_joint_order": true,
+    "one_training_actuator_per_joint": true,
+    "action_order_and_type_are_audited": true,
+    "gpu_clamp_matches_deployment_contract": true,
+    "torque_gate_matches_rcss_effective_caps": true,
+    "ball_matches_rcss_world_physics": true,
+    "legal_and_illegal_body_filters_are_disjoint": true,
+    "legal_and_illegal_filters_partition_every_robot_body": true,
+    "only_foot_and_shank_bodies_are_legal": true,
+    "body_mode_sensors_cover_unnamed_collision_geoms": true,
+    "contact_sensors_use_real_ball_secondary": true,
+    "dangerous_ground_sensor_is_separate": true,
+    "compiled_scene_has_all_three_contact_channels": true,
+    "actor_has_exact_deployable_terms_only": true,
+    "actor_ball_estimate_has_noise_and_delay": true,
+    "critic_is_actor_superset_with_explicit_truth": true,
+    "success_requires_real_legal_contact": true,
+    "success_requires_speed_reduction": true,
+    "success_requires_continuous_one_second_control": true,
+    "success_requires_control_radius": true,
+    "all_safety_failures_gate_success": true,
+    "four_stage_speed_angle_landing_curriculum": true,
+    "fixed_and_heldout_seeds_are_disjoint": true,
+    "strict_27_cell_episode_counts": true,
+    "anti_fraud_contract_is_fail_closed": true,
+    "evaluator_hash_binds_checkpoint_sources_audit_and_fixed_proof": true
+  },
+  "model_semantics_passed": true,
+  "training_completed": false,
+  "fixed_validation_passed": false,
+  "heldout_validation_passed": false,
+  "quality_passed": false,
+  "failed_checks": [],
+  "conclusion": "The v049 physical receive task is structurally valid; no learned receiving ability is claimed."
+}

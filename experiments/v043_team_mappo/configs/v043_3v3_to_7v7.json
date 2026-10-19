@@ -1,0 +1,79 @@
+{
+  "version": "v043_team_mappo",
+  "status": "3v3_pipeline_smoke_and_short_training_only",
+  "important_claim_boundary": "A smoke pass or one short PPO update proves code execution only; it does not prove passing, goalkeeping, teamwork, match competitiveness, or promotion.",
+  "observation_schema": "v2_decentralized_local_roles_and_own_touch_only",
+  "curriculum": [
+    {
+      "stage": 0,
+      "players_per_team": 3,
+      "opponent": "privileged_dynamic_role_heuristic",
+      "objective": "finite recurrent rollout and role coverage"
+    },
+    {
+      "stage": 1,
+      "players_per_team": 3,
+      "opponent": "mixed_heuristic_and_snapshot_pool",
+      "objective": "possession and territory"
+    },
+    {
+      "stage": 2,
+      "players_per_team": 3,
+      "opponent": "snapshot_league",
+      "objective": "passing and scoring after a validated pass skill is wired"
+    },
+    {
+      "stage": 3,
+      "players_per_team": 5,
+      "opponent": "snapshot_league",
+      "objective": "spacing, cover and transition"
+    },
+    {
+      "stage": 4,
+      "players_per_team": 7,
+      "opponent": "snapshot_league",
+      "objective": "full ten-minute match"
+    }
+  ],
+  "environment": {
+    "physics_dt_s": 0.02,
+    "tactical_dt_s": 0.1,
+    "episode_high_level_steps": 300,
+    "local_observation_dim": 92,
+    "central_state_dim": 96,
+    "entity_mask_dim": 14,
+    "continuous_action_dim": 3,
+    "action_semantics": [
+      "normalized_vx",
+      "normalized_vy",
+      "normalized_yaw_rate"
+    ],
+    "possession_evidence_schema": "rcss_real_touch_plus_finite_hold_v1",
+    "possession_hold_window_s": 1.5,
+    "validated_capability": "safe walking only; the current v043 action does not invoke a learned pass, dive, or get-up skill"
+  },
+  "mappo": {
+    "actor": "parameter-shared 128-unit GRU with separate hidden state per player; local observation only at execution",
+    "critic": "centralized 96D global-state critic with seven padded value heads",
+    "gamma": 0.99,
+    "gae_lambda": 0.95,
+    "clip_range": 0.1,
+    "learning_rate": 0.0001,
+    "entropy_coef": 0.005,
+    "value_coef": 0.5,
+    "max_grad_norm": 0.5
+  },
+  "promotion_gates_not_yet_run": {
+    "held_out_matches": 20,
+    "minimum_match_duration_s": 600.0,
+    "minimum_win_rate_vs_heuristic": 0.55,
+    "maximum_fall_rate": 0.0,
+    "minimum_all_23_targets_sent_rate": 1.0,
+    "minimum_possession_rate": 0.5,
+    "minimum_pass_completion_rate": 0.6,
+    "maximum_goals_conceded_per_10min": 1.5,
+    "minimum_distinct_opponents": 5,
+    "requires_validated_team_skill_interface": true,
+    "requires_decentralized_execution_audit": true
+  }
+}

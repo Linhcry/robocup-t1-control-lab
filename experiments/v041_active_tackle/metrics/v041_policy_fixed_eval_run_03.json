@@ -1,0 +1,421 @@
+{
+  "version": "v041_active_tackle",
+  "policy": "experiments/v041_active_tackle/checkpoints/v041_policy_iter_0001.zip",
+  "summary": {
+    "episode_count": 10,
+    "success_count": 0,
+    "success_rate": 0.0,
+    "fall_rate": 0.0,
+    "finite_state_rate": 1.0,
+    "all_23_targets_sent_rate": 1.0,
+    "mean_episode_reward": -23.800994390431935,
+    "turnover_rate": 1.0,
+    "attacker_touch_rate": 1.0,
+    "defender_touch_rate": 1.0,
+    "upper_body_contact_rate": 0.0,
+    "foul_rate": 1.0,
+    "upper_body_collision_rate": 0.8,
+    "mean_clearance_m": 0.04479397140576187
+  },
+  "gate_checks": {
+    "success_rate": false,
+    "fall_rate": true,
+    "upper_body_contact_rate": true,
+    "foul_rate": false,
+    "finite_state": true,
+    "all_23_targets": true
+  },
+  "quality_passed": false,
+  "episodes": [
+    {
+      "success": false,
+      "failed": true,
+      "attacker_touched": true,
+      "defender_touched": true,
+      "turnover": true,
+      "clearance_away_from_own_goal_m": 0.050647967857076925,
+      "current_clearance_m": -0.10814767393894953,
+      "defender_control_seconds": 0.3,
+      "current_defender_control_seconds": 0.0,
+      "upper_body_contacts": 0,
+      "cross_team_contact_frames": 1,
+      "upper_body_collision_frames": 1,
+      "maximum_opponent_contact_force_n": 131.00496901577546,
+      "foul_detected": true,
+      "minimum_upright": 0.9939929623797814,
+      "minimum_height_m": 0.6311594320962733,
+      "fell": false,
+      "episode_steps": 57,
+      "all_23_targets_sent": true,
+      "finite_state": true,
+      "defender_teacher_action": [
+        0.18074455857276917,
+        -0.9453038573265076,
+        -1.0
+      ],
+      "residual_action": [
+        -0.007977611385285854,
+        -0.007327924482524395,
+        0.011799274943768978
+      ],
+      "executed_defender_action": [
+        0.17954792082309723,
+        -0.947135865688324,
+        -0.9964601993560791
+      ],
+      "seed": 41010,
+      "episode_reward": -23.79847843357301
+    },
+    {
+      "success": false,
+      "failed": true,
+      "attacker_touched": true,
+      "defender_touched": true,
+      "turnover": true,
+      "clearance_away_from_own_goal_m": 0.06114663723502767,
+      "current_clearance_m": -0.03216674088263538,
+      "defender_control_seconds": 0.2,
+      "current_defender_control_seconds": 0.1,
+      "upper_body_contacts": 0,
+      "cross_team_contact_frames": 4,
+      "upper_body_collision_frames": 4,
+      "maximum_opponent_contact_force_n": 78.56108679356001,
+      "foul_detected": true,
+      "minimum_upright": 0.9964566534187493,
+      "minimum_height_m": 0.6324788745120686,
+      "fell": false,
+      "episode_steps": 54,
+      "all_23_targets_sent": true,
+      "finite_state": true,
+      "defender_teacher_action": [
+        0.22278746962547302,
+        -0.1476236879825592,
+        -0.5226134657859802
+      ],
+      "residual_action": [
+        -0.012742605060338974,
+        -0.0062229810282588005,
+        0.007728686556220055
+      ],
+      "executed_defender_action": [
+        0.220876082777977,
+        -0.14917942881584167,
+        -0.5202948451042175
+      ],
+      "seed": 41011,
+      "episode_reward": -23.129361567249482
+    },
+    {
+      "success": false,
+      "failed": true,
+      "attacker_touched": true,
+      "defender_touched": true,
+      "turnover": true,
+      "clearance_away_from_own_goal_m": 0.05842512466777572,
+      "current_clearance_m": -0.06242499940058266,
+      "defender_control_seconds": 0.2,
+      "current_defender_control_seconds": 0.0,
+      "upper_body_contacts": 0,
+      "cross_team_contact_frames": 1,
+      "upper_body_collision_frames": 1,
+      "maximum_opponent_contact_force_n": 26.761655408855017,
+      "foul_detected": true,
+      "minimum_upright": 0.9965848294630987,
+      "minimum_height_m": 0.6328111529720529,
+      "fell": false,
+      "episode_steps": 53,
+      "all_23_targets_sent": true,
+      "finite_state": true,
+      "defender_teacher_action": [
+        0.3087170720100403,
+        -0.14396421611309052,
+        -0.3750213086605072
+      ],
+      "residual_action": [
+        -0.008186612278223038,
+        -0.006486664060503244,
+        0.010558633133769035
+      ],
+      "executed_defender_action": [
+        0.3074890673160553,
+        -0.14558587968349457,
+        -0.37185370922088623
+      ],
+      "seed": 41012,
+      "episode_reward": -23.283128714741636
+    },
+    {
+      "success": false,
+      "failed": true,
+      "attacker_touched": true,
+      "defender_touched": true,
+      "turnover": true,
+      "clearance_away_from_own_goal_m": 0.041680066767422974,
+      "current_clearance_m": -0.3086396490085327,
+      "defender_control_seconds": 0.3,
+      "current_defender_control_seconds": 0.0,
+      "upper_body_contacts": 0,
+      "cross_team_contact_frames": 2,
+      "upper_body_collision_frames": 2,
+      "maximum_opponent_contact_force_n": 126.79791777492291,
+      "foul_detected": true,
+      "minimum_upright": 0.9961388165509191,
+      "minimum_height_m": 0.6308466618081822,
+      "fell": false,
+      "episode_steps": 58,
+      "all_23_targets_sent": true,
+      "finite_state": true,
+      "defender_teacher_action": [
+        0.013664532452821732,
+        -1.0,
+        -1.0
+      ],
+      "residual_action": [
+        -0.001043781521730125,
+        -0.006815534550696611,
+        0.014953133650124073
+      ],
+      "executed_defender_action": [
+        0.0135079650208354,
+        -1.0,
+        -0.9955140352249146
+      ],
+      "seed": 41013,
+      "episode_reward": -25.634407868810573
+    },
+    {
+      "success": false,
+      "failed": true,
+      "attacker_touched": true,
+      "defender_touched": true,
+      "turnover": true,
+      "clearance_away_from_own_goal_m": 0.0,
+      "current_clearance_m": -0.4339454678942648,
+      "defender_control_seconds": 0.4,
+      "current_defender_control_seconds": 0.4,
+      "upper_body_contacts": 0,
+      "cross_team_contact_frames": 5,
+      "upper_body_collision_frames": 0,
+      "maximum_opponent_contact_force_n": 97.90825155707937,
+      "foul_detected": true,
+      "minimum_upright": 0.9964174154600981,
+      "minimum_height_m": 0.6312934823004058,
+      "fell": false,
+      "episode_steps": 57,
+      "all_23_targets_sent": true,
+      "finite_state": true,
+      "defender_teacher_action": [
+        0.0,
+        -0.9826682806015015,
+        -1.0
+      ],
+      "residual_action": [
+        -0.005713245365768671,
+        -0.009223547764122486,
+        0.011137801222503185
+      ],
+      "executed_defender_action": [
+        -0.0008569868514314294,
+        -0.9849741458892822,
+        -0.9966586828231812
+      ],
+      "seed": 41014,
+      "episode_reward": -26.77313658847714
+    },
+    {
+      "success": false,
+      "failed": true,
+      "attacker_touched": true,
+      "defender_touched": true,
+      "turnover": true,
+      "clearance_away_from_own_goal_m": 0.056215133465913114,
+      "current_clearance_m": -0.0014836475143414907,
+      "defender_control_seconds": 0.2,
+      "current_defender_control_seconds": 0.0,
+      "upper_body_contacts": 0,
+      "cross_team_contact_frames": 2,
+      "upper_body_collision_frames": 2,
+      "maximum_opponent_contact_force_n": 30.214418409672067,
+      "foul_detected": true,
+      "minimum_upright": 0.9924152831038537,
+      "minimum_height_m": 0.633225369703776,
+      "fell": false,
+      "episode_steps": 54,
+      "all_23_targets_sent": true,
+      "finite_state": true,
+      "defender_teacher_action": [
+        0.24665386974811554,
+        -0.3109734058380127,
+        -0.9107201099395752
+      ],
+      "residual_action": [
+        -0.017032206058502197,
+        -0.007232234813272953,
+        0.0068563357926905155
+      ],
+      "executed_defender_action": [
+        0.24409903585910797,
+        -0.3127814531326294,
+        -0.9086632132530212
+      ],
+      "seed": 41015,
+      "episode_reward": -22.529079549366617
+    },
+    {
+      "success": false,
+      "failed": true,
+      "attacker_touched": true,
+      "defender_touched": true,
+      "turnover": true,
+      "clearance_away_from_own_goal_m": 0.04339244431558609,
+      "current_clearance_m": -0.008052433726163266,
+      "defender_control_seconds": 0.2,
+      "current_defender_control_seconds": 0.1,
+      "upper_body_contacts": 0,
+      "cross_team_contact_frames": 2,
+      "upper_body_collision_frames": 2,
+      "maximum_opponent_contact_force_n": 45.93974735688699,
+      "foul_detected": true,
+      "minimum_upright": 0.9927733853279811,
+      "minimum_height_m": 0.633299628208408,
+      "fell": false,
+      "episode_steps": 54,
+      "all_23_targets_sent": true,
+      "finite_state": true,
+      "defender_teacher_action": [
+        0.24703629314899445,
+        -0.3427458703517914,
+        -0.9800717234611511
+      ],
+      "residual_action": [
+        -0.017470134422183037,
+        -0.007516141049563885,
+        0.007019487209618092
+      ],
+      "executed_defender_action": [
+        0.2444157749414444,
+        -0.34462490677833557,
+        -0.9779658913612366
+      ],
+      "seed": 41016,
+      "episode_reward": -22.60838138341498
+    },
+    {
+      "success": false,
+      "failed": true,
+      "attacker_touched": true,
+      "defender_touched": true,
+      "turnover": true,
+      "clearance_away_from_own_goal_m": 0.06731047320831873,
+      "current_clearance_m": 0.012822706828179764,
+      "defender_control_seconds": 0.2,
+      "current_defender_control_seconds": 0.2,
+      "upper_body_contacts": 0,
+      "cross_team_contact_frames": 3,
+      "upper_body_collision_frames": 3,
+      "maximum_opponent_contact_force_n": 66.4651233071858,
+      "foul_detected": true,
+      "minimum_upright": 0.9963527452857718,
+      "minimum_height_m": 0.6329066949332696,
+      "fell": false,
+      "episode_steps": 54,
+      "all_23_targets_sent": true,
+      "finite_state": true,
+      "defender_teacher_action": [
+        0.0,
+        0.002466455800458789,
+        1.0
+      ],
+      "residual_action": [
+        -0.009628660045564175,
+        -0.007504748646169901,
+        0.006465693935751915
+      ],
+      "executed_defender_action": [
+        -0.0014442990068346262,
+        0.0005902686389163136,
+        1.0
+      ],
+      "seed": 41017,
+      "episode_reward": -22.84148722021764
+    },
+    {
+      "success": false,
+      "failed": true,
+      "attacker_touched": true,
+      "defender_touched": true,
+      "turnover": true,
+      "clearance_away_from_own_goal_m": 0.02197890117347545,
+      "current_clearance_m": -0.2104033881299428,
+      "defender_control_seconds": 0.3,
+      "current_defender_control_seconds": 0.3,
+      "upper_body_contacts": 0,
+      "cross_team_contact_frames": 1,
+      "upper_body_collision_frames": 0,
+      "maximum_opponent_contact_force_n": 5.164457165911992,
+      "foul_detected": true,
+      "minimum_upright": 0.9965200673190145,
+      "minimum_height_m": 0.632187924031993,
+      "fell": false,
+      "episode_steps": 56,
+      "all_23_targets_sent": true,
+      "finite_state": true,
+      "defender_teacher_action": [
+        0.0,
+        -0.922843337059021,
+        -1.0
+      ],
+      "residual_action": [
+        -0.013710233382880688,
+        -0.009295203723013401,
+        0.007338257506489754
+      ],
+      "executed_defender_action": [
+        -0.0020565351005643606,
+        -0.9251671433448792,
+        -0.997798502445221
+      ],
+      "seed": 41018,
+      "episode_reward": -24.84629971087639
+    },
+    {
+      "success": false,
+      "failed": true,
+      "attacker_touched": true,
+      "defender_touched": true,
+      "turnover": true,
+      "clearance_away_from_own_goal_m": 0.047142965367022005,
+      "current_clearance_m": -0.005792371405032193,
+      "defender_control_seconds": 0.1,
+      "current_defender_control_seconds": 0.1,
+      "upper_body_contacts": 0,
+      "cross_team_contact_frames": 2,
+      "upper_body_collision_frames": 2,
+      "maximum_opponent_contact_force_n": 32.71379467413109,
+      "foul_detected": true,
+      "minimum_upright": 0.9927673811288104,
+      "minimum_height_m": 0.6332576551125685,
+      "fell": false,
+      "episode_steps": 54,
+      "all_23_targets_sent": true,
+      "finite_state": true,
+      "defender_teacher_action": [
+        0.2479550540447235,
+        -0.3240412771701813,
+        -0.9364653825759888
+      ],
+      "residual_action": [
+        -0.017001306638121605,
+        -0.007424651645123959,
+        0.007166178431361914
+      ],
+      "executed_defender_action": [
+        0.24540485441684723,
+        -0.3258974254131317,
+        -0.9343155026435852
+      ],
+      "seed": 41019,
+      "episode_reward": -22.56618286759189
+    }
+  ]
+}

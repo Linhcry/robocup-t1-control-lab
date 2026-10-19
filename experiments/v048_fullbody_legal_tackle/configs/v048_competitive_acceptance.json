@@ -1,0 +1,91 @@
+{
+  "version": "v048",
+  "task": "exact_rcss_two_t1_fullbody_legal_active_tackle",
+  "contract_status": "defined_not_passed",
+  "physics": {
+    "robot_model": "installed_rcss_t1_robot_xml",
+    "robots": 2,
+    "controlled_joints_per_robot": 23,
+    "ball_radius_m": 0.11,
+    "ball_mass_kg": 0.41,
+    "ball_friction": [
+      0.4,
+      0.01,
+      0.01
+    ],
+    "physics_timestep_s": 0.005,
+    "policy_timestep_s": 0.02
+  },
+  "curriculum": {
+    "attacker_direction_rad": [
+      -3.141592653589793,
+      3.141592653589793
+    ],
+    "attacker_speed_mps": [
+      0.15,
+      0.65
+    ],
+    "defender_lateral_offset_m": [
+      -0.35,
+      0.35
+    ],
+    "episode_seconds": 8.0
+  },
+  "success_definition": {
+    "attacker_must_legally_touch_ball_first": true,
+    "defender_must_legally_touch_ball_after_attacker": true,
+    "simultaneous_contact_is_not_a_transfer": true,
+    "minimum_clearance_away_from_own_goal_m": 0.25,
+    "minimum_post_tackle_control_seconds": 2.0,
+    "head_or_torso_robot_collision_is_foul": true,
+    "fall_allowed": false,
+    "joint_limit_violation_allowed": false,
+    "torque_limit_violation_allowed": false,
+    "nonfinite_state_allowed": false
+  },
+  "fixed_validation": {
+    "seeds": [
+      48000,
+      48001,
+      48002,
+      48003,
+      48004,
+      48005,
+      48006,
+      48007,
+      48008,
+      48009,
+      48010,
+      48011,
+      48012,
+      48013,
+      48014,
+      48015,
+      48016,
+      48017,
+      48018,
+      48019
+    ],
+    "minimum_success_rate": 0.65,
+    "maximum_foul_rate": 0.02,
+    "maximum_fall_rate": 0.02
+  },
+  "held_out_test": {
+    "seed_start": 4810000,
+    "episodes": 100,
+    "minimum_success_rate": 0.65,
+    "maximum_foul_rate": 0.02,
+    "maximum_fall_rate": 0.02,
+    "minimum_distinct_direction_bins": 8,
+    "minimum_distinct_speed_bins": 5
+  },
+  "promotion": {
+    "requires_semantic_audit": true,
+    "requires_cpu_smoke": true,
+    "requires_fixed_validation": true,
+    "requires_held_out_test": true,
+    "requires_checkpoint_sha256": true,
+    "requires_video_evidence": true,
+    "quality_passed": false
+  }
+}

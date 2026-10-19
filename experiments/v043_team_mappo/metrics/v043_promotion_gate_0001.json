@@ -1,0 +1,27 @@
+{
+  "version": "v043_team_mappo",
+  "evaluation": "<LOCAL>/v043_fixed_eval_0003.json",
+  "gate_results": {
+    "held_out_match_count": false,
+    "win_rate": false,
+    "fall_rate": true,
+    "all_23_targets_sent": true,
+    "possession": true,
+    "true_pass_completion": false,
+    "goals_conceded": false,
+    "opponent_diversity": false,
+    "validated_team_skill_interface": false,
+    "decentralized_execution_audit": true,
+    "observation_schema_v2": true
+  },
+  "quality_passed": false,
+  "communication_audit": "/mnt/d/机器人足球/training_runs/rcss_t1_training_20260706/experiments/v043_team_mappo/metrics/v043_decentralized_execution_audit_0002.json",
+  "failed_gates": [
+    "held_out_match_count",
+    "win_rate",
+    "true_pass_completion",
+    "goals_conceded",
+    "opponent_diversity",
+    "validated_team_skill_interface"
+  ]
+}

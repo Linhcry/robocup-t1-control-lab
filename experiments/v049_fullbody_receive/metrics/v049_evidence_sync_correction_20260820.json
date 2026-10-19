@@ -1,0 +1,21 @@
+{
+  "schema_version": "v049_evidence_sync_correction_v1",
+  "created_utc": "2026-08-20T07:59:27.4718603Z",
+  "incident": "The first transient WSL smoke artifact was removed before local archival by a source synchronization command that included deletion semantics.",
+  "known_transient_result": {
+    "smoke_passed": false,
+    "quality_passed": false,
+    "failed_check": "torso_contact_latched_as_illegal",
+    "root_cause": "The environment correctly returned an illegal-contact termination, then auto-reset that world in the same step; the smoke script incorrectly inspected the cleared latch from the new episode."
+  },
+  "correction": {
+    "source_sync_no_longer_deletes_metric_directories": true,
+    "corrected_smoke_uses_returned_termination_and_not_timeout_evidence": true,
+    "corrected_archived_result": "metrics/v049_cpu_dynamics_smoke_run_01.json",
+    "old_transient_artifact_reconstructed_or_claimed_as_exact": false
+  },
+  "training_completed": false,
+  "fixed_validation_passed": false,
+  "heldout_validation_passed": false,
+  "quality_passed": false
+}

@@ -1,0 +1,109 @@
+{
+  "schema_version": "v048_competitive_acceptance_v2",
+  "version": "v048",
+  "task": "exact_rcss_two_t1_fullbody_legal_active_tackle",
+  "supersedes_without_deleting": "v048_competitive_acceptance.json",
+  "reason_for_larger_splits": "The v1 20/100 episode splits cannot cover all 8 direction by 5 speed cells with repeated samples. V2 uses 3 fixed and 10 held-out episodes per cell.",
+  "physics": {
+    "robot_model": "installed_rcss_t1_robot_xml",
+    "robots": 2,
+    "controlled_joints_per_robot": 23,
+    "ball_radius_m": 0.11,
+    "ball_mass_kg": 0.41,
+    "ball_friction": [
+      0.4,
+      0.01,
+      0.01
+    ],
+    "physics_timestep_s": 0.005,
+    "policy_timestep_s": 0.02,
+    "physics_substeps_per_action": 4,
+    "contact_history_substeps": 4
+  },
+  "scenario_grid": {
+    "direction_edges_rad": [
+      -3.141592653589793,
+      -2.356194490192345,
+      -1.5707963267948966,
+      -0.7853981633974483,
+      0.0,
+      0.7853981633974483,
+      1.5707963267948966,
+      2.356194490192345,
+      3.141592653589793
+    ],
+    "speed_edges_mps": [
+      0.15,
+      0.25,
+      0.35,
+      0.45,
+      0.55,
+      0.65
+    ],
+    "direction_bins": 8,
+    "speed_bins": 5,
+    "cells": 40,
+    "defender_lateral_offset_m": [
+      -0.35,
+      0.35
+    ],
+    "episode_seconds": 8.0
+  },
+  "success_definition": {
+    "attacker_real_foot_or_calf_contact_must_occur_first": true,
+    "defender_real_foot_or_calf_contact_must_occur_after_attacker": true,
+    "simultaneous_contact_is_not_a_transfer": true,
+    "minimum_clearance_away_from_own_goal_m": 0.25,
+    "minimum_post_tackle_control_seconds": 2.0,
+    "upper_body_robot_contact_is_foul": true,
+    "lower_body_robot_contact_is_foul": true,
+    "either_robot_fall_allowed": false,
+    "either_robot_joint_limit_violation_allowed": false,
+    "either_robot_actual_torque_violation_allowed": false,
+    "nonfinite_state_allowed": false
+  },
+  "fixed_validation": {
+    "seed_start_inclusive": 4820000,
+    "seed_end_exclusive": 4820120,
+    "required_episodes": 120,
+    "samples_per_direction_speed_cell": 3,
+    "minimum_success_rate": 0.65,
+    "minimum_worst_direction_success_rate": 0.5,
+    "minimum_worst_speed_success_rate": 0.5,
+    "minimum_worst_cell_success_rate": 0.3333333333333333
+  },
+  "held_out_test": {
+    "seed_start_inclusive": 4830000,
+    "seed_end_exclusive": 4830400,
+    "required_episodes": 400,
+    "samples_per_direction_speed_cell": 10,
+    "minimum_success_rate": 0.65,
+    "minimum_worst_direction_success_rate": 0.55,
+    "minimum_worst_speed_success_rate": 0.55,
+    "minimum_worst_cell_success_rate": 0.5,
+    "requires_same_checkpoint_passing_fixed_proof": true
+  },
+  "common_quality_gates": {
+    "minimum_attacker_first_touch_rate": 1.0,
+    "minimum_real_transfer_given_success_rate": 1.0,
+    "minimum_clearance_given_success_m": 0.25,
+    "minimum_control_given_success_s": 2.0,
+    "maximum_upper_body_foul_rate": 0.02,
+    "maximum_lower_body_foul_rate": 0.02,
+    "maximum_attacker_fall_rate": 0.02,
+    "maximum_defender_fall_rate": 0.02,
+    "maximum_joint_violation_rate": 0.0,
+    "maximum_actual_torque_violation_rate": 0.0,
+    "maximum_nonfinite_rate": 0.0,
+    "maximum_unexpected_termination_rate": 0.0
+  },
+  "promotion": {
+    "requires_current_semantic_audit": true,
+    "requires_checkpoint_sha256": true,
+    "requires_all_control_source_sha256": true,
+    "requires_fixed_validation": true,
+    "requires_same_model_held_out_test": true,
+    "requires_40_cell_video_manifest": true,
+    "quality_passed": false
+  }
+}

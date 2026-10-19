@@ -1,0 +1,100 @@
+{
+  "experiment": "v039_getup_recovery",
+  "created_at": "2026-08-19T18:36:14.743719+00:00",
+  "reset": {
+    "stage": 0,
+    "pose": "near_fall",
+    "floor_friction": 0.8225554321994817,
+    "model_nu": 23,
+    "all_23_targets": false
+  },
+  "steps": [
+    {
+      "step": 1,
+      "reward": 3.999628031325975,
+      "finite": true,
+      "height_m": 0.717782910196206,
+      "upright_cos": 0.9636172035821267,
+      "all_23_targets": true,
+      "terminated": false,
+      "truncated": false
+    },
+    {
+      "step": 2,
+      "reward": 3.8939517318999024,
+      "finite": true,
+      "height_m": 0.7108716388800067,
+      "upright_cos": 0.9612387317546643,
+      "all_23_targets": true,
+      "terminated": false,
+      "truncated": false
+    },
+    {
+      "step": 3,
+      "reward": 3.845211223967271,
+      "finite": true,
+      "height_m": 0.700203770061337,
+      "upright_cos": 0.9600908422101144,
+      "all_23_targets": true,
+      "terminated": false,
+      "truncated": false
+    },
+    {
+      "step": 4,
+      "reward": 3.8480069568996775,
+      "finite": true,
+      "height_m": 0.6856806449801569,
+      "upright_cos": 0.9598085415890357,
+      "all_23_targets": true,
+      "terminated": false,
+      "truncated": false
+    },
+    {
+      "step": 5,
+      "reward": 3.7387118822739627,
+      "finite": true,
+      "height_m": 0.6680641017381204,
+      "upright_cos": 0.9605950806062247,
+      "all_23_targets": true,
+      "terminated": false,
+      "truncated": false
+    },
+    {
+      "step": 6,
+      "reward": 3.928129414361944,
+      "finite": true,
+      "height_m": 0.6578513845562484,
+      "upright_cos": 0.973952466914407,
+      "all_23_targets": true,
+      "terminated": false,
+      "truncated": false
+    },
+    {
+      "step": 7,
+      "reward": 4.0770612006361375,
+      "finite": true,
+      "height_m": 0.6508017188687968,
+      "upright_cos": 0.984612573666736,
+      "all_23_targets": true,
+      "terminated": false,
+      "truncated": false
+    },
+    {
+      "step": 8,
+      "reward": 4.005043497344396,
+      "finite": true,
+      "height_m": 0.6448527490531007,
+      "upright_cos": 0.9891958690284514,
+      "all_23_targets": true,
+      "terminated": false,
+      "truncated": false
+    }
+  ],
+  "fsm": {
+    "first": "request_get_up",
+    "duplicate": "wait",
+    "falling": "safe_stop",
+    "request_count": 1
+  },
+  "quality_passed": true
+}

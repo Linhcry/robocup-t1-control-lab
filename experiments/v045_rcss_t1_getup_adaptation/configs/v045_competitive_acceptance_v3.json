@@ -1,0 +1,74 @@
+{
+  "schema_version": "v045_getup_acceptance_v3",
+  "skill": "exact_rcss_t1_23dof_getup_and_forward_locomotion_handoff",
+  "formal_evaluation_backend": "rcssservermj_mujoco_3_5",
+  "evaluation_is_fail_closed": true,
+  "initial_pose_contract": {
+    "placement": "lowest robot collision geometry is 0.005 m above the pitch",
+    "joint_positions": "HOME_QPOS plus seeded +/-0.035 rad jitter, then mechanically clamped",
+    "root_and_joint_velocity": "zero",
+    "uncontrolled_drop": false,
+    "policy_takeover": "immediate after mj_forward"
+  },
+  "required_splits": {
+    "fixed_validation": {
+      "seed_start": 450100,
+      "episodes_per_pose": 20
+    },
+    "held_out_test": {
+      "seed_start": 10450100,
+      "episodes_per_pose": 100,
+      "requires_passing_fixed_proof": true
+    }
+  },
+  "required_initial_poses": [
+    "prone",
+    "supine",
+    "left_side",
+    "right_side"
+  ],
+  "success_definition": {
+    "settle_s": 0.0,
+    "recovery_timeout_s": 8.0,
+    "torso_height_m_min": 0.6,
+    "upright_score_min": 0.9,
+    "root_speed_mps_max": 0.45,
+    "both_feet_in_contact": true,
+    "continuous_standing_s": 3.0,
+    "then_walk_s": 5.0,
+    "forward_walk_distance_m_min": 1.0
+  },
+  "safety_thresholds": {
+    "unsafe_contact_force_n": 900.0,
+    "command_target_joint_limit_tolerance_rad": 1e-06,
+    "physical_joint_constraint_excursion_tolerance_rad": 0.3,
+    "torque_limit_tolerance_nm": 0.001
+  },
+  "physical_constraint_calibration": {
+    "path": "../metrics/v045_passive_hold_reset_limit_probe_run_02.json",
+    "sha256": "d988aba518d866240e259cdd0989d6a3776389ae5f2045885164d1dc3f7f9c12",
+    "schema_version": "v045_passive_hold_limit_probe_v1",
+    "episodes": 80,
+    "passive_hold_violation_rate_at_old_0_0001_rad_tolerance": 1.0,
+    "maximum_passive_excursion_rad": 0.2801375389099121,
+    "formal_excursion_envelope_rad": 0.3
+  },
+  "quality_gates": {
+    "episode_completion_rate_min": 1.0,
+    "overall_recovery_rate_min": 0.97,
+    "per_pose_recovery_rate_min": 0.95,
+    "post_recovery_walk_rate_min": 0.95,
+    "overall_success_rate_min": 0.95,
+    "per_pose_success_rate_min": 0.9,
+    "fall_rate_max": 0.0,
+    "command_target_joint_limit_violation_rate_max": 0.0,
+    "physical_joint_constraint_excursion_rate_max": 0.0,
+    "nonfinite_state_or_action_rate_max": 0.0,
+    "unsafe_any_body_contact_rate_max": 0.0,
+    "unsafe_head_contact_rate_max": 0.0,
+    "unsafe_hand_or_torso_contact_rate_max": 0.01,
+    "actual_torque_over_limit_rate_max": 0.0,
+    "mean_torque_saturation_fraction_max": 0.02
+  },
+  "promotion_rule": "The exact checkpoint must first pass the complete fixed split and then the disjoint held-out split. Command targets must never leave the strict RCSS rule/model intersection; physical qpos excursion is separately bounded by the immutable exact-RCSS passive-hold calibration. Missing poses, skipped walking, incomplete evidence, or proof mismatches fail closed."
+}

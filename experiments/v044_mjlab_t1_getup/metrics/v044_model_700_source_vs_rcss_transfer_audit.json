@@ -1,0 +1,53 @@
+{
+  "schema_version": "v044_source_target_transfer_audit_v1",
+  "checkpoint": {
+    "path": "<LOCAL>/model_700.pt",
+    "sha256": "05473d2d72e8744b7bdaa0c38a5f23bceb17eb5a76f0ebc7d297657e134799e2",
+    "iteration": 700
+  },
+  "source_domain_probe": {
+    "backend": "Mjlab-Getup-Flat-Booster-T1 play configuration",
+    "seed": 44700,
+    "fall_probability": 1.0,
+    "environments": 16,
+    "steps": 299,
+    "episode_duration_s": 5.98,
+    "stood_up_once": 16,
+    "stood_up_once_rate": 1.0,
+    "note": "This source metric does not require sustained standing or a locomotion handoff."
+  },
+  "target_domain_probe": {
+    "backend": "RCSSServerMJ MuJoCo 3.5",
+    "evidence": "v044_model_700_fixed_validation_run_01.json",
+    "episodes_per_pose": 1,
+    "poses": [
+      "prone",
+      "supine",
+      "left_side",
+      "right_side"
+    ],
+    "recovered": 0,
+    "episodes": 4,
+    "recovery_rate": 0.0,
+    "joint_limit_violation_rate": 1.0,
+    "unsafe_head_contact_rate": 0.25,
+    "unsafe_hand_or_torso_contact_rate": 1.0,
+    "mean_torque_saturation_fraction": 0.5561413043478247
+  },
+  "geometry_audit": {
+    "source_robot_geoms": 49,
+    "rcss_robot_geoms_before_jersey_insertion": 36,
+    "rcss_robot_geoms_in_match_model": 38,
+    "same_collision_geometry": false,
+    "important_differences": [
+      "torso",
+      "head",
+      "forearms_and_hands",
+      "shins",
+      "feet"
+    ]
+  },
+  "transfer_passed": false,
+  "quality_passed": false,
+  "conclusion": "The official source policy works in its own model but does not transfer to the competition collision model. Continue with v045 exact-RCSS adaptation; do not deploy v044."
+}

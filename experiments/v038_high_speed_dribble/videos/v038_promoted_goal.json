@@ -1,0 +1,68 @@
+{
+  "model": "/mnt/d/机器人足球/training_runs/rcss_t1_training_20260706/experiments/v038_high_speed_dribble/checkpoints/v038_stage_00_iter_0002.zip",
+  "promotion_metrics": "<LOCAL>/v038_stage_00_iter_0002_held_out_test.json",
+  "promotion_split": "held_out_test",
+  "promotion_quality_passed": true,
+  "stage_index": 0,
+  "checkpoint_iteration": 2,
+  "seed": 38016,
+  "episode_reward": 377.99382043362004,
+  "video_fps": 5,
+  "frame_size": [
+    640,
+    480
+  ],
+  "video": "<LOCAL>/v038_promoted_goal.mp4",
+  "scored": true,
+  "official_goal": true,
+  "contacted_ball": true,
+  "fell": false,
+  "episode_steps": 233,
+  "episode_seconds": 23.3,
+  "initial_ball_distance_m": 1.1754047634599192,
+  "minimum_ball_distance_m": 0.1146048306314199,
+  "ball_forward_m": 7.2502522685497155,
+  "ball_lateral_m": 1.4404779402765,
+  "maximum_ball_speed_mps": 1.586758918166776,
+  "minimum_robot_height_m": 0.6240848747877751,
+  "minimum_robot_upright": 0.9946578879822481,
+  "left_team_score": 1,
+  "all_23_targets_sent": true,
+  "stage_name": "0.60m/s指令的短距离高速控球",
+  "initial_goal_distance_m": 7.262738159470307,
+  "remaining_goal_distance_m": 0.9842079361269623,
+  "goal_distance_progress_m": 6.278530223343345,
+  "post_contact_steps": 202,
+  "controlled_possession_steps": 152,
+  "controlled_possession_ratio": 0.7524752475247525,
+  "maximum_distance_after_contact_m": 1.1253822871776054,
+  "lost_possession": false,
+  "max_vx_mps": 0.6,
+  "gait_frequency_hz": 1.0,
+  "target_controlled_speed_mps": 0.24,
+  "mean_controlled_robot_speed_mps": 0.3668602800170421,
+  "maximum_controlled_robot_speed_mps": 0.6900834058143852,
+  "mean_commanded_forward_speed_mps": 0.39798306062185035,
+  "controlled_speed_sample_count": 152,
+  "sideline_guard_steps": 0,
+  "sideline_guard_phase_steps": {
+    "behind_inside": 0,
+    "behind_outside": 0,
+    "push_inward": 0
+  },
+  "teacher_action": [
+    0.7081308364868164,
+    0.47650083899497986,
+    0.5842856168746948
+  ],
+  "residual_action": [
+    -0.001908552716486156,
+    0.00970570370554924,
+    0.011900423094630241
+  ],
+  "executed_action": [
+    0.707787275314331,
+    0.4798978269100189,
+    0.5896407961845398
+  ]
+}

@@ -1,0 +1,3435 @@
+{
+  "version": "v040_pass_receive",
+  "policy": "zero residual geometric teacher",
+  "summary": {
+    "episode_count": 10,
+    "success_count": 0,
+    "success_rate": 0.0,
+    "fall_rate": 0.0,
+    "finite_state_rate": 1.0,
+    "all_23_targets_sent_rate": 1.0,
+    "mean_episode_reward": 22.386647689683354,
+    "transfer_rate": 1.0,
+    "passer_touch_rate": 1.0,
+    "receiver_touch_rate": 1.0,
+    "upper_body_contact_rate": 0.0,
+    "mean_ball_travel_m": 0.8271769517156482
+  },
+  "gate_checks": {
+    "success_rate": false,
+    "fall_rate": true,
+    "upper_body_contact_rate": true,
+    "finite_state": true,
+    "all_23_targets": true
+  },
+  "quality_passed": false,
+  "episodes": [
+    {
+      "success": false,
+      "failed": false,
+      "passer_touched": true,
+      "receiver_touched": true,
+      "contact_transfer": true,
+      "ball_travel_m": 1.0627159622723634,
+      "ball_lateral_error_m": 1.068693357905872,
+      "receiver_control_seconds": 3.2,
+      "episode_steps": 180,
+      "minimum_upright": 0.9863020585663467,
+      "minimum_height_m": 0.617826767342272,
+      "fell": false,
+      "finite_state": true,
+      "all_23_targets_sent": true,
+      "ball_events_event_count": 24,
+      "ball_events_transfer_count": 3,
+      "ball_events_upper_body_contact_count": 0,
+      "ball_events_last_distinct_toucher": {
+        "team_id": 0,
+        "player_no": 2
+      },
+      "ball_events_events": [
+        {
+          "kind": "touch",
+          "sim_time_s": 5.839999999999898,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": [
+            "r-0-1-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 5.899999999999896,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "transfer",
+          "sim_time_s": 11.080000000000332,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-2-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 11.100000000000335,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 11.840000000000451,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "body_parts": [
+            "r-0-2-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 11.880000000000457,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "transfer",
+          "sim_time_s": 11.980000000000473,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "body_parts": [
+            "r-0-1-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.02000000000048,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 12.100000000000492,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.180000000000504,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 12.34000000000053,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-left_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.400000000000539,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 12.54000000000056,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.580000000000567,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 12.760000000000595,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.780000000000598,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 12.880000000000614,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.940000000000623,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.100000000000648,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-left_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.160000000000657,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 15.900000000001086,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 15.940000000001092,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "transfer",
+          "sim_time_s": 16.020000000001097,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-2-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 16.06000000000109,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": null,
+          "body_parts": []
+        }
+      ],
+      "teacher_action": [
+        0.5056294202804565,
+        -1.0,
+        -1.0,
+        0.31972065567970276,
+        -0.06099206209182739,
+        -0.15598976612091064
+      ],
+      "residual_action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "executed_action": [
+        0.5056294202804565,
+        -1.0,
+        -1.0,
+        0.31972065567970276,
+        -0.06099206209182739,
+        -0.15598976612091064
+      ],
+      "seed": 40010,
+      "episode_reward": 25.164295741278025
+    },
+    {
+      "success": false,
+      "failed": false,
+      "passer_touched": true,
+      "receiver_touched": true,
+      "contact_transfer": true,
+      "ball_travel_m": 0.9412143375468687,
+      "ball_lateral_error_m": 1.1625512950830137,
+      "receiver_control_seconds": 0.0,
+      "episode_steps": 180,
+      "minimum_upright": 0.9879269197662712,
+      "minimum_height_m": 0.6114358513673075,
+      "fell": false,
+      "finite_state": true,
+      "all_23_targets_sent": true,
+      "ball_events_event_count": 20,
+      "ball_events_transfer_count": 4,
+      "ball_events_upper_body_contact_count": 0,
+      "ball_events_last_distinct_toucher": {
+        "team_id": 0,
+        "player_no": 1
+      },
+      "ball_events_events": [
+        {
+          "kind": "touch",
+          "sim_time_s": 5.839999999999898,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": [
+            "r-0-1-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 5.899999999999896,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "transfer",
+          "sim_time_s": 11.90000000000046,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-2-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 11.980000000000473,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "transfer",
+          "sim_time_s": 12.22000000000051,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "body_parts": [
+            "r-0-1-left_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.260000000000517,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 12.720000000000589,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.760000000000595,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.080000000000645,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-left_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.120000000000651,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.460000000000704,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.50000000000071,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.580000000000723,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.62000000000073,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "transfer",
+          "sim_time_s": 13.700000000000742,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-2-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.760000000000751,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 17.000000000000902,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "body_parts": [
+            "r-0-2-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 17.06000000000089,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "transfer",
+          "sim_time_s": 19.08000000000049,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "body_parts": [
+            "r-0-1-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 19.100000000000485,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        }
+      ],
+      "teacher_action": [
+        0.08557181805372238,
+        0.5044724345207214,
+        1.0,
+        0.4057804346084595,
+        -0.10448954254388809,
+        -0.20997074246406555
+      ],
+      "residual_action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "executed_action": [
+        0.08557181805372238,
+        0.5044724345207214,
+        1.0,
+        0.4057804346084595,
+        -0.10448954254388809,
+        -0.20997074246406555
+      ],
+      "seed": 40011,
+      "episode_reward": 23.469682860499688
+    },
+    {
+      "success": false,
+      "failed": false,
+      "passer_touched": true,
+      "receiver_touched": true,
+      "contact_transfer": true,
+      "ball_travel_m": 1.0281351584190244,
+      "ball_lateral_error_m": 1.0913342390525904,
+      "receiver_control_seconds": 4.2,
+      "episode_steps": 180,
+      "minimum_upright": 0.990287787393723,
+      "minimum_height_m": 0.6168643196066844,
+      "fell": false,
+      "finite_state": true,
+      "all_23_targets_sent": true,
+      "ball_events_event_count": 30,
+      "ball_events_transfer_count": 3,
+      "ball_events_upper_body_contact_count": 0,
+      "ball_events_last_distinct_toucher": {
+        "team_id": 0,
+        "player_no": 2
+      },
+      "ball_events_events": [
+        {
+          "kind": "touch",
+          "sim_time_s": 5.839999999999898,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": [
+            "r-0-1-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 5.899999999999896,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "transfer",
+          "sim_time_s": 11.980000000000473,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-2-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.040000000000482,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "transfer",
+          "sim_time_s": 12.180000000000504,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "body_parts": [
+            "r-0-1-left_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.22000000000051,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 12.520000000000557,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.560000000000564,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 12.620000000000573,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.66000000000058,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 12.900000000000617,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.000000000000632,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.020000000000636,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-left_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.060000000000642,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.100000000000648,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.140000000000654,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.280000000000676,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-left_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.30000000000068,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.340000000000686,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.380000000000692,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.580000000000723,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.62000000000073,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.780000000000754,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.82000000000076,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.920000000000776,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.960000000000782,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 14.060000000000798,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-left_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 14.100000000000804,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "transfer",
+          "sim_time_s": 15.040000000000951,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-2-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 15.080000000000958,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": null,
+          "body_parts": []
+        }
+      ],
+      "teacher_action": [
+        0.0,
+        -1.0,
+        -1.0,
+        0.2830202281475067,
+        -0.08990635722875595,
+        -0.2581985294818878
+      ],
+      "residual_action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "executed_action": [
+        0.0,
+        -1.0,
+        -1.0,
+        0.2830202281475067,
+        -0.08990635722875595,
+        -0.2581985294818878
+      ],
+      "seed": 40012,
+      "episode_reward": 24.203042956741683
+    },
+    {
+      "success": false,
+      "failed": false,
+      "passer_touched": true,
+      "receiver_touched": true,
+      "contact_transfer": true,
+      "ball_travel_m": 0.9557140131276638,
+      "ball_lateral_error_m": 1.1160563742600178,
+      "receiver_control_seconds": 2.2,
+      "episode_steps": 180,
+      "minimum_upright": 0.988925533536656,
+      "minimum_height_m": 0.6178157735943512,
+      "fell": false,
+      "finite_state": true,
+      "all_23_targets_sent": true,
+      "ball_events_event_count": 24,
+      "ball_events_transfer_count": 3,
+      "ball_events_upper_body_contact_count": 0,
+      "ball_events_last_distinct_toucher": {
+        "team_id": 0,
+        "player_no": 2
+      },
+      "ball_events_events": [
+        {
+          "kind": "touch",
+          "sim_time_s": 5.839999999999898,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": [
+            "r-0-1-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 5.899999999999896,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "transfer",
+          "sim_time_s": 11.940000000000467,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-2-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.000000000000476,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "transfer",
+          "sim_time_s": 12.180000000000504,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "body_parts": [
+            "r-0-1-left_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.22000000000051,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 12.620000000000573,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.680000000000582,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 12.780000000000598,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.820000000000604,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.040000000000639,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-left_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.080000000000645,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.420000000000698,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.460000000000704,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.520000000000714,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.56000000000072,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.600000000000726,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.640000000000732,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.94000000000078,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-left_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.980000000000786,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "transfer",
+          "sim_time_s": 17.040000000000894,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-2-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 17.080000000000886,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 19.08000000000049,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "body_parts": [
+            "r-0-2-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 19.100000000000485,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": null,
+          "body_parts": []
+        }
+      ],
+      "teacher_action": [
+        0.041765958070755005,
+        -1.0,
+        -1.0,
+        0.2644096612930298,
+        -0.06696008890867233,
+        -0.20653986930847168
+      ],
+      "residual_action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "executed_action": [
+        0.041765958070755005,
+        -1.0,
+        -1.0,
+        0.2644096612930298,
+        -0.06696008890867233,
+        -0.20653986930847168
+      ],
+      "seed": 40013,
+      "episode_reward": 23.601589451396944
+    },
+    {
+      "success": false,
+      "failed": false,
+      "passer_touched": true,
+      "receiver_touched": true,
+      "contact_transfer": true,
+      "ball_travel_m": 1.0836175235644077,
+      "ball_lateral_error_m": 1.2453143902866461,
+      "receiver_control_seconds": 3.2,
+      "episode_steps": 180,
+      "minimum_upright": 0.9925580421499307,
+      "minimum_height_m": 0.617581494957343,
+      "fell": false,
+      "finite_state": true,
+      "all_23_targets_sent": true,
+      "ball_events_event_count": 16,
+      "ball_events_transfer_count": 5,
+      "ball_events_upper_body_contact_count": 0,
+      "ball_events_last_distinct_toucher": {
+        "team_id": 0,
+        "player_no": 2
+      },
+      "ball_events_events": [
+        {
+          "kind": "touch",
+          "sim_time_s": 5.839999999999898,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": [
+            "r-0-1-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 5.899999999999896,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 12.34000000000053,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-left_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.380000000000535,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 12.420000000000542,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.460000000000548,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "transfer",
+          "sim_time_s": 12.940000000000623,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-2-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.98000000000063,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "transfer",
+          "sim_time_s": 13.140000000000654,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "body_parts": [
+            "r-0-1-left_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.200000000000664,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "transfer",
+          "sim_time_s": 13.380000000000692,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-2-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.480000000000707,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "transfer",
+          "sim_time_s": 13.780000000000754,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "body_parts": [
+            "r-0-1-right_calf",
+            "r-0-1-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.840000000000764,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "transfer",
+          "sim_time_s": 16.040000000001093,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-2-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 16.080000000001085,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": null,
+          "body_parts": []
+        }
+      ],
+      "teacher_action": [
+        0.5503284931182861,
+        -1.0,
+        -1.0,
+        0.3051784634590149,
+        -0.07235172390937805,
+        -0.193500354886055
+      ],
+      "residual_action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "executed_action": [
+        0.5503284931182861,
+        -1.0,
+        -1.0,
+        0.3051784634590149,
+        -0.07235172390937805,
+        -0.193500354886055
+      ],
+      "seed": 40014,
+      "episode_reward": 24.18258972771708
+    },
+    {
+      "success": false,
+      "failed": false,
+      "passer_touched": true,
+      "receiver_touched": true,
+      "contact_transfer": true,
+      "ball_travel_m": 0.7465425471258085,
+      "ball_lateral_error_m": 1.1767498033321782,
+      "receiver_control_seconds": 4.2,
+      "episode_steps": 180,
+      "minimum_upright": 0.9864503554595303,
+      "minimum_height_m": 0.6147699837523642,
+      "fell": false,
+      "finite_state": true,
+      "all_23_targets_sent": true,
+      "ball_events_event_count": 32,
+      "ball_events_transfer_count": 3,
+      "ball_events_upper_body_contact_count": 0,
+      "ball_events_last_distinct_toucher": {
+        "team_id": 0,
+        "player_no": 2
+      },
+      "ball_events_events": [
+        {
+          "kind": "touch",
+          "sim_time_s": 5.839999999999898,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": [
+            "r-0-1-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 5.899999999999896,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "transfer",
+          "sim_time_s": 11.800000000000445,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-2-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 11.860000000000454,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "transfer",
+          "sim_time_s": 11.980000000000473,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "body_parts": [
+            "r-0-1-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.000000000000476,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 12.100000000000492,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-left_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.240000000000514,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 12.380000000000535,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-left_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.400000000000539,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 12.680000000000582,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.720000000000589,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 12.740000000000592,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.780000000000598,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 12.98000000000063,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-left_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.040000000000639,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.220000000000667,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.260000000000673,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.380000000000692,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.420000000000698,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.480000000000707,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.520000000000714,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.540000000000717,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.580000000000723,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.62000000000073,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.660000000000736,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.920000000000776,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.960000000000782,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 14.020000000000792,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-left_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 14.060000000000798,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "transfer",
+          "sim_time_s": 15.040000000000951,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-2-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 15.080000000000958,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": null,
+          "body_parts": []
+        }
+      ],
+      "teacher_action": [
+        0.3433701992034912,
+        0.680558443069458,
+        1.0,
+        0.3614930510520935,
+        -0.18946345150470734,
+        -0.4193389415740967
+      ],
+      "residual_action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "executed_action": [
+        0.3433701992034912,
+        0.680558443069458,
+        1.0,
+        0.3614930510520935,
+        -0.18946345150470734,
+        -0.4193389415740967
+      ],
+      "seed": 40015,
+      "episode_reward": 21.91423698622563
+    },
+    {
+      "success": false,
+      "failed": false,
+      "passer_touched": true,
+      "receiver_touched": true,
+      "contact_transfer": true,
+      "ball_travel_m": -0.11515473395137299,
+      "ball_lateral_error_m": 1.0331936297158697,
+      "receiver_control_seconds": 0.8,
+      "episode_steps": 180,
+      "minimum_upright": 0.9923763702168028,
+      "minimum_height_m": 0.6186935505420696,
+      "fell": false,
+      "finite_state": true,
+      "all_23_targets_sent": true,
+      "ball_events_event_count": 24,
+      "ball_events_transfer_count": 3,
+      "ball_events_upper_body_contact_count": 0,
+      "ball_events_last_distinct_toucher": {
+        "team_id": 0,
+        "player_no": 2
+      },
+      "ball_events_events": [
+        {
+          "kind": "touch",
+          "sim_time_s": 5.839999999999898,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": [
+            "r-0-1-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 5.899999999999896,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "transfer",
+          "sim_time_s": 12.060000000000485,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-2-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.100000000000492,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "transfer",
+          "sim_time_s": 12.320000000000526,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "body_parts": [
+            "r-0-1-left_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.400000000000539,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 12.620000000000573,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.66000000000058,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 12.840000000000607,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.880000000000614,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 12.98000000000063,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-left_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.020000000000636,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.120000000000651,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.160000000000657,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.30000000000068,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-left_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.420000000000698,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.62000000000073,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.660000000000736,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.780000000000754,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf",
+            "r-0-1-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.82000000000076,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 14.020000000000792,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-left_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 14.120000000000807,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "transfer",
+          "sim_time_s": 18.42000000000062,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-2-left_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 18.480000000000608,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": null,
+          "body_parts": []
+        }
+      ],
+      "teacher_action": [
+        0.0,
+        1.0,
+        1.0,
+        0.3113945424556732,
+        0.029249992221593857,
+        0.07700823992490768
+      ],
+      "residual_action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "executed_action": [
+        0.0,
+        1.0,
+        1.0,
+        0.3113945424556732,
+        0.029249992221593857,
+        0.07700823992490768
+      ],
+      "seed": 40016,
+      "episode_reward": 15.034295513144018
+    },
+    {
+      "success": false,
+      "failed": false,
+      "passer_touched": true,
+      "receiver_touched": true,
+      "contact_transfer": true,
+      "ball_travel_m": -0.26007329062956597,
+      "ball_lateral_error_m": 0.05405845820530153,
+      "receiver_control_seconds": 0.8,
+      "episode_steps": 180,
+      "minimum_upright": 0.9902248991615907,
+      "minimum_height_m": 0.6185884116939714,
+      "fell": false,
+      "finite_state": true,
+      "all_23_targets_sent": true,
+      "ball_events_event_count": 30,
+      "ball_events_transfer_count": 3,
+      "ball_events_upper_body_contact_count": 0,
+      "ball_events_last_distinct_toucher": {
+        "team_id": 0,
+        "player_no": 2
+      },
+      "ball_events_events": [
+        {
+          "kind": "touch",
+          "sim_time_s": 5.839999999999898,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": [
+            "r-0-1-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 5.899999999999896,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "transfer",
+          "sim_time_s": 12.000000000000476,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-2-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.040000000000482,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "transfer",
+          "sim_time_s": 12.180000000000504,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "body_parts": [
+            "r-0-1-left_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.22000000000051,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 12.500000000000554,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.54000000000056,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 12.640000000000576,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.680000000000582,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 12.800000000000601,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.840000000000607,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 12.960000000000626,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-left_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.000000000000632,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.020000000000636,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.220000000000667,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.260000000000673,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-left_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.320000000000682,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.380000000000692,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-left_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.420000000000698,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.640000000000732,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.680000000000739,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.780000000000754,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.82000000000076,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.840000000000764,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.900000000000773,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 14.240000000000826,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-left_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 14.300000000000836,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "transfer",
+          "sim_time_s": 18.460000000000612,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-2-left_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 18.500000000000604,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": null,
+          "body_parts": []
+        }
+      ],
+      "teacher_action": [
+        0.0,
+        1.0,
+        1.0,
+        0.45436814427375793,
+        0.31937381625175476,
+        0.5517905354499817
+      ],
+      "residual_action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "executed_action": [
+        0.0,
+        1.0,
+        1.0,
+        0.45436814427375793,
+        0.31937381625175476,
+        0.5517905354499817
+      ],
+      "seed": 40017,
+      "episode_reward": 13.763906744732665
+    },
+    {
+      "success": false,
+      "failed": false,
+      "passer_touched": true,
+      "receiver_touched": true,
+      "contact_transfer": true,
+      "ball_travel_m": 1.5177417308946235,
+      "ball_lateral_error_m": 1.2390960390608716,
+      "receiver_control_seconds": 0.0,
+      "episode_steps": 180,
+      "minimum_upright": 0.9887914742939844,
+      "minimum_height_m": 0.6184529092404963,
+      "fell": false,
+      "finite_state": true,
+      "all_23_targets_sent": true,
+      "ball_events_event_count": 20,
+      "ball_events_transfer_count": 2,
+      "ball_events_upper_body_contact_count": 0,
+      "ball_events_last_distinct_toucher": {
+        "team_id": 0,
+        "player_no": 1
+      },
+      "ball_events_events": [
+        {
+          "kind": "touch",
+          "sim_time_s": 5.839999999999898,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": [
+            "r-0-1-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 5.899999999999896,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "transfer",
+          "sim_time_s": 11.920000000000464,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-2-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 11.980000000000473,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "transfer",
+          "sim_time_s": 12.22000000000051,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "body_parts": [
+            "r-0-1-left_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.260000000000517,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 12.720000000000589,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.760000000000595,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 12.780000000000598,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.820000000000604,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.080000000000645,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-left_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.120000000000651,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.480000000000707,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.520000000000714,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.600000000000726,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.640000000000732,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 17.040000000000894,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 17.080000000000886,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 18.98000000000051,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 19.040000000000497,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        }
+      ],
+      "teacher_action": [
+        0.0,
+        0.0,
+        0.0,
+        0.3667307496070862,
+        -0.4183675944805145,
+        -0.8409135341644287
+      ],
+      "residual_action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "executed_action": [
+        0.0,
+        0.0,
+        0.0,
+        0.3667307496070862,
+        -0.4183675944805145,
+        -0.8409135341644287
+      ],
+      "seed": 40018,
+      "episode_reward": 27.95747582682751
+    },
+    {
+      "success": false,
+      "failed": false,
+      "passer_touched": true,
+      "receiver_touched": true,
+      "contact_transfer": true,
+      "ball_travel_m": 1.3113162687866602,
+      "ball_lateral_error_m": 1.0855280677694141,
+      "receiver_control_seconds": 5.2,
+      "episode_steps": 180,
+      "minimum_upright": 0.9924278315925722,
+      "minimum_height_m": 0.6152818634630917,
+      "fell": false,
+      "finite_state": true,
+      "all_23_targets_sent": true,
+      "ball_events_event_count": 14,
+      "ball_events_transfer_count": 1,
+      "ball_events_upper_body_contact_count": 0,
+      "ball_events_last_distinct_toucher": {
+        "team_id": 0,
+        "player_no": 2
+      },
+      "ball_events_events": [
+        {
+          "kind": "touch",
+          "sim_time_s": 5.839999999999898,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": [
+            "r-0-1-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 5.899999999999896,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 12.66000000000058,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.700000000000585,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 12.800000000000601,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.820000000000604,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 12.880000000000614,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 12.940000000000623,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 13.080000000000645,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-1-left_calf"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 13.120000000000651,
+          "actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "transfer",
+          "sim_time_s": 14.080000000000801,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 1
+          },
+          "body_parts": [
+            "r-0-2-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 14.100000000000804,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": null,
+          "body_parts": []
+        },
+        {
+          "kind": "touch",
+          "sim_time_s": 14.420000000000854,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "body_parts": [
+            "r-0-2-right_foot"
+          ]
+        },
+        {
+          "kind": "release",
+          "sim_time_s": 14.52000000000087,
+          "actor": {
+            "team_id": 0,
+            "player_no": 2
+          },
+          "previous_actor": null,
+          "body_parts": []
+        }
+      ],
+      "teacher_action": [
+        0.7629210352897644,
+        -1.0,
+        -1.0,
+        0.29529842734336853,
+        -0.07970158755779266,
+        -0.21994705498218536
+      ],
+      "residual_action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "executed_action": [
+        0.7629210352897644,
+        -1.0,
+        -1.0,
+        0.29529842734336853,
+        -0.07970158755779266,
+        -0.21994705498218536
+      ],
+      "seed": 40019,
+      "episode_reward": 24.575361088270327
+    }
+  ]
+}

@@ -1,0 +1,601 @@
+{
+  "schema_version": "v045_target_model_semantic_audit_v10",
+  "audit_completed": true,
+  "sources": {
+    "v045_task": {
+      "path": "<LOCAL>/rcss_mjlab_task.py",
+      "sha256": "78221a69bdb6492489f4619a4c85dc120eed11eaace7db91b3af1e3388bfc629"
+    },
+    "v045_training_safety_terms": {
+      "path": "<LOCAL>/safety_mdp.py",
+      "sha256": "80487f6b148f8066a7350be7f091c532f220a08764ccc07b2af6da50d5cf15c0"
+    },
+    "v045_training_reset_terms": {
+      "path": "<LOCAL>/reset_mdp.py",
+      "sha256": "dd82a74c9f9ef61592e063565fa1851e33cd95f169c66ec9f02471cc12d8ed0e"
+    },
+    "v045_training_safe_action": {
+      "path": "<LOCAL>/safe_actions.py",
+      "sha256": "7b4ca90520842f218a463de28138c8df9bd63626398ec9cc6092cf073e99c6c8"
+    },
+    "v045_training_profiles": {
+      "path": "<LOCAL>/training_profiles.py",
+      "sha256": "98c1b7522090450764c5f095fbf2d7bfe9665c6c5655216d24d0beda3f7e56aa"
+    },
+    "v045_physics_substep_watchdog": {
+      "path": "<LOCAL>/stability_watchdog.py",
+      "sha256": "4d940d4e77711f09dbc6f48c90f5cb7f81e7accd93b37c0bdaa886bbb1324fde"
+    },
+    "v045_reset_height_calibration": {
+      "path": "<LOCAL>/v045_reset_height_calibration_run_01.json",
+      "sha256": "f89012eeb325068d6c387b868bc040cb36c88a649d23c66b3d508bf11eb5c55d",
+      "schema_version": "v045_reset_height_calibration_v1"
+    },
+    "v045_passive_soft_joint_constraint_probe": {
+      "path": "<LOCAL>/v045_passive_hold_reset_limit_probe_run_02.json",
+      "sha256": "d988aba518d866240e259cdd0989d6a3776389ae5f2045885164d1dc3f7f9c12",
+      "schema_version": "v045_passive_hold_limit_probe_v1"
+    },
+    "source_action_semantics_audit": {
+      "path": "<LOCAL>/v045_source_action_semantics_audit_run_01.json",
+      "sha256": "d5137b68a58f8f2e75507dfcb6f440a35edfdd22ff0a099850d4dbe049f66eda"
+    },
+    "rcss_getup_deployment_controller": {
+      "path": "<LOCAL>/rcss_getup_controller.py",
+      "sha256": "abf44be14765cf6de3b664964f27998859896d0d1123ad1e36db329350feecac"
+    },
+    "v045_actuator_contract": {
+      "path": "<LOCAL>/actuator_contract.py",
+      "sha256": "87eb7788f2216368acf8a17e85de3cd9ce1af7a161a3da4cabb7dc305a500a87"
+    },
+    "rcss_getup_deployment_policy": {
+      "path": "<LOCAL>/mjlab_getup_policy.py",
+      "sha256": "22f9f82da7c62316cb16fe7a0d69d010700d15073a2fea18c46fe8c7ba335700"
+    },
+    "canonical_t1_control_contract": {
+      "path": "<LOCAL>/t1_spec.py",
+      "sha256": "ba3c5e6748af025ecf35a437d3172d9146f754a66864633c104f014d9bf02356"
+    },
+    "rcss_robot_xml": {
+      "path": "<LOCAL>/robot.xml",
+      "sha256": "b81087d7d04ecfa1064ee5392cc632fc69b4d7de644b3a5318b0c5e12276d083",
+      "mujoco_version": "3.11.0"
+    },
+    "rcss_match_mjb": {
+      "path": "/mnt/d/机器人足球/training_runs/rcss_t1_training_20260706/records/full_rcss_t1_23dof_20260820.mjb",
+      "sha256": "9a2ee0daa48248c6fa9b71460e8059d199489a6e0d03eb793a7b9cba9bd5965a",
+      "mujoco_version": "3.5.0",
+      "reader_python": "<LOCAL>/python"
+    }
+  },
+  "counts": {
+    "source_xml": {
+      "bodies": 24,
+      "geoms": 36,
+      "hinge_joints": 23,
+      "actuators": 69
+    },
+    "v045_compiled_entity": {
+      "bodies": 24,
+      "geoms": 36,
+      "hinge_joints": 23,
+      "actuators": 23
+    },
+    "rcss_match_robot": {
+      "bodies": 24,
+      "geoms_including_jersey": 38,
+      "base_geoms": 36,
+      "jersey_geoms": 2,
+      "hinge_joints": 23,
+      "actuators": 69
+    }
+  },
+  "joint_order": {
+    "canonical": [
+      "Head_yaw",
+      "Head_pitch",
+      "Left_Shoulder_Pitch",
+      "Left_Shoulder_Roll",
+      "Left_Elbow_Pitch",
+      "Left_Elbow_Yaw",
+      "Right_Shoulder_Pitch",
+      "Right_Shoulder_Roll",
+      "Right_Elbow_Pitch",
+      "Right_Elbow_Yaw",
+      "Waist",
+      "Left_Hip_Pitch",
+      "Left_Hip_Roll",
+      "Left_Hip_Yaw",
+      "Left_Knee_Pitch",
+      "Left_Ankle_Pitch",
+      "Left_Ankle_Roll",
+      "Right_Hip_Pitch",
+      "Right_Hip_Roll",
+      "Right_Hip_Yaw",
+      "Right_Knee_Pitch",
+      "Right_Ankle_Pitch",
+      "Right_Ankle_Roll"
+    ],
+    "source_xml": [
+      "Head_yaw",
+      "Head_pitch",
+      "Left_Shoulder_Pitch",
+      "Left_Shoulder_Roll",
+      "Left_Elbow_Pitch",
+      "Left_Elbow_Yaw",
+      "Right_Shoulder_Pitch",
+      "Right_Shoulder_Roll",
+      "Right_Elbow_Pitch",
+      "Right_Elbow_Yaw",
+      "Waist",
+      "Left_Hip_Pitch",
+      "Left_Hip_Roll",
+      "Left_Hip_Yaw",
+      "Left_Knee_Pitch",
+      "Left_Ankle_Pitch",
+      "Left_Ankle_Roll",
+      "Right_Hip_Pitch",
+      "Right_Hip_Roll",
+      "Right_Hip_Yaw",
+      "Right_Knee_Pitch",
+      "Right_Ankle_Pitch",
+      "Right_Ankle_Roll"
+    ],
+    "v045": [
+      "Head_yaw",
+      "Head_pitch",
+      "Left_Shoulder_Pitch",
+      "Left_Shoulder_Roll",
+      "Left_Elbow_Pitch",
+      "Left_Elbow_Yaw",
+      "Right_Shoulder_Pitch",
+      "Right_Shoulder_Roll",
+      "Right_Elbow_Pitch",
+      "Right_Elbow_Yaw",
+      "Waist",
+      "Left_Hip_Pitch",
+      "Left_Hip_Roll",
+      "Left_Hip_Yaw",
+      "Left_Knee_Pitch",
+      "Left_Ankle_Pitch",
+      "Left_Ankle_Roll",
+      "Right_Hip_Pitch",
+      "Right_Hip_Roll",
+      "Right_Hip_Yaw",
+      "Right_Knee_Pitch",
+      "Right_Ankle_Pitch",
+      "Right_Ankle_Roll"
+    ],
+    "rcss_mjb": [
+      "Head_yaw",
+      "Head_pitch",
+      "Left_Shoulder_Pitch",
+      "Left_Shoulder_Roll",
+      "Left_Elbow_Pitch",
+      "Left_Elbow_Yaw",
+      "Right_Shoulder_Pitch",
+      "Right_Shoulder_Roll",
+      "Right_Elbow_Pitch",
+      "Right_Elbow_Yaw",
+      "Waist",
+      "Left_Hip_Pitch",
+      "Left_Hip_Roll",
+      "Left_Hip_Yaw",
+      "Left_Knee_Pitch",
+      "Left_Ankle_Pitch",
+      "Left_Ankle_Roll",
+      "Right_Hip_Pitch",
+      "Right_Hip_Roll",
+      "Right_Hip_Yaw",
+      "Right_Knee_Pitch",
+      "Right_Ankle_Pitch",
+      "Right_Ankle_Roll"
+    ],
+    "v045_policy_action_targets": [
+      "Head_yaw",
+      "Head_pitch",
+      "Left_Shoulder_Pitch",
+      "Left_Shoulder_Roll",
+      "Left_Elbow_Pitch",
+      "Left_Elbow_Yaw",
+      "Right_Shoulder_Pitch",
+      "Right_Shoulder_Roll",
+      "Right_Elbow_Pitch",
+      "Right_Elbow_Yaw",
+      "Waist",
+      "Left_Hip_Pitch",
+      "Left_Hip_Roll",
+      "Left_Hip_Yaw",
+      "Left_Knee_Pitch",
+      "Left_Ankle_Pitch",
+      "Left_Ankle_Roll",
+      "Right_Hip_Pitch",
+      "Right_Hip_Roll",
+      "Right_Hip_Yaw",
+      "Right_Knee_Pitch",
+      "Right_Ankle_Pitch",
+      "Right_Ankle_Roll"
+    ],
+    "v045_compiled_actuator_internal_order": [
+      "Head_yaw",
+      "Head_pitch",
+      "Left_Shoulder_Pitch",
+      "Right_Shoulder_Pitch",
+      "Left_Shoulder_Roll",
+      "Right_Shoulder_Roll",
+      "Left_Elbow_Pitch",
+      "Right_Elbow_Pitch",
+      "Left_Elbow_Yaw",
+      "Right_Elbow_Yaw",
+      "Waist",
+      "Left_Hip_Pitch",
+      "Right_Hip_Pitch",
+      "Left_Hip_Roll",
+      "Right_Hip_Roll",
+      "Left_Hip_Yaw",
+      "Right_Hip_Yaw",
+      "Left_Knee_Pitch",
+      "Right_Knee_Pitch",
+      "Left_Ankle_Pitch",
+      "Right_Ankle_Pitch",
+      "Left_Ankle_Roll",
+      "Right_Ankle_Roll"
+    ],
+    "internal_order_note": "MJLab stores grouped actuator objects internally, while the action manager intentionally exposes the natural 23-joint order."
+  },
+  "maximum_limit_delta_rad": {
+    "source_xml_vs_v045": 0.0,
+    "source_xml_vs_rcss_mjb": 0.0,
+    "v045_vs_canonical_contract": 0.006125631332397408
+  },
+  "robot_mass_kg": {
+    "source_xml": 31.614357,
+    "v045": 31.614357,
+    "rcss_mjb": 31.614357
+  },
+  "actuator_semantics": {
+    "source_xml_and_rcss_mjb": "69 raw control ports: torque, position and velocity for each of 23 canonical joints.",
+    "v045": "23 one-to-one joint position servos implementing kp*(target-q)-kd*qvel, with configured force limits and the unchanged RCSS joint-level actuator-force caps.",
+    "effective_joint_torque_caps": {
+      "Head_yaw": 7.0,
+      "Head_pitch": 7.0,
+      "Left_Shoulder_Pitch": 18.0,
+      "Left_Shoulder_Roll": 18.0,
+      "Left_Elbow_Pitch": 18.0,
+      "Left_Elbow_Yaw": 18.0,
+      "Right_Shoulder_Pitch": 18.0,
+      "Right_Shoulder_Roll": 18.0,
+      "Right_Elbow_Pitch": 18.0,
+      "Right_Elbow_Yaw": 18.0,
+      "Waist": 30.0,
+      "Left_Hip_Pitch": 45.0,
+      "Left_Hip_Roll": 30.0,
+      "Left_Hip_Yaw": 30.0,
+      "Left_Knee_Pitch": 60.0,
+      "Left_Ankle_Pitch": 20.0,
+      "Left_Ankle_Roll": 15.0,
+      "Right_Hip_Pitch": 45.0,
+      "Right_Hip_Roll": 30.0,
+      "Right_Hip_Yaw": 30.0,
+      "Right_Knee_Pitch": 60.0,
+      "Right_Ankle_Pitch": 20.0,
+      "Right_Ankle_Roll": 15.0
+    },
+    "position_servo_requested_caps": {
+      "Head_yaw": 7.0,
+      "Head_pitch": 7.0,
+      "Left_Shoulder_Pitch": 18.0,
+      "Right_Shoulder_Pitch": 18.0,
+      "Left_Shoulder_Roll": 18.0,
+      "Right_Shoulder_Roll": 18.0,
+      "Left_Elbow_Pitch": 18.0,
+      "Right_Elbow_Pitch": 18.0,
+      "Left_Elbow_Yaw": 18.0,
+      "Right_Elbow_Yaw": 18.0,
+      "Waist": 30.0,
+      "Left_Hip_Pitch": 45.0,
+      "Right_Hip_Pitch": 45.0,
+      "Left_Hip_Roll": 30.0,
+      "Right_Hip_Roll": 30.0,
+      "Left_Hip_Yaw": 30.0,
+      "Right_Hip_Yaw": 30.0,
+      "Left_Knee_Pitch": 60.0,
+      "Right_Knee_Pitch": 60.0,
+      "Left_Ankle_Pitch": 20.0,
+      "Right_Ankle_Pitch": 20.0,
+      "Left_Ankle_Roll": 15.0,
+      "Right_Ankle_Roll": 15.0
+    },
+    "rcss_joint_mechanical_caps": {
+      "Head_yaw": 7.0,
+      "Head_pitch": 7.0,
+      "Left_Shoulder_Pitch": 18.0,
+      "Left_Shoulder_Roll": 18.0,
+      "Left_Elbow_Pitch": 18.0,
+      "Left_Elbow_Yaw": 18.0,
+      "Right_Shoulder_Pitch": 18.0,
+      "Right_Shoulder_Roll": 18.0,
+      "Right_Elbow_Pitch": 18.0,
+      "Right_Elbow_Yaw": 18.0,
+      "Waist": 30.0,
+      "Left_Hip_Pitch": 45.0,
+      "Left_Hip_Roll": 30.0,
+      "Left_Hip_Yaw": 30.0,
+      "Left_Knee_Pitch": 60.0,
+      "Left_Ankle_Pitch": 20.0,
+      "Left_Ankle_Roll": 15.0,
+      "Right_Hip_Pitch": 45.0,
+      "Right_Hip_Roll": 30.0,
+      "Right_Hip_Yaw": 30.0,
+      "Right_Knee_Pitch": 60.0,
+      "Right_Ankle_Pitch": 20.0,
+      "Right_Ankle_Roll": 15.0
+    },
+    "deployment_clip_caps": {
+      "Head_yaw": 7.0,
+      "Head_pitch": 7.0,
+      "Left_Shoulder_Pitch": 18.0,
+      "Left_Shoulder_Roll": 18.0,
+      "Left_Elbow_Pitch": 18.0,
+      "Left_Elbow_Yaw": 18.0,
+      "Right_Shoulder_Pitch": 18.0,
+      "Right_Shoulder_Roll": 18.0,
+      "Right_Elbow_Pitch": 18.0,
+      "Right_Elbow_Yaw": 18.0,
+      "Waist": 30.0,
+      "Left_Hip_Pitch": 45.0,
+      "Left_Hip_Roll": 30.0,
+      "Left_Hip_Yaw": 30.0,
+      "Left_Knee_Pitch": 60.0,
+      "Left_Ankle_Pitch": 20.0,
+      "Left_Ankle_Roll": 15.0,
+      "Right_Hip_Pitch": 45.0,
+      "Right_Hip_Roll": 30.0,
+      "Right_Hip_Yaw": 30.0,
+      "Right_Knee_Pitch": 60.0,
+      "Right_Ankle_Pitch": 20.0,
+      "Right_Ankle_Roll": 15.0
+    },
+    "training_and_deployment_kp": {
+      "Head_yaw": 5.0,
+      "Head_pitch": 5.0,
+      "Left_Shoulder_Pitch": 40.0,
+      "Left_Shoulder_Roll": 50.0,
+      "Left_Elbow_Pitch": 20.0,
+      "Left_Elbow_Yaw": 10.0,
+      "Right_Shoulder_Pitch": 40.0,
+      "Right_Shoulder_Roll": 50.0,
+      "Right_Elbow_Pitch": 20.0,
+      "Right_Elbow_Yaw": 10.0,
+      "Waist": 100.0,
+      "Left_Hip_Pitch": 350.0,
+      "Left_Hip_Roll": 350.0,
+      "Left_Hip_Yaw": 180.0,
+      "Left_Knee_Pitch": 350.0,
+      "Left_Ankle_Pitch": 450.0,
+      "Left_Ankle_Roll": 450.0,
+      "Right_Hip_Pitch": 350.0,
+      "Right_Hip_Roll": 350.0,
+      "Right_Hip_Yaw": 180.0,
+      "Right_Knee_Pitch": 350.0,
+      "Right_Ankle_Pitch": 450.0,
+      "Right_Ankle_Roll": 450.0
+    },
+    "training_and_deployment_kd": {
+      "Head_yaw": 0.10000000149011612,
+      "Head_pitch": 0.10000000149011612,
+      "Left_Shoulder_Pitch": 0.5,
+      "Left_Shoulder_Roll": 1.5,
+      "Left_Elbow_Pitch": 0.20000000298023224,
+      "Left_Elbow_Yaw": 0.20000000298023224,
+      "Right_Shoulder_Pitch": 0.5,
+      "Right_Shoulder_Roll": 1.5,
+      "Right_Elbow_Pitch": 0.20000000298023224,
+      "Right_Elbow_Yaw": 0.20000000298023224,
+      "Waist": 5.0,
+      "Left_Hip_Pitch": 7.5,
+      "Left_Hip_Roll": 7.5,
+      "Left_Hip_Yaw": 3.0,
+      "Left_Knee_Pitch": 5.5,
+      "Left_Ankle_Pitch": 0.5,
+      "Left_Ankle_Roll": 0.5,
+      "Right_Hip_Pitch": 7.5,
+      "Right_Hip_Roll": 7.5,
+      "Right_Hip_Yaw": 3.0,
+      "Right_Knee_Pitch": 5.5,
+      "Right_Ankle_Pitch": 0.5,
+      "Right_Ankle_Roll": 0.5
+    },
+    "raw_dynamics_identical": false,
+    "effective_pd_torque_semantics_audited": true
+  },
+  "training_safety_shaping": {
+    "ground_contact_sensors": [
+      "self_collision",
+      "head_ground_contact",
+      "hand_ground_contact",
+      "torso_ground_contact",
+      "left_foot_ground_contact",
+      "right_foot_ground_contact"
+    ],
+    "unsafe_ground_impact_reward_weight": -2.0,
+    "unsafe_ground_impact_force_limit_n": 900.0,
+    "torque_saturation_reward_weight": -0.05,
+    "torque_saturation_fraction": 0.98,
+    "formal_stable_stand_reward_weight": 5.0,
+    "formal_stable_stand_thresholds": {
+      "desired_height_m": 0.6,
+      "upright_score_min": 0.9,
+      "root_speed_mps_max": 0.45
+    }
+  },
+  "training_reset_contract": {
+    "pose_order": [
+      "prone",
+      "supine",
+      "left_side",
+      "right_side"
+    ],
+    "root_heights_m": [
+      0.237,
+      0.135,
+      0.295,
+      0.297
+    ],
+    "parameters": {
+      "fall_probability": 1.0,
+      "orientation_jitter_rad": 0.04,
+      "joint_jitter_rad": 0.035
+    },
+    "uncontrolled_high_drop": false,
+    "initial_velocity": "zero",
+    "policy_takeover": "immediate",
+    "actor_and_critic_nan_policy": "per_term_error",
+    "official_source_raw_actor_clip": null,
+    "training_raw_actor_clip": null,
+    "deployment_raw_actor_clip": null,
+    "relative_action_scale_rad": 0.6,
+    "maximum_target_delta_per_50hz_step_rad": 0.06,
+    "target_limit_margin_rad": 0.08,
+    "velocity_brake_lookahead_s": 0.025,
+    "final_target_clamp": "intersection of RCSS rule/model limits with dynamic safety margin",
+    "target_is_computed_once_per_50hz_policy_step_and_held_for_four_substeps": true,
+    "training_profile": {
+      "schema_version": "v045_training_profile_v1",
+      "selected": {
+        "solver": "rcss_mjb",
+        "base_com": "off",
+        "reset": "rcss_eval_v2"
+      },
+      "actual": {
+        "solver": {
+          "timestep": 0.005,
+          "integrator": "euler",
+          "impratio": 1,
+          "cone": "pyramidal",
+          "jacobian": "auto",
+          "solver": "newton",
+          "iterations": 100,
+          "tolerance": 1e-08,
+          "ls_iterations": 50,
+          "ls_tolerance": 0.01,
+          "ccd_iterations": 35
+        },
+        "base_com": null,
+        "reset": {
+          "fall_probability": 1.0,
+          "orientation_jitter_rad": 0.04,
+          "joint_jitter_rad": 0.035
+        },
+        "reset_root_heights_m": [
+          0.237,
+          0.135,
+          0.295,
+          0.297
+        ],
+        "reset_height_calibration": {
+          "path": "<LOCAL>/v045_reset_height_calibration_run_01.json",
+          "sha256": "f89012eeb325068d6c387b868bc040cb36c88a649d23c66b3d508bf11eb5c55d",
+          "schema_version": "v045_reset_height_calibration_v1",
+          "seed": 45110,
+          "samples_per_pose": 5000,
+          "selected_root_heights_m": [
+            0.237,
+            0.135,
+            0.295,
+            0.297
+          ],
+          "all_sampled_resets_clear_at_selected_heights": true
+        },
+        "tilt_height_calibration": null,
+        "dense_tilt_height_calibration": null,
+        "passive_soft_joint_constraint_probe": {
+          "path": "<LOCAL>/v045_passive_hold_reset_limit_probe_run_02.json",
+          "sha256": "d988aba518d866240e259cdd0989d6a3776389ae5f2045885164d1dc3f7f9c12",
+          "schema_version": "v045_passive_hold_limit_probe_v1",
+          "episode_count": 80,
+          "violation_rate_at_0_0001_rad": 1.0,
+          "maximum_joint_limit_violation_rad": 0.2801375389099121,
+          "watchdog_warning_envelope_rad": 0.3,
+          "watchdog_abort_envelope_rad": 0.4
+        },
+        "reset_pose_order": [
+          "prone",
+          "supine",
+          "left_side",
+          "right_side"
+        ],
+        "minimum_clearance_m": 0.005,
+        "decimation": 4,
+        "physics_dt_s": 0.005,
+        "policy_dt_s": 0.02,
+        "reward_weights": {
+          "raw_action_l2": 0.0,
+          "processed_delta_l2": 0.0,
+          "normalized_joint_velocity_l2": 0.0,
+          "torque_saturation": -0.05
+        }
+      },
+      "formal_component_requirements": {
+        "solver": "rcss_mjb",
+        "reset": "rcss_eval_v2",
+        "base_com": "must be selected by immutable controlled-A/B proof"
+      },
+      "formal_components_match": true
+    }
+  },
+  "source_action_semantics": {
+    "checkpoint": {
+      "path": "<LOCAL>/model_800.pt",
+      "sha256": "5ffe68a7f0e4668db3285bf76dbc8e763081b70e97e8a5a9938640c0e18112ff"
+    },
+    "official_runner_clip_actions": null,
+    "observed_raw_actions": {
+      "maximum_absolute_component": 7.838164806365967,
+      "mean_absolute_component": 0.4905332628682514,
+      "components_above_absolute_one": 17715,
+      "fraction_above_absolute_one": 0.16099861858368475,
+      "mean_squared_change_if_clipped_to_one": 0.2795258834122267
+    }
+  },
+  "checks": {
+    "source_xml_has_23_hinge_joints": true,
+    "v045_has_23_hinge_joints": true,
+    "rcss_mjb_has_23_hinge_joints": true,
+    "source_xml_joint_order_matches_canonical": true,
+    "v045_joint_order_matches_canonical": true,
+    "rcss_mjb_joint_order_matches_canonical": true,
+    "source_v045_mjb_joint_limits_match": true,
+    "joint_limits_within_0_007_rad_of_canonical_contract": true,
+    "source_v045_mjb_joint_passive_dynamics_match": true,
+    "source_v045_mjb_robot_body_count_is_24": true,
+    "source_v045_mjb_body_mass_and_inertia_match": true,
+    "source_and_v045_geom_count_is_36": true,
+    "rcss_mjb_has_36_base_geoms_plus_two_jersey_geoms": true,
+    "source_v045_mjb_base_geom_semantics_match": true,
+    "source_xml_has_canonical_tau_pos_vel_triplets": true,
+    "rcss_mjb_has_canonical_tau_pos_vel_triplets": true,
+    "v045_has_one_position_servo_per_canonical_joint": true,
+    "v045_policy_action_order_matches_canonical": true,
+    "v045_effective_joint_torque_caps_match_rcss": true,
+    "v045_position_servos_cover_rcss_mechanical_caps": true,
+    "v045_training_and_deployment_effective_caps_match": true,
+    "v045_training_and_deployment_getup_gains_match": true,
+    "v045_training_observes_head_hand_and_torso_ground_impacts": true,
+    "v045_training_penalizes_contract_impacts_and_torque_saturation": true,
+    "v045_training_rewards_formal_stable_standing": true,
+    "v045_reset_uses_exact_four_pose_family": true,
+    "v045_reset_heights_are_bound_to_exact_rcss_calibration": true,
+    "v045_training_uses_exact_rcss_solver_profile": true,
+    "v045_default_target_com_is_not_randomized": true,
+    "v045_watchdog_is_true_substep_and_fail_closed": true,
+    "v045_reset_has_immediate_policy_takeover": true,
+    "v045_raw_action_semantics_match_official_source_and_deployment": true,
+    "v045_training_and_deployment_share_dynamic_target_safety": true,
+    "v045_observations_fail_on_exact_nonfinite_term": true
+  },
+  "target_model_semantics_passed": true,
+  "deployment_ready": false,
+  "quality_passed": false,
+  "conclusion": "Target-model semantics passed. Recovery training and independent RCSS behavioral evaluation are still required."
+}

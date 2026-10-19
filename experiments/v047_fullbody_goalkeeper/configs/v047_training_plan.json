@@ -1,0 +1,42 @@
+{
+  "schema_version": "v047_fullbody_goalkeeper_training_plan_v1",
+  "algorithm": "asymmetric actor-critic PPO",
+  "parallel_environments": 4096,
+  "policy_steps_per_update": 32,
+  "maximum_iterations": 5000,
+  "optimizer": "Adam",
+  "learning_rate": 0.0003,
+  "gamma": 0.995,
+  "gae_lambda": 0.95,
+  "clip_parameter": 0.2,
+  "entropy_coefficient": 0.01,
+  "learning_epochs": 5,
+  "mini_batches": 8,
+  "actor_hidden_layers": [
+    512,
+    256,
+    128
+  ],
+  "critic_hidden_layers": [
+    512,
+    256,
+    128
+  ],
+  "activation": "ELU",
+  "logger": "tensorboard",
+  "required_sequence": [
+    "canonical_23dof_audit",
+    "v047_target_and_contract_audit",
+    "8_step_cpu_smoke",
+    "gpu_parallel_probe_without_promotion",
+    "stage_0_training_and_fixed_gate",
+    "stage_1_training_and_fixed_gate",
+    "stage_2_training_and_fixed_gate",
+    "stage_3_training",
+    "120_episode_fixed_validation",
+    "360_episode_held_out_grid",
+    "stress_tests_and_video_grid"
+  ],
+  "promotion_rule": "every prior item must have immutable passing evidence; partial stage scores never imply complete goalkeeper quality",
+  "quality_passed": false
+}

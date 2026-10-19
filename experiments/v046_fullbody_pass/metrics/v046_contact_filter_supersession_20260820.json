@@ -1,0 +1,19 @@
+{
+  "schema_version": "v046_evidence_supersession_v1",
+  "created_utc": "2026-08-20T07:38:30Z",
+  "superseded_evidence": [
+    "v046_model_semantic_audit_run_01.json",
+    "v046_cpu_dynamics_smoke_run_01.json",
+    "v046_cpu_ppo_smoke_run_01.json"
+  ],
+  "reason": "The first upper-body filter used only named collision geoms and could miss unnamed shoulder and upper-arm collision geoms in the RCSS XML.",
+  "replacement": {
+    "implementation": "upper-body contact now matches 12 complete upper-body MuJoCo bodies, including torso, waist, head, shoulders, arms and hands",
+    "semantic_audit": "v046_model_semantic_audit_run_02.json",
+    "dynamics_smoke": "v046_cpu_dynamics_smoke_run_02.json",
+    "ppo_smoke": "v046_cpu_ppo_smoke_run_02.json"
+  },
+  "old_evidence_may_promote": false,
+  "new_evidence_may_promote": false,
+  "quality_passed": false
+}

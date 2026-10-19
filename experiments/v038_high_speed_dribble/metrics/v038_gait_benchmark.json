@@ -1,0 +1,65 @@
+{
+  "version": "v038_high_speed_dribble",
+  "definition": "strict running requires at least 2% sampled flight phase with neither foot touching pitch",
+  "sim_dt_s": 0.02,
+  "prepare_seconds": 2.0,
+  "duration_seconds": 8.0,
+  "results": [
+    {
+      "requested_speed_mps": 0.45,
+      "mean_body_forward_speed_mps": 0.407667695991726,
+      "distance_m": 3.0491424068325106,
+      "flight_fraction": 0.0,
+      "double_support_fraction": 0.34,
+      "left_only_fraction": 0.32,
+      "right_only_fraction": 0.34,
+      "strict_gait_class": "walking_or_fast_walking",
+      "fell": false,
+      "minimum_height_m": 0.6237740255030012,
+      "minimum_upright": 0.9967120003558456,
+      "all_23_targets_sent": true
+    },
+    {
+      "requested_speed_mps": 0.6,
+      "mean_body_forward_speed_mps": 0.5114798948141444,
+      "distance_m": 3.797366282739374,
+      "flight_fraction": 0.0,
+      "double_support_fraction": 0.3433333333333333,
+      "left_only_fraction": 0.32,
+      "right_only_fraction": 0.33666666666666667,
+      "strict_gait_class": "walking_or_fast_walking",
+      "fell": false,
+      "minimum_height_m": 0.616475457906303,
+      "minimum_upright": 0.9964775129829735,
+      "all_23_targets_sent": true
+    },
+    {
+      "requested_speed_mps": 0.8,
+      "mean_body_forward_speed_mps": 0.6306138633483794,
+      "distance_m": 4.6324882718147995,
+      "flight_fraction": 0.0,
+      "double_support_fraction": 0.33666666666666667,
+      "left_only_fraction": 0.34,
+      "right_only_fraction": 0.3233333333333333,
+      "strict_gait_class": "walking_or_fast_walking",
+      "fell": false,
+      "minimum_height_m": 0.6074014737916821,
+      "minimum_upright": 0.9962686142010162,
+      "all_23_targets_sent": true
+    },
+    {
+      "requested_speed_mps": 1.0,
+      "mean_body_forward_speed_mps": 0.7357440720249516,
+      "distance_m": 5.3495871069176415,
+      "flight_fraction": 0.0,
+      "double_support_fraction": 0.34,
+      "left_only_fraction": 0.34,
+      "right_only_fraction": 0.32,
+      "strict_gait_class": "walking_or_fast_walking",
+      "fell": false,
+      "minimum_height_m": 0.5936071101267774,
+      "minimum_upright": 0.9958385001863764,
+      "all_23_targets_sent": true
+    }
+  ]
+}

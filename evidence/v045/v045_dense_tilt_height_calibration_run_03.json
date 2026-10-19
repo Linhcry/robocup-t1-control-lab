@@ -1,0 +1,267 @@
+{
+  "schema_version": "v045_dense_tilt_height_calibration_v1",
+  "created_utc": "2026-08-24T09:05:37.911069+00:00",
+  "backend": "rcssservermj_mujoco_3_5_exact_collision_geometry",
+  "mujoco_version": "3.5.0",
+  "seed": 46700,
+  "samples_per_pose_level": 2000,
+  "total_samples": 32000,
+  "pose_order": [
+    "prone",
+    "supine",
+    "left_side",
+    "right_side"
+  ],
+  "tilt_degrees": [
+    5,
+    10,
+    12,
+    14
+  ],
+  "domain": {
+    "yaw_rad": [
+      -3.141592653589793,
+      3.141592653589793
+    ],
+    "orientation_jitter_rad": [
+      -0.04,
+      0.04
+    ],
+    "joint_jitter_rad": [
+      -0.035,
+      0.035
+    ],
+    "minimum_clearance_m": 0.005,
+    "additional_sampled_reserve_m": 0.01
+  },
+  "selection_rule": "ceil_to_1mm(sampled_max_required_height + 10mm)",
+  "per_level": {
+    "5": {
+      "tilt_deg": 5,
+      "per_pose": {
+        "prone": {
+          "samples": 2000,
+          "minimum_required_root_height_m": 0.6771046491244822,
+          "mean_required_root_height_m": 0.6858947578566672,
+          "p99_required_root_height_m": 0.6937126772952324,
+          "maximum_required_root_height_m": 0.6953660527143676,
+          "selected_fixed_root_height_m": 0.706,
+          "reserve_over_sampled_max_m": 0.010633947285632384,
+          "sampled_clearance_failures_at_selected_height": 0
+        },
+        "supine": {
+          "samples": 2000,
+          "minimum_required_root_height_m": 0.6672238994502443,
+          "mean_required_root_height_m": 0.6773464789519464,
+          "p99_required_root_height_m": 0.6852931999007817,
+          "maximum_required_root_height_m": 0.6874218571879399,
+          "selected_fixed_root_height_m": 0.698,
+          "reserve_over_sampled_max_m": 0.010578142812060043,
+          "sampled_clearance_failures_at_selected_height": 0
+        },
+        "left_side": {
+          "samples": 2000,
+          "minimum_required_root_height_m": 0.6752023981795174,
+          "mean_required_root_height_m": 0.6850053294057951,
+          "p99_required_root_height_m": 0.6937051452251805,
+          "maximum_required_root_height_m": 0.6961637720627476,
+          "selected_fixed_root_height_m": 0.707,
+          "reserve_over_sampled_max_m": 0.010836227937252363,
+          "sampled_clearance_failures_at_selected_height": 0
+        },
+        "right_side": {
+          "samples": 2000,
+          "minimum_required_root_height_m": 0.6751745188918691,
+          "mean_required_root_height_m": 0.6851530427107468,
+          "p99_required_root_height_m": 0.6936142316879359,
+          "maximum_required_root_height_m": 0.6956599078333786,
+          "selected_fixed_root_height_m": 0.706,
+          "reserve_over_sampled_max_m": 0.01034009216662135,
+          "sampled_clearance_failures_at_selected_height": 0
+        }
+      }
+    },
+    "10": {
+      "tilt_deg": 10,
+      "per_pose": {
+        "prone": {
+          "samples": 2000,
+          "minimum_required_root_height_m": 0.6846508497814008,
+          "mean_required_root_height_m": 0.6920872233605863,
+          "p99_required_root_height_m": 0.6983776946039616,
+          "maximum_required_root_height_m": 0.7003736746310383,
+          "selected_fixed_root_height_m": 0.711,
+          "reserve_over_sampled_max_m": 0.010626325368961687,
+          "sampled_clearance_failures_at_selected_height": 0
+        },
+        "supine": {
+          "samples": 2000,
+          "minimum_required_root_height_m": 0.6658914845679507,
+          "mean_required_root_height_m": 0.674840238446732,
+          "p99_required_root_height_m": 0.6822604485885111,
+          "maximum_required_root_height_m": 0.6842818044607197,
+          "selected_fixed_root_height_m": 0.695,
+          "reserve_over_sampled_max_m": 0.010718195539280218,
+          "sampled_clearance_failures_at_selected_height": 0
+        },
+        "left_side": {
+          "samples": 2000,
+          "minimum_required_root_height_m": 0.6814388865763692,
+          "mean_required_root_height_m": 0.6907682577379223,
+          "p99_required_root_height_m": 0.6988188826359497,
+          "maximum_required_root_height_m": 0.7012539416703722,
+          "selected_fixed_root_height_m": 0.712,
+          "reserve_over_sampled_max_m": 0.010746058329627717,
+          "sampled_clearance_failures_at_selected_height": 0
+        },
+        "right_side": {
+          "samples": 2000,
+          "minimum_required_root_height_m": 0.6823222568754299,
+          "mean_required_root_height_m": 0.6908600437470167,
+          "p99_required_root_height_m": 0.6981609905781864,
+          "maximum_required_root_height_m": 0.7006728737107286,
+          "selected_fixed_root_height_m": 0.711,
+          "reserve_over_sampled_max_m": 0.010327126289271349,
+          "sampled_clearance_failures_at_selected_height": 0
+        }
+      }
+    },
+    "12": {
+      "tilt_deg": 12,
+      "per_pose": {
+        "prone": {
+          "samples": 2000,
+          "minimum_required_root_height_m": 0.6862224359139185,
+          "mean_required_root_height_m": 0.6931797476190195,
+          "p99_required_root_height_m": 0.6991494616805783,
+          "maximum_required_root_height_m": 0.7018635773824826,
+          "selected_fixed_root_height_m": 0.712,
+          "reserve_over_sampled_max_m": 0.010136422617517349,
+          "sampled_clearance_failures_at_selected_height": 0
+        },
+        "supine": {
+          "samples": 2000,
+          "minimum_required_root_height_m": 0.6634010175657856,
+          "mean_required_root_height_m": 0.6725150783201596,
+          "p99_required_root_height_m": 0.6802569273372034,
+          "maximum_required_root_height_m": 0.682869162017279,
+          "selected_fixed_root_height_m": 0.693,
+          "reserve_over_sampled_max_m": 0.010130837982720964,
+          "sampled_clearance_failures_at_selected_height": 0
+        },
+        "left_side": {
+          "samples": 2000,
+          "minimum_required_root_height_m": 0.682768639298071,
+          "mean_required_root_height_m": 0.6918166170648535,
+          "p99_required_root_height_m": 0.6999731500680443,
+          "maximum_required_root_height_m": 0.7017563577518996,
+          "selected_fixed_root_height_m": 0.712,
+          "reserve_over_sampled_max_m": 0.01024364224810037,
+          "sampled_clearance_failures_at_selected_height": 0
+        },
+        "right_side": {
+          "samples": 2000,
+          "minimum_required_root_height_m": 0.681575052887136,
+          "mean_required_root_height_m": 0.6918692165818919,
+          "p99_required_root_height_m": 0.6998361563409736,
+          "maximum_required_root_height_m": 0.7023971105546433,
+          "selected_fixed_root_height_m": 0.713,
+          "reserve_over_sampled_max_m": 0.0106028894453567,
+          "sampled_clearance_failures_at_selected_height": 0
+        }
+      }
+    },
+    "14": {
+      "tilt_deg": 14,
+      "per_pose": {
+        "prone": {
+          "samples": 2000,
+          "minimum_required_root_height_m": 0.6861956860976116,
+          "mean_required_root_height_m": 0.6934279617044017,
+          "p99_required_root_height_m": 0.6992959701059662,
+          "maximum_required_root_height_m": 0.7023731347910588,
+          "selected_fixed_root_height_m": 0.713,
+          "reserve_over_sampled_max_m": 0.010626865208941183,
+          "sampled_clearance_failures_at_selected_height": 0
+        },
+        "supine": {
+          "samples": 2000,
+          "minimum_required_root_height_m": 0.6595640298302905,
+          "mean_required_root_height_m": 0.669228951571927,
+          "p99_required_root_height_m": 0.6773975855064156,
+          "maximum_required_root_height_m": 0.6798360508029823,
+          "selected_fixed_root_height_m": 0.69,
+          "reserve_over_sampled_max_m": 0.010163949197017685,
+          "sampled_clearance_failures_at_selected_height": 0
+        },
+        "left_side": {
+          "samples": 2000,
+          "minimum_required_root_height_m": 0.6825320245386137,
+          "mean_required_root_height_m": 0.6918707377403912,
+          "p99_required_root_height_m": 0.700003189932548,
+          "maximum_required_root_height_m": 0.7038555505308798,
+          "selected_fixed_root_height_m": 0.714,
+          "reserve_over_sampled_max_m": 0.010144449469120187,
+          "sampled_clearance_failures_at_selected_height": 0
+        },
+        "right_side": {
+          "samples": 2000,
+          "minimum_required_root_height_m": 0.681628596710699,
+          "mean_required_root_height_m": 0.6921311577975756,
+          "p99_required_root_height_m": 0.6999812748645741,
+          "maximum_required_root_height_m": 0.7028500643217859,
+          "selected_fixed_root_height_m": 0.713,
+          "reserve_over_sampled_max_m": 0.010149935678214095,
+          "sampled_clearance_failures_at_selected_height": 0
+        }
+      }
+    }
+  },
+  "selected_root_heights_m_by_tilt_deg": {
+    "5": [
+      0.706,
+      0.698,
+      0.707,
+      0.706
+    ],
+    "10": [
+      0.711,
+      0.695,
+      0.712,
+      0.711
+    ],
+    "12": [
+      0.712,
+      0.693,
+      0.712,
+      0.713
+    ],
+    "14": [
+      0.713,
+      0.69,
+      0.714,
+      0.713
+    ]
+  },
+  "all_sampled_resets_clear_at_selected_heights": true,
+  "quality_passed": false,
+  "scope": "Dense engineering curriculum reset proof; not skill evidence.",
+  "calibration_script": {
+    "path": "<LOCAL>/calibrate_v045_dense_tilt_curriculum.py",
+    "sha256": "fa935a7478b1cee6cce4e5063f2d4264a1585d16dfd310add0237364d56c068d"
+  },
+  "dependencies": [
+    {
+      "path": "<LOCAL>/calibrate_v045_fine_tilt_curriculum.py",
+      "sha256": "f103bccd006e8e7e8c3786210857c82145fc159064933f0e7bf741b13fe56018"
+    },
+    {
+      "path": "<LOCAL>/evaluate_v045_rcss.py",
+      "sha256": "b1110e8fa68ca5841632c7e53137d727ce336134a94eac0980274850b9e31564"
+    },
+    {
+      "path": "<LOCAL>/t1_spec.py",
+      "sha256": "ba3c5e6748af025ecf35a437d3172d9146f754a66864633c104f014d9bf02356"
+    }
+  ]
+}

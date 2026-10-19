@@ -1,0 +1,100 @@
+{
+  "version": "v040_pass_receive",
+  "environment": {
+    "prepare_seconds": 1.2,
+    "action_repeat": 5,
+    "episode_seconds": 18.0
+  },
+  "residual_action_scale": [
+    0.12,
+    0.5,
+    0.35,
+    0.12,
+    0.3,
+    0.3
+  ],
+  "quality_gates": {
+    "minimum_ball_travel_m": 1.5,
+    "maximum_lateral_error_m": 0.9,
+    "minimum_receiver_control_seconds": 0.4,
+    "maximum_receiver_control_distance_m": 0.45,
+    "maximum_receiver_control_ball_speed_mps": 1.0,
+    "minimum_success_rate": 0.8,
+    "maximum_fall_rate": 0.0,
+    "maximum_upper_body_contact_rate": 0.0
+  },
+  "curriculum_stages": [
+    {
+      "index": 0,
+      "name": "约1.5米直线行走推球与定点接球",
+      "implemented": true
+    },
+    {
+      "index": 1,
+      "name": "3-6米多角度动力传球",
+      "implemented": false,
+      "blocked_by": "v034动态踢球门槛"
+    },
+    {
+      "index": 2,
+      "name": "6-12米力度控制与移动接球",
+      "implemented": false,
+      "blocked_by": "stage 1"
+    },
+    {
+      "index": 3,
+      "name": "2v1有拦截者的传球选择",
+      "implemented": false,
+      "blocked_by": "stage 2"
+    }
+  ],
+  "evaluation_seeds": [
+    40010,
+    40011,
+    40012,
+    40013,
+    40014,
+    40015,
+    40016,
+    40017,
+    40018,
+    40019
+  ],
+  "held_out_test_seeds": [
+    50010,
+    50011,
+    50012,
+    50013,
+    50014,
+    50015,
+    50016,
+    50017,
+    50018,
+    50019,
+    50020,
+    50021,
+    50022,
+    50023,
+    50024,
+    50025,
+    50026,
+    50027,
+    50028,
+    50029
+  ],
+  "ppo": {
+    "learning_rate": 5e-05,
+    "n_steps": 256,
+    "batch_size": 64,
+    "n_epochs": 5,
+    "gamma": 0.995,
+    "gae_lambda": 0.95,
+    "clip_range": 0.1,
+    "ent_coef": 0.0,
+    "policy_layers": [
+      128,
+      128
+    ],
+    "seed": 40001
+  }
+}

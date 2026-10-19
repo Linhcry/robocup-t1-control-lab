@@ -1,0 +1,38 @@
+{
+  "version": "v041_active_tackle",
+  "smoke_steps": 8,
+  "quality_passed": true,
+  "result": {
+    "success": false,
+    "failed": false,
+    "attacker_touched": false,
+    "defender_touched": false,
+    "turnover": false,
+    "clearance_away_from_own_goal_m": 0.0,
+    "defender_control_seconds": 0.0,
+    "upper_body_contacts": 0,
+    "minimum_upright": 0.9971195401944255,
+    "minimum_height_m": 0.6416634034301737,
+    "fell": false,
+    "episode_steps": 8,
+    "all_23_targets_sent": true,
+    "finite_state": true,
+    "defender_teacher_action": [
+      0.8792675733566284,
+      -0.24455654621124268,
+      -0.22656254470348358
+    ],
+    "residual_action": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "executed_defender_action": [
+      0.8792675733566284,
+      -0.24455654621124268,
+      -0.22656254470348358
+    ],
+    "seed": 41000,
+    "episode_reward": 0.19077930020936973
+  }
+}

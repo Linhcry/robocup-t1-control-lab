@@ -1,0 +1,48 @@
+{
+  "schema_version": "v047_cpu_smoke_8_steps_v1",
+  "seed": 47001,
+  "device": "cpu",
+  "steps_executed": 8,
+  "actor_observation_shape": [
+    1,
+    87
+  ],
+  "critic_observation_shape": [
+    1,
+    107
+  ],
+  "action_dim": 23,
+  "initial_ball_velocity_mps": [
+    -4.26900053024292,
+    0.0,
+    0.0
+  ],
+  "rewards": [
+    0.05953379347920418,
+    0.059515684843063354,
+    0.05938643217086792,
+    0.059443097561597824,
+    0.0594957172870636,
+    0.059511374682188034,
+    0.05950916185975075,
+    0.059509530663490295
+  ],
+  "checks": {
+    "actor_shape_is_1x87": true,
+    "critic_shape_is_1x107": true,
+    "action_dim_is_23": true,
+    "all_eight_steps_executed": true,
+    "all_steps_finite": true,
+    "shot_moves_toward_keeper": true,
+    "curriculum_stage_is_zero": true,
+    "no_nonfinite_state_recorded": true
+  },
+  "smoke_passed": true,
+  "gpu_parallel_probe_completed": false,
+  "training_completed": false,
+  "fixed_validation_completed": false,
+  "held_out_test_completed": false,
+  "deployment_ready": false,
+  "quality_passed": false,
+  "scope_note": "Eight CPU steps prove construction and tensor flow only; they do not train or validate goalkeeper ability."
+}

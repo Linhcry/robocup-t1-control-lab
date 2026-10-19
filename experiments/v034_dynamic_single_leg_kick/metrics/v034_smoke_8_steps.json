@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "steps": 8,
+  "finite_observations": true,
+  "finite_rewards": true,
+  "targets_inside_joint_limits": true,
+  "all_23_targets_sent": true,
+  "final": {
+    "step": 8,
+    "reward": 0.560958689560937,
+    "phase": 0.19999999999999998,
+    "touch_count": 0,
+    "left_touch_count": 0,
+    "contacted_ball": false,
+    "max_ball_speed_mps": 0.039326666220214364,
+    "direction_error_deg": 180.0,
+    "ball_forward_m": 0.0,
+    "ball_lateral_m": 0.0,
+    "min_robot_height_m": 0.659125887385066,
+    "min_robot_upright": 0.9993700269131844,
+    "recovery_time_s": null,
+    "fallen": false,
+    "invalid": false,
+    "success": false,
+    "all_23_targets_sent": true
+  }
+}

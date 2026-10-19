@@ -1,0 +1,105 @@
+{
+  "schema_version": "v046_v045_shape_warmstart_audit_v1",
+  "created_utc": "2026-08-20T08:07:34.317865+00:00",
+  "transform": "v046_v045_shape_warmstart_v1",
+  "source_checkpoint": {
+    "path": "<LOCAL>/model_0.pt",
+    "sha256": "fc4ffc2af2db047a9fec39f06133d755b1cb911e1a4911d1e0b346958928b4b4"
+  },
+  "target_checkpoint": {
+    "path": "<LOCAL>/v046_v045_shape_warmstart_run_01.pt",
+    "sha256": "81efa16cecf91cdf17482fa64d5c307fc4d290cde400a55f55edb003dc05d184"
+  },
+  "cpu_smoke_proof": {
+    "path": "<LOCAL>/v046_cpu_ppo_smoke_run_03.json",
+    "sha256": "042b3a9c2a6f9e5800b8c7d54087bcdd922a559de4372e7ae4b62d2f40d45ea3"
+  },
+  "mapping_contract": {
+    "actor_shared_columns": [
+      0,
+      75
+    ],
+    "actor_new_zero_columns": [
+      75,
+      84
+    ],
+    "critic_shared_columns": [
+      0,
+      75
+    ],
+    "critic_base_lin_source_columns": [
+      75,
+      78
+    ],
+    "critic_base_lin_target_columns": [
+      84,
+      87
+    ],
+    "critic_new_zero_columns": [
+      [
+        75,
+        84
+      ],
+      [
+        87,
+        101
+      ]
+    ],
+    "subsequent_layers_and_action_distribution": "exact_copy",
+    "optimizer_iteration_curriculum": "reset"
+  },
+  "sources": {
+    "__init__.py": "d790ef2e843fe728bff6476a0aef3e97b1c050287a2099b387802a1f2564e1a0",
+    "mdp/__init__.py": "a17c362915e0da57d4a769a98be29d302aca287aa51981311e9c37f3c9168347",
+    "mdp/actions.py": "3e2571e07eb4deb391082042a59865216da42f83d6bd3d2cd534a8daa5345b52",
+    "mdp/commands.py": "085e933d99434a2e7c0bf93c09553457b04d8fb3d2fe87a9e6dd9f8b83f4ed6e",
+    "mdp/observations.py": "d81255e53a0a151b249f6ee07fdd6a4d7c19b9a575cc66ac2d4736f72e302e8e",
+    "mdp/rewards.py": "a05fc0a9c6597eb6e37b3e517357efcfa875901b9709bafa9aa5d047eb3e6b7d",
+    "mdp/terminations.py": "e26a5a60b17906cb28d7d5644707a78e463be19ecbba53636f1da85d404b52fd",
+    "rcss_mjlab_task.py": "26c95900c68192cd33374fbbdfcecc9bd84f4b82d3df507b5b7e0f9dd67eca71",
+    "scripts/audit_v046_model.py": "6b8fe0ef75360d969d27e846eec0c8918d363ea7ce8cf0e3e7785330a1998708",
+    "scripts/audit_v046_warmstart.py": "deb844348ae0ffc368df0963c68636764943d80994e37ee93c4a030afaf13c0c",
+    "scripts/evaluate_v046.py": "7bafd5ba94377430402e057268cb4566f493b62446918c55c044b3d35fd1042e",
+    "scripts/prepare_v046_warmstart.py": "f215d08f881e6d373a508efc8fe186eb49334c8e9b581ee60f03d1c995148b7c",
+    "scripts/smoke_v046.py": "392f6ceed817ea31ab800ca11bf84ff1fa140e9af1c275a083a3cf7a9ad9c6f7",
+    "scripts/train_v046.py": "17e94a7078fb068f58e1d8b98114f1df0c8e3a9f6bce4d65a232db73267cb324",
+    "warmstart.py": "7a39b467f9d473d5147fa746b1445df7231f25ee8f0e99f8a0f049ebb97d01e3"
+  },
+  "source_manifest_sha256": "8a2be2f5828fc54cd7ab044c1d488fe4f209c52a9d64868740c7b5117753b743",
+  "checks": {
+    "target_top_level_keys_exact": true,
+    "target_actor_keys_exact": true,
+    "target_critic_keys_exact": true,
+    "actor_first_layer_shape_512x84": true,
+    "actor_shared_75_columns_exact": true,
+    "actor_new_9_columns_zero": true,
+    "actor_new_normalizer_is_identity": true,
+    "actor_tail_and_distribution_exact": true,
+    "critic_first_layer_shape_512x101": true,
+    "critic_shared_75_columns_exact": true,
+    "critic_base_lin_75_78_mapped_to_84_87": true,
+    "critic_all_new_columns_zero": true,
+    "critic_normalizer_shared_and_base_lin_mapped": true,
+    "critic_new_normalizer_columns_identity": true,
+    "critic_normalizer_count_copied": true,
+    "critic_tail_exact": true,
+    "optimizer_state_reset": true,
+    "iteration_reset_to_zero": true,
+    "curriculum_counter_reset_to_zero": true,
+    "provenance_declares_current_transform": true,
+    "all_target_tensors_finite": true,
+    "cpu_smoke_schema_valid": true,
+    "cpu_strict_checkpoint_load_completed": true,
+    "cpu_one_ppo_update_completed": true,
+    "cpu_smoke_used_audited_warmstart": true,
+    "cpu_post_update_shapes_and_finiteness_passed": true,
+    "cpu_smoke_quality_remained_false": true
+  },
+  "warmstart_semantics_passed": true,
+  "checkpoint_load_test_passed": true,
+  "ppo_update_completed": true,
+  "training_completed": false,
+  "validation_passed": false,
+  "quality_passed": false,
+  "conclusion": "The network mapping is exact and safe to test on CPU; no pass skill is claimed."
+}

@@ -1,0 +1,148 @@
+{
+  "schema_version": "v047_target_contract_audit_v1",
+  "sources": {
+    "rcss_t1_xml": {
+      "path": "<LOCAL>/robot.xml",
+      "sha256": "b81087d7d04ecfa1064ee5392cc632fc69b4d7de644b3a5318b0c5e12276d083"
+    },
+    "v047_task": {
+      "path": "<LOCAL>/rcss_goalkeeper_task.py",
+      "sha256": "d9c7244c5e7cfff272b0d4ea4ed90b2a2ac57924f60f052dad25ea36c445d464"
+    },
+    "v047_mdp": {
+      "path": "<LOCAL>/mdp.py",
+      "sha256": "742700b07033b0b4ea33a852d1ab6fb6f997419d2c1b241c4e1fad37d27fe28e"
+    },
+    "v047_evaluator": {
+      "path": "<LOCAL>/evaluate_v047.py",
+      "sha256": "b240a089ac5f28e8781ae6448e2e2015f7ea2c85c24760849ebccc95e3b5eb5a"
+    },
+    "v047_audit": {
+      "path": "<LOCAL>/audit_v047_task.py",
+      "sha256": "1ae8aed8e9df680cc955bda12ae0b4415598ab8233572c61792bf3121120b7e3"
+    },
+    "v047_warmstart": {
+      "path": "<LOCAL>/warmstart.py",
+      "sha256": "d9d9d37152c113c39943e47087dd563dcbb07185dacfa3160a0fbb6aa9886fe1"
+    },
+    "v047_training_entry": {
+      "path": "<LOCAL>/train_v047.py",
+      "sha256": "27bc5b5912fc80facf118527aa9bc79ec5b0795a4763cc3c130726b153ec8b8f"
+    },
+    "acceptance_contract": {
+      "path": "<LOCAL>/v047_competitive_acceptance.json",
+      "sha256": "ec3b3ce4ca617f8c9e0168461076efb2aa0af95e5facd72349f125295fade131"
+    }
+  },
+  "counts": {
+    "hinge_joints": 23,
+    "policy_actions": 23,
+    "robot_geoms": 36,
+    "contact_sensors": 6,
+    "fixed_seeds": 120,
+    "heldout_seeds": 360
+  },
+  "robot_mass_kg": 31.614357,
+  "joint_order": [
+    "Head_yaw",
+    "Head_pitch",
+    "Left_Shoulder_Pitch",
+    "Left_Shoulder_Roll",
+    "Left_Elbow_Pitch",
+    "Left_Elbow_Yaw",
+    "Right_Shoulder_Pitch",
+    "Right_Shoulder_Roll",
+    "Right_Elbow_Pitch",
+    "Right_Elbow_Yaw",
+    "Waist",
+    "Left_Hip_Pitch",
+    "Left_Hip_Roll",
+    "Left_Hip_Yaw",
+    "Left_Knee_Pitch",
+    "Left_Ankle_Pitch",
+    "Left_Ankle_Roll",
+    "Right_Hip_Pitch",
+    "Right_Hip_Roll",
+    "Right_Hip_Yaw",
+    "Right_Knee_Pitch",
+    "Right_Ankle_Pitch",
+    "Right_Ankle_Roll"
+  ],
+  "action_order": [
+    "Head_yaw",
+    "Head_pitch",
+    "Left_Shoulder_Pitch",
+    "Left_Shoulder_Roll",
+    "Left_Elbow_Pitch",
+    "Left_Elbow_Yaw",
+    "Right_Shoulder_Pitch",
+    "Right_Shoulder_Roll",
+    "Right_Elbow_Pitch",
+    "Right_Elbow_Yaw",
+    "Waist",
+    "Left_Hip_Pitch",
+    "Left_Hip_Roll",
+    "Left_Hip_Yaw",
+    "Left_Knee_Pitch",
+    "Left_Ankle_Pitch",
+    "Left_Ankle_Roll",
+    "Right_Hip_Pitch",
+    "Right_Hip_Roll",
+    "Right_Hip_Yaw",
+    "Right_Knee_Pitch",
+    "Right_Ankle_Pitch",
+    "Right_Ankle_Roll"
+  ],
+  "checks": {
+    "source_rcss_t1_xml_exists": true,
+    "exact_rcss_training_robot_has_23_hinges": true,
+    "training_joint_order_is_canonical": true,
+    "policy_action_order_is_canonical": true,
+    "policy_action_ids_are_0_through_22": true,
+    "training_robot_has_36_exact_rcss_geoms": true,
+    "training_robot_mass_is_exact_rcss": true,
+    "actor_observation_contract_is_87": true,
+    "critic_observation_contract_is_107": true,
+    "action_contract_is_23": true,
+    "v045_shared_actor_term_order_is_exact": true,
+    "v045_shared_actor_joint_velocity_is_not_rescaled": true,
+    "v045_shared_actor_joint_velocity_noise_matches": true,
+    "v045_shared_actor_joint_position_bias_matches": true,
+    "v045_shared_critic_joint_position_is_unbiased": true,
+    "v045_actor_normalization_contract_matches": true,
+    "v045_critic_normalization_contract_matches": true,
+    "v045_action_scale_contract_matches": true,
+    "warmstart_actor_dimension_mapping_is_75_to_87": true,
+    "warmstart_critic_dimension_mapping_is_78_to_107": true,
+    "warmstart_base_lin_mapping_is_75_78_to_87_90": true,
+    "warmstart_transform_version_is_v2": true,
+    "batched_action_uses_canonical_clamper": true,
+    "all_strict_contact_sensors_exist": true,
+    "four_stage_thresholds_match_contract": true,
+    "ball_radius_matches_rcss": true,
+    "ball_mass_matches_rcss": true,
+    "ball_friction_matches_rcss": true,
+    "ball_contact_dimension_matches_rcss": true,
+    "ball_priority_matches_rcss": true,
+    "ball_solref_matches_rcss": true,
+    "full_scene_air_density_matches_rcss": true,
+    "full_scene_air_viscosity_matches_rcss": true,
+    "configured_physics_timestep_is_200hz": true,
+    "policy_decimation_is_4_for_50hz": true,
+    "fixed_seed_count_is_120": true,
+    "heldout_seed_count_is_360": true,
+    "fixed_and_heldout_seeds_are_disjoint": true,
+    "heldout_grid_has_27_cells": true,
+    "heldout_grid_can_allocate_at_least_8_per_cell": true,
+    "contract_initial_quality_is_false": true,
+    "training_plan_initial_quality_is_false": true
+  },
+  "audit_passed": true,
+  "gpu_parallel_probe_completed": false,
+  "long_training_completed": false,
+  "fixed_validation_completed": false,
+  "held_out_test_completed": false,
+  "deployment_ready": false,
+  "quality_passed": false,
+  "conclusion": "Structure and fail-closed contract passed; no trained goalkeeper exists yet."
+}

@@ -1,0 +1,17 @@
+{
+  "version": "v032_rcss_free_walk",
+  "source_policy": "BoosterRobotics/booster_gym deploy/models/T1.pt",
+  "controller": "locomotion/rcss_t1_controller.py",
+  "prepare_seconds": 3.0,
+  "safe_commands": {
+    "forward_vx_mps": 0.45,
+    "lateral_vy_mps": 0.3,
+    "yaw_rate_rps": 0.2
+  },
+  "quality_gate": {
+    "all_23_targets_sent": true,
+    "forward_seconds_without_fall": 8.0,
+    "lateral_seconds_without_fall": 8.0,
+    "turn_seconds_without_fall": 10.0
+  }
+}

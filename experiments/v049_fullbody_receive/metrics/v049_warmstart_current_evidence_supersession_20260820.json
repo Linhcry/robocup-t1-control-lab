@@ -1,0 +1,54 @@
+{
+  "schema_version": "v049_warmstart_current_evidence_supersession_v1",
+  "created_utc": "2026-08-20T08:25:04.6536697Z",
+  "scope": "Current non-promotable engineering evidence for the v045-to-v049 shape-aware warm-start and the source tree it loads into.",
+  "current_evidence": {
+    "warmstart_checkpoint": {
+      "path": "artifacts/v049_v045_warmstart_engineering_run_02.pt",
+      "sha256": "cdba3941e2e659a5af536d7305215a16c1e3399e8ab5e823c439e006d5e6fd4b"
+    },
+    "warmstart_provenance": {
+      "path": "artifacts/v049_v045_warmstart_engineering_run_02.provenance.json",
+      "sha256": "26c6f22d60c94002e2cfe93e762f7bf48ef69c187fb7bd2f7163d27470e8555e"
+    },
+    "one_cpu_ppo_update": {
+      "path": "metrics/v049_warmstart_cpu_ppo_smoke_run_02.json",
+      "sha256": "df2bb144fafa8d134118d7e608c56c6a54118e7c24677254e48f5e8bddb79e37"
+    },
+    "warmstart_semantic_audit": {
+      "path": "metrics/v049_warmstart_semantic_audit_run_01.json",
+      "sha256": "56215275326a680af94cfa6ee9bfbc16608f52b63dfd1bc6a64fc31a297e7838"
+    },
+    "v049_model_semantic_audit": {
+      "path": "metrics/v049_model_semantic_audit_run_04.json",
+      "sha256": "1bfa47150343e6f9bb5528d38fb5e941801cf5c20192805085b11d9e5370f7f0"
+    },
+    "v049_cpu_real_contact_smoke": {
+      "path": "metrics/v049_cpu_dynamics_smoke_run_04.json",
+      "sha256": "5b5b71acc14fb4dfb034f64afccbf21f0767f58aa439a3ede355916674c3b436"
+    },
+    "central_23dof_contract_audit": {
+      "path": "metrics/v049_t1_contract_audit_run_02.json",
+      "sha256": "055105a27d7c100e3e6e38aab2f317d37b227dd16b71d4d49383082ae3fbf6e0"
+    }
+  },
+  "superseded_engineering_evidence": [
+    "artifacts/v049_v045_warmstart_engineering_run_01.pt",
+    "artifacts/v049_v045_warmstart_engineering_run_01.provenance.json",
+    "metrics/v049_warmstart_cpu_ppo_smoke_run_01.json",
+    "metrics/v049_model_semantic_audit_run_01.json",
+    "metrics/v049_model_semantic_audit_run_02.json",
+    "metrics/v049_model_semantic_audit_run_03.json",
+    "metrics/v049_cpu_dynamics_smoke_run_01.json",
+    "metrics/v049_cpu_dynamics_smoke_run_02.json",
+    "metrics/v049_cpu_dynamics_smoke_run_03.json",
+    "metrics/v049_t1_contract_audit_run_01.json"
+  ],
+  "formal_v045_training_product_available": false,
+  "formal_training_allowed": false,
+  "training_completed": false,
+  "fixed_validation_passed": false,
+  "heldout_validation_passed": false,
+  "quality_passed": false,
+  "conclusion": "The listed files are the current engineering-only proof set. Formal v049 warm-start preparation and training remain fail-closed until a completed formal v045 training summary and mutually bound candidate-selection proof exist."
+}

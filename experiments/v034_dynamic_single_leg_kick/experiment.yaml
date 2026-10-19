@@ -1,0 +1,39 @@
+schema_version: 1
+experiment_id: v034_dynamic_single_leg_kick
+status: short_training_gate_failed
+parent_baselines:
+  locomotion: v032_official_t1_walk
+  ball_contact: v033_closed_loop_walk_kick
+runtime:
+  distro: Ubuntu-24.04
+  python: /home/linh/robot_soccer/envs/rl-mujoco/bin/python
+  project: /home/linh/robot_soccer/training_runs/rcss_t1_training_20260706
+robot:
+  model: Booster T1
+  dof: 23
+  joint_contract: locomotion/t1_spec.py
+safety:
+  clamp_targets: true
+  reject_non_finite_actions: true
+  overwrite_history: false
+quality_gates:
+  success_rate: 0.6
+  ball_speed_mps: 1.0
+  direction_error_deg: 20.0
+  fall_rate: 0.2
+  single_touch_rate: 0.8
+  recovery_time_s: 1.2
+training_progress:
+  current_config: configs/v034_residual_ppo_r3.json
+  completed_timesteps: 8192
+  checkpoint_count: 4
+  latest_checkpoint: checkpoints/v034_policy_iter_0004.zip
+  most_stable_diagnostic_checkpoint: checkpoints/v034_policy_iter_0003.zip
+  long_training_started: false
+  blocker: fixed_seed_fall_rate_is_1.0
+  deployment_approved: false
+artifacts:
+  checkpoints: checkpoints
+  logs: logs
+  metrics: metrics
+  videos: videos

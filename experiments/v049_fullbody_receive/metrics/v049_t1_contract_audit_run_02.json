@@ -1,0 +1,20 @@
+{
+  "schema_version": "v049_t1_23dof_contract_audit_v1",
+  "created_utc": "2026-08-20T08:24:02.2056482Z",
+  "runtime": "formal WSL Ubuntu-24.04 with /home/linh/robot_soccer/envs/rl-mujoco",
+  "audit_script": {
+    "path": "scripts/audit_t1_23dof.py",
+    "sha256": "4a6e94df818011e26567e959020eb75ffa74695741eb64b707d48af93eb81a13"
+  },
+  "result": "PASS: T1_23_DOF_CONTRACT",
+  "joint_count": 23,
+  "canonical_order_verified": true,
+  "tau_position_velocity_channels_verified": true,
+  "finite_neutral_control_verified": true,
+  "mechanical_target_clamp_verified": true,
+  "training_completed": false,
+  "fixed_validation_passed": false,
+  "heldout_validation_passed": false,
+  "quality_passed": false,
+  "conclusion": "The central RCSS T1 control contract passed after the current v049 warm-start changes. This does not establish receiving ability."
+}

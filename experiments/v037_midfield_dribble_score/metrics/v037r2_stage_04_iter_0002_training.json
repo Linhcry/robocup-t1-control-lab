@@ -1,0 +1,283 @@
+{
+  "checkpoint": "/mnt/d/机器人足球/training_runs/rcss_t1_training_20260706/experiments/v037_midfield_dribble_score/checkpoints/v037r2_stage_04_iter_0002.zip",
+  "resumed_from": "/mnt/d/机器人足球/training_runs/rcss_t1_training_20260706/experiments/v037_midfield_dribble_score/checkpoints/v037r2_stage_04_iter_0001.zip",
+  "config": "/mnt/d/机器人足球/training_runs/rcss_t1_training_20260706/experiments/v037_midfield_dribble_score/configs/v037_curriculum.json",
+  "chunk_timesteps": 8192,
+  "total_model_timesteps": 32768,
+  "elapsed_seconds": 54.368794679641724,
+  "method": "geometric_dribble_teacher_plus_ppo_residual",
+  "stage": {
+    "index": 4,
+    "name": "中场完整控球射门",
+    "ball_goal_distance_m": [
+      26.0,
+      27.0
+    ],
+    "ball_y_m": [
+      -3.0,
+      3.0
+    ],
+    "player_y_offset_m": [
+      -0.5,
+      0.5
+    ],
+    "player_yaw_rad": [
+      -0.25,
+      0.25
+    ],
+    "episode_seconds": 170.0,
+    "evaluation_seeds": [
+      37410,
+      37411,
+      37412,
+      37413,
+      37414
+    ]
+  },
+  "summary": {
+    "stage_index": 4,
+    "stage_name": "中场完整控球射门",
+    "episodes": 5,
+    "goal_count": 4,
+    "official_goal_count": 4,
+    "success_rate": 0.8,
+    "contact_rate": 1.0,
+    "fall_rate": 0.0,
+    "mean_goal_progress_m": 24.48822553917462,
+    "mean_controlled_possession_ratio": 0.9400777455215635,
+    "lost_possession_rate": 0.0,
+    "mean_episode_seconds": 144.72000000000003,
+    "all_23_targets_sent": true
+  },
+  "gate_results": {
+    "at_least_one_goal": true,
+    "target_success_rate": true,
+    "fall_rate": true,
+    "contact_rate": true,
+    "controlled_possession": true,
+    "finite_and_23dof": true
+  },
+  "quality_passed": true,
+  "episodes": [
+    {
+      "seed": 37410,
+      "episode_reward": 644.3865721995987,
+      "scored": true,
+      "official_goal": true,
+      "contacted_ball": true,
+      "fell": false,
+      "episode_steps": 1373,
+      "episode_seconds": 137.3,
+      "initial_ball_distance_m": 1.1409729446257715,
+      "minimum_ball_distance_m": 0.1277163365833243,
+      "ball_forward_m": 26.232600300980945,
+      "ball_lateral_m": -0.862817917868325,
+      "maximum_ball_speed_mps": 1.6293119753421008,
+      "minimum_robot_height_m": 0.6288556506126585,
+      "minimum_robot_upright": 0.9945376632541955,
+      "left_team_score": 1,
+      "all_23_targets_sent": true,
+      "stage_index": 4,
+      "stage_name": "中场完整控球射门",
+      "initial_goal_distance_m": 26.2340986345223,
+      "remaining_goal_distance_m": 0.04045663781600484,
+      "goal_distance_progress_m": 26.193641996706297,
+      "post_contact_steps": 1339,
+      "controlled_possession_steps": 1254,
+      "controlled_possession_ratio": 0.936519790888723,
+      "maximum_distance_after_contact_m": 1.0866981620265663,
+      "lost_possession": false,
+      "teacher_action": [
+        0.9950544238090515,
+        0.22349534928798676,
+        0.22110076248645782
+      ],
+      "residual_action": [
+        -0.030776670202612877,
+        -0.030297372490167618,
+        -0.034843698143959045
+      ],
+      "executed_action": [
+        0.9873602390289307,
+        0.20986153185367584,
+        0.20019453763961792
+      ]
+    },
+    {
+      "seed": 37411,
+      "episode_reward": 647.1139585702637,
+      "scored": true,
+      "official_goal": true,
+      "contacted_ball": true,
+      "fell": false,
+      "episode_steps": 1195,
+      "episode_seconds": 119.5,
+      "initial_ball_distance_m": 1.3146353884973714,
+      "minimum_ball_distance_m": 0.07692253658802826,
+      "ball_forward_m": 26.25897873652432,
+      "ball_lateral_m": -0.5912690544374961,
+      "maximum_ball_speed_mps": 1.551881015435398,
+      "minimum_robot_height_m": 0.6298905174088149,
+      "minimum_robot_upright": 0.9946075753232766,
+      "left_team_score": 1,
+      "all_23_targets_sent": true,
+      "stage_index": 4,
+      "stage_name": "中场完整控球射门",
+      "initial_goal_distance_m": 26.264843184187413,
+      "remaining_goal_distance_m": 0.11160680303606202,
+      "goal_distance_progress_m": 26.153236381151352,
+      "post_contact_steps": 1156,
+      "controlled_possession_steps": 1051,
+      "controlled_possession_ratio": 0.9091695501730104,
+      "maximum_distance_after_contact_m": 1.145636711199431,
+      "lost_possession": false,
+      "teacher_action": [
+        0.64950031042099,
+        -0.8685510754585266,
+        -1.0
+      ],
+      "residual_action": [
+        -0.01145896501839161,
+        -0.07052957266569138,
+        -0.007285408675670624
+      ],
+      "executed_action": [
+        0.6466355919837952,
+        -0.9002893567085266,
+        -1.0
+      ]
+    },
+    {
+      "seed": 37412,
+      "episode_reward": 226.5178927938558,
+      "scored": false,
+      "official_goal": false,
+      "contacted_ball": true,
+      "fell": false,
+      "episode_steps": 1700,
+      "episode_seconds": 170.0,
+      "initial_ball_distance_m": 1.166390638277627,
+      "minimum_ball_distance_m": 0.017115042016311994,
+      "ball_forward_m": 18.868226443784124,
+      "ball_lateral_m": 6.832425800900353,
+      "maximum_ball_speed_mps": 1.3783595255658954,
+      "minimum_robot_height_m": 0.6302693647772232,
+      "minimum_robot_upright": 0.9947914193989171,
+      "left_team_score": 0,
+      "all_23_targets_sent": true,
+      "stage_index": 4,
+      "stage_name": "中场完整控球射门",
+      "initial_goal_distance_m": 26.414120541125403,
+      "remaining_goal_distance_m": 8.369884158868578,
+      "goal_distance_progress_m": 18.044236382256827,
+      "post_contact_steps": 1668,
+      "controlled_possession_steps": 1608,
+      "controlled_possession_ratio": 0.9640287769784173,
+      "maximum_distance_after_contact_m": 1.0942040653931138,
+      "lost_possession": false,
+      "teacher_action": [
+        0.0,
+        -1.0,
+        -1.0
+      ],
+      "residual_action": [
+        -0.03204242140054703,
+        0.09668494015932083,
+        -0.017650870606303215
+      ],
+      "executed_action": [
+        -0.008010605350136757,
+        -0.9564917683601379,
+        -1.0
+      ]
+    },
+    {
+      "seed": 37413,
+      "episode_reward": 700.626060802588,
+      "scored": true,
+      "official_goal": true,
+      "contacted_ball": true,
+      "fell": false,
+      "episode_steps": 1641,
+      "episode_seconds": 164.10000000000002,
+      "initial_ball_distance_m": 1.1887390714300223,
+      "minimum_ball_distance_m": 0.09271807012642125,
+      "ball_forward_m": 26.716809710318522,
+      "ball_lateral_m": -0.7269331279881914,
+      "maximum_ball_speed_mps": 1.3871671258158025,
+      "minimum_robot_height_m": 0.6289758114714618,
+      "minimum_robot_upright": 0.9944192553491037,
+      "left_team_score": 1,
+      "all_23_targets_sent": true,
+      "stage_index": 4,
+      "stage_name": "中场完整控球射门",
+      "initial_goal_distance_m": 26.725969695609887,
+      "remaining_goal_distance_m": 0.10335964063841137,
+      "goal_distance_progress_m": 26.622610054971474,
+      "post_contact_steps": 1598,
+      "controlled_possession_steps": 1512,
+      "controlled_possession_ratio": 0.9461827284105131,
+      "maximum_distance_after_contact_m": 1.3838653327664983,
+      "lost_possession": false,
+      "teacher_action": [
+        0.5508449673652649,
+        -1.0,
+        -1.0
+      ],
+      "residual_action": [
+        0.0009243733948096633,
+        0.09303014725446701,
+        -0.09054408967494965
+      ],
+      "executed_action": [
+        0.5510760545730591,
+        -0.9581364393234253,
+        -1.0
+      ]
+    },
+    {
+      "seed": 37414,
+      "episode_reward": 684.9525544892763,
+      "scored": true,
+      "official_goal": true,
+      "contacted_ball": true,
+      "fell": false,
+      "episode_steps": 1327,
+      "episode_seconds": 132.70000000000002,
+      "initial_ball_distance_m": 1.384469242619051,
+      "minimum_ball_distance_m": 0.11226758638250658,
+      "ball_forward_m": 26.692490594210195,
+      "ball_lateral_m": 0.736118301163933,
+      "maximum_ball_speed_mps": 1.5994983620858625,
+      "minimum_robot_height_m": 0.6276543845513901,
+      "minimum_robot_upright": 0.9945330426433703,
+      "left_team_score": 1,
+      "all_23_targets_sent": true,
+      "stage_index": 4,
+      "stage_name": "中场完整控球射门",
+      "initial_goal_distance_m": 26.77196871944526,
+      "remaining_goal_distance_m": 1.3445658386581043,
+      "goal_distance_progress_m": 25.427402880787152,
+      "post_contact_steps": 1279,
+      "controlled_possession_steps": 1208,
+      "controlled_possession_ratio": 0.944487881157154,
+      "maximum_distance_after_contact_m": 1.4099991742797193,
+      "lost_possession": false,
+      "teacher_action": [
+        0.6093184351921082,
+        -1.0,
+        -1.0
+      ],
+      "residual_action": [
+        0.011170804500579834,
+        0.01565057411789894,
+        -0.08142488449811935
+      ],
+      "executed_action": [
+        0.6121111512184143,
+        -0.9929572343826294,
+        -1.0
+      ]
+    }
+  ]
+}

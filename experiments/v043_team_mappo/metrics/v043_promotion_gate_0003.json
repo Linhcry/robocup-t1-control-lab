@@ -1,0 +1,70 @@
+{
+  "version": "v043_team_mappo",
+  "evaluation": "/mnt/d/机器人足球/training_runs/rcss_t1_training_20260706/experiments/v043_team_mappo/metrics/v043_fixed_eval_0004.json",
+  "gate_results": {
+    "checkpoint_exists": true,
+    "checkpoint_format": true,
+    "checkpoint_metadata": true,
+    "checkpoint_digest": true,
+    "episode_records": true,
+    "seed_manifest": true,
+    "summary_recomputed": true,
+    "held_out_split": true,
+    "held_out_match_count": false,
+    "ten_minute_matches": false,
+    "win_rate": false,
+    "fall_rate": true,
+    "all_23_targets_sent": true,
+    "possession": false,
+    "true_pass_completion": false,
+    "goals_conceded": true,
+    "opponent_diversity": false,
+    "validated_team_skill_interface": false,
+    "decentralized_execution_audit": true,
+    "observation_schema_v2": true
+  },
+  "quality_passed": false,
+  "communication_audit": "/mnt/d/机器人足球/training_runs/rcss_t1_training_20260706/experiments/v043_team_mappo/metrics/v043_decentralized_execution_audit_0003.json",
+  "checkpoint_evidence": {
+    "exists": true,
+    "format_valid": true,
+    "metadata_matches": true,
+    "digest_matches": true,
+    "resolved_path": "/mnt/d/机器人足球/training_runs/rcss_t1_training_20260706/experiments/v043_team_mappo/checkpoints/v043_mappo_local_v2_0002.pt",
+    "actual_sha256": "a02ff9429c5ab398eaf02fbfa394eba9dd8a3ff3f651262aa11e85a947035794"
+  },
+  "episode_evidence": {
+    "records_valid": true,
+    "seed_manifest_valid": true,
+    "summary_matches": true,
+    "episode_count": 1,
+    "opponent_ids": [
+      "privileged_dynamic_role_heuristic"
+    ],
+    "recomputed_summary": {
+      "episodes": 1,
+      "wins": 0,
+      "draws": 1,
+      "losses": 0,
+      "win_rate": 0.0,
+      "mean_learner_possession_ratio": 0.0,
+      "fall_episode_rate": 0.0,
+      "all_23_targets_sent_rate": 1.0,
+      "true_pass_attempts": 0,
+      "true_pass_completions": 0,
+      "true_pass_completion_rate": 0.0,
+      "mean_goals_conceded_per_10min": 0.0,
+      "minimum_match_duration_s": 0.1,
+      "distinct_opponents": 1
+    }
+  },
+  "failed_gates": [
+    "held_out_match_count",
+    "ten_minute_matches",
+    "win_rate",
+    "possession",
+    "true_pass_completion",
+    "opponent_diversity",
+    "validated_team_skill_interface"
+  ]
+}

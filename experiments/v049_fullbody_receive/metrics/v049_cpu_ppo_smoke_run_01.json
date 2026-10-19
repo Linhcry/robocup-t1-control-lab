@@ -1,0 +1,21 @@
+{
+  "schema_version": "v049_cpu_ppo_smoke_v1",
+  "created_utc": "2026-08-20T07:58:28.429301+00:00",
+  "task_id": "Mjlab-Fullbody-Receive-RCSS-T1-v049",
+  "device": "cpu",
+  "num_envs": 4,
+  "seed": 49040,
+  "requested_iterations": 1,
+  "ppo_update_completed": true,
+  "log_directory": "<LOCAL>/2026-08-20_15-58-24_v049_cpu_4env_smoke_r1",
+  "checkpoint": {
+    "path": "<LOCAL>/model_0.pt",
+    "sha256": "61f573d6cf795b2e50e1c4b924b922377cf00d00c2def97acb232dea3aa65dbc",
+    "size_bytes": 5182719
+  },
+  "training_completed": false,
+  "fixed_validation_passed": false,
+  "heldout_validation_passed": false,
+  "quality_passed": false,
+  "conclusion": "One CPU PPO update proves only that the v049 training pipeline runs; it is not receiving ability evidence."
+}

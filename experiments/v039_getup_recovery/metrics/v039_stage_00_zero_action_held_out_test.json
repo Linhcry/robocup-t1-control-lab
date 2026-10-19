@@ -1,0 +1,68 @@
+{
+  "experiment": "v039_getup_recovery",
+  "stage": 0,
+  "stage_name": "near_fall_balance_recovery",
+  "poses": [
+    "near_fall"
+  ],
+  "seed_count_per_pose": 1,
+  "summary": {
+    "episode_count": 1,
+    "success_count": 0,
+    "success_rate": 0.0,
+    "success_rate_by_pose": {
+      "near_fall": 0.0
+    },
+    "worst_pose_success_rate": 0.0,
+    "median_getup_time_s": null,
+    "p95_getup_time_s": null,
+    "post_recovery_chain_success_rate": 0.0,
+    "unsafe_rate": 0.0,
+    "joint_limit_violation_rate": 1.0,
+    "sent_target_limit_violation_rate": 0.0,
+    "all_23_targets": true,
+    "checks": {
+      "success_rate": false,
+      "worst_pose_success_rate": false,
+      "median_getup_time": false,
+      "p95_getup_time": false,
+      "post_recovery_stand_walk_chain": false,
+      "unsafe_rate": true,
+      "joint_limit_violation_rate": false,
+      "sent_targets_within_limits": true,
+      "all_23_targets": true
+    },
+    "quality_passed": false
+  },
+  "episodes": [
+    {
+      "seed": 1039100,
+      "pose": "near_fall",
+      "success": false,
+      "unsafe": false,
+      "elapsed_s": 12.0,
+      "return": -70.19212269789712,
+      "height_m": 0.03476518167415332,
+      "upright_cos": 0.016645388264031946,
+      "max_torque_fraction": 1.0,
+      "max_contact_force_n": 3420.6348467895855,
+      "initial_joint_limit_violation": false,
+      "initial_max_joint_overshoot_rad": 0.0,
+      "joint_limit_violation": true,
+      "max_joint_overshoot_rad": 0.16488892642587744,
+      "all_23_targets": true,
+      "requested_target_was_clamped": false,
+      "sent_target_limit_violation": false,
+      "max_sent_target_overshoot_rad": 0.0,
+      "finite": true,
+      "post_recovery_chain_success": false,
+      "post_recovery_chain_reason": "Recovery did not reach the stable-stand handoff gate."
+    }
+  ],
+  "created_at": "2026-08-19T19:51:30.271262+00:00",
+  "checkpoint": null,
+  "policy": "zero_action_prepare_pose",
+  "evaluation_split": "held_out_test",
+  "seed_start": 1039100,
+  "seed_stop_exclusive": 1039101
+}

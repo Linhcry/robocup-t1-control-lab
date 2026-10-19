@@ -1,0 +1,20 @@
+{
+  "schema_version": "v046_cpu_ppo_smoke_v1",
+  "created_utc": "2026-08-20T07:37:43.933856+00:00",
+  "task_id": "Mjlab-Directional-Pass-Flat-RCSS-T1-v046",
+  "device": "cpu",
+  "num_envs": 4,
+  "seed": 46041,
+  "requested_iterations": 1,
+  "ppo_update_completed": true,
+  "log_directory": "<LOCAL>/2026-08-20_15-37-40_v046_cpu_4env_smoke_r2",
+  "checkpoint": {
+    "path": "<LOCAL>/model_0.pt",
+    "sha256": "2596eb2f3ff54ec424aabcbfe3e1dfd8ccb66aa5fe2a5b67496484c0e60c17e4",
+    "size_bytes": 5151999
+  },
+  "training_completed": false,
+  "validation_passed": false,
+  "quality_passed": false,
+  "conclusion": "One CPU PPO update proves the v046 training path is executable. It is not evidence of passing or receiving skill."
+}

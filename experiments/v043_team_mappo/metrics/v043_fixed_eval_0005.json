@@ -1,0 +1,72 @@
+{
+  "version": "v043_team_mappo",
+  "observation_schema": "v2_decentralized_local_roles_and_own_touch_only",
+  "possession_evidence_schema": "rcss_real_touch_plus_finite_hold_v1",
+  "possession_hold_window_s": 1.5,
+  "checkpoint": "/mnt/d/机器人足球/training_runs/rcss_t1_training_20260706/experiments/v043_team_mappo/checkpoints/v043_mappo_local_v2_0002.pt",
+  "checkpoint_sha256": "a02ff9429c5ab398eaf02fbfa394eba9dd8a3ff3f651262aa11e85a947035794",
+  "checkpoint_format": "v043_recurrent_mappo_v2_local_roles",
+  "players_per_team": 3,
+  "checkpoint_evidence_status": "short_training_checkpoint_not_promoted",
+  "learner_policy": "deterministic_neural_gru_actor",
+  "opponent_policy": "privileged_dynamic_role_heuristic",
+  "evaluation_seeds": [
+    53100
+  ],
+  "evaluation_split": "held_out",
+  "opponent_pool_members": [
+    "privileged_dynamic_role_heuristic"
+  ],
+  "validated_team_skill_interface": false,
+  "summary": {
+    "episodes": 1,
+    "wins": 0,
+    "draws": 1,
+    "losses": 0,
+    "win_rate": 0.0,
+    "mean_ball_progress_m": 0.0,
+    "mean_learner_possession_ratio": 0.0,
+    "contact_backed_possession_sample_rate": 0.0,
+    "learner_touch_event_count": 0,
+    "opponent_touch_event_count": 0,
+    "fall_episode_rate": 0.0,
+    "all_23_targets_sent_rate": 1.0,
+    "teammate_touch_change_proxy_total": 0,
+    "true_pass_attempts": 0,
+    "true_pass_completions": 0,
+    "true_pass_completion_rate": 0.0,
+    "mean_goals_conceded_per_10min": 0.0,
+    "minimum_match_duration_s": 0.1,
+    "distinct_opponents": 1
+  },
+  "episodes": [
+    {
+      "seed": 53100,
+      "high_level_steps": 1,
+      "left_score": 0,
+      "right_score": 0,
+      "ball_progress_m": 0.0,
+      "learner_possession_ratio": 0.0,
+      "possession_evidence_schema": "rcss_real_touch_plus_finite_hold_v1",
+      "possession_hold_window_s": 1.5,
+      "possession_sample_steps": 1,
+      "learner_contact_possession_steps": 0,
+      "opponent_contact_possession_steps": 0,
+      "neutral_possession_steps": 1,
+      "active_contact_possession_steps": 0,
+      "recent_touch_hold_possession_steps": 0,
+      "learner_touch_event_count": 0,
+      "opponent_touch_event_count": 0,
+      "teammate_touch_change_proxy_count": 0,
+      "turnover_step_count": 0,
+      "maximum_fallen_players": 0,
+      "all_targets_sent": true,
+      "simulated_seconds": 0.1,
+      "true_pass_attempts": 0,
+      "true_pass_completions": 0,
+      "opponent_id": "privileged_dynamic_role_heuristic"
+    }
+  ],
+  "quality_passed": false,
+  "quality_reason": "The current action interface has no validated pass/dive/get-up skill and this run does not meet the configured 20-match promotion protocol. Teammate contact changes are only a proxy, not pass proof."
+}

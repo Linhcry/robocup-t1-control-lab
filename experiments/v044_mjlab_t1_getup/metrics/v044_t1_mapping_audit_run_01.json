@@ -1,0 +1,120 @@
+{
+  "schema_version": "v044_t1_mapping_audit_v1",
+  "sources": {
+    "mjlab_xml": {
+      "path": "<LOCAL>/t1.xml",
+      "sha256": "e2054101b11130006e3adc7b30bb45f4b081629db1ccc829be1266340607b5cf",
+      "mujoco_timestep_s": 0.002
+    },
+    "rcss_mjb": {
+      "path": "/mnt/d/机器人足球/training_runs/rcss_t1_training_20260706/records/full_rcss_t1_23dof_20260820.mjb",
+      "sha256": "9a2ee0daa48248c6fa9b71460e8059d199489a6e0d03eb793a7b9cba9bd5965a",
+      "mujoco_timestep_s": 0.005
+    }
+  },
+  "joint_order": {
+    "canonical": [
+      "Head_yaw",
+      "Head_pitch",
+      "Left_Shoulder_Pitch",
+      "Left_Shoulder_Roll",
+      "Left_Elbow_Pitch",
+      "Left_Elbow_Yaw",
+      "Right_Shoulder_Pitch",
+      "Right_Shoulder_Roll",
+      "Right_Elbow_Pitch",
+      "Right_Elbow_Yaw",
+      "Waist",
+      "Left_Hip_Pitch",
+      "Left_Hip_Roll",
+      "Left_Hip_Yaw",
+      "Left_Knee_Pitch",
+      "Left_Ankle_Pitch",
+      "Left_Ankle_Roll",
+      "Right_Hip_Pitch",
+      "Right_Hip_Roll",
+      "Right_Hip_Yaw",
+      "Right_Knee_Pitch",
+      "Right_Ankle_Pitch",
+      "Right_Ankle_Roll"
+    ],
+    "mjlab": [
+      "Head_yaw",
+      "Head_pitch",
+      "Left_Shoulder_Pitch",
+      "Left_Shoulder_Roll",
+      "Left_Elbow_Pitch",
+      "Left_Elbow_Yaw",
+      "Right_Shoulder_Pitch",
+      "Right_Shoulder_Roll",
+      "Right_Elbow_Pitch",
+      "Right_Elbow_Yaw",
+      "Waist",
+      "Left_Hip_Pitch",
+      "Left_Hip_Roll",
+      "Left_Hip_Yaw",
+      "Left_Knee_Pitch",
+      "Left_Ankle_Pitch",
+      "Left_Ankle_Roll",
+      "Right_Hip_Pitch",
+      "Right_Hip_Roll",
+      "Right_Hip_Yaw",
+      "Right_Knee_Pitch",
+      "Right_Ankle_Pitch",
+      "Right_Ankle_Roll"
+    ],
+    "rcss": [
+      "Head_yaw",
+      "Head_pitch",
+      "Left_Shoulder_Pitch",
+      "Left_Shoulder_Roll",
+      "Left_Elbow_Pitch",
+      "Left_Elbow_Yaw",
+      "Right_Shoulder_Pitch",
+      "Right_Shoulder_Roll",
+      "Right_Elbow_Pitch",
+      "Right_Elbow_Yaw",
+      "Waist",
+      "Left_Hip_Pitch",
+      "Left_Hip_Roll",
+      "Left_Hip_Yaw",
+      "Left_Knee_Pitch",
+      "Left_Ankle_Pitch",
+      "Left_Ankle_Roll",
+      "Right_Hip_Pitch",
+      "Right_Hip_Roll",
+      "Right_Hip_Yaw",
+      "Right_Knee_Pitch",
+      "Right_Ankle_Pitch",
+      "Right_Ankle_Roll"
+    ]
+  },
+  "maximum_limit_delta_rad": {
+    "mjlab_vs_rcss": 0.0,
+    "mjlab_vs_canonical": 0.006125631332397408
+  },
+  "robot_mass_kg": {
+    "mjlab": 31.614357,
+    "rcss": 31.614357000000002,
+    "absolute_delta": 3.552713678800501e-15
+  },
+  "actuator_semantics": {
+    "mjlab": "23 builtin position actuators added by mjlab configuration",
+    "rcss": "69 actuators: torque, position and velocity per joint",
+    "dynamics_equivalent": false
+  },
+  "checks": {
+    "mjlab_joint_count_23": true,
+    "rcss_joint_count_23": true,
+    "mjlab_order_matches_canonical": true,
+    "rcss_order_matches_canonical": true,
+    "mjlab_and_rcss_limits_exact": true,
+    "mjlab_limits_within_0_006_rad_of_canonical": false,
+    "robot_mass_matches_within_1e_6_kg": true,
+    "rcss_has_23_tau_pos_vel_actuator_triplets": true
+  },
+  "mapping_passed": false,
+  "deployment_ready": false,
+  "quality_passed": false,
+  "conclusion": "Structural mapping failed; checkpoint export and deployment are blocked."
+}

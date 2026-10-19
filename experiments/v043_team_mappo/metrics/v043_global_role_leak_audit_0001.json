@@ -1,0 +1,21 @@
+{
+  "version": "v043_team_mappo",
+  "audit": "decentralized_execution_design_review",
+  "affected_artifacts": [
+    "checkpoints/v043_mappo_0001.pt",
+    "checkpoints/v043_mappo_0002.pt",
+    "metrics/v043_mappo_training_0001.json",
+    "metrics/v043_mappo_training_0002.json",
+    "metrics/v043_fixed_eval_0001.json"
+  ],
+  "finding": "The first observation schema injected a globally assigned dynamic-role one-hot into every Actor row. This was privileged simulator truth and was not valid decentralized execution.",
+  "quality_passed": false,
+  "deployment_allowed": false,
+  "remediation": "Observation schema v2 uses public field zones, jersey number, local ball visibility and own-touch-only events. Old checkpoint format is rejected and uses a separate legacy opponent pool.",
+  "replacement_evidence": [
+    "metrics/v043_decentralized_execution_audit_0002.json",
+    "metrics/v043_3v3_smoke_0003.json",
+    "metrics/v043_7v7_smoke_0002.json",
+    "checkpoints/v043_mappo_local_v2_0002.pt"
+  ]
+}

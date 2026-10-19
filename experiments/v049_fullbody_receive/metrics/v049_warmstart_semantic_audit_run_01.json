@@ -1,0 +1,60 @@
+{
+  "schema_version": "v049_v045_warmstart_semantic_audit_v1",
+  "created_utc": "2026-08-20T08:22:07.995613+00:00",
+  "artifact": {
+    "path": "<LOCAL>/v049_v045_warmstart_engineering_run_02.pt",
+    "sha256": "cdba3941e2e659a5af536d7305215a16c1e3399e8ab5e823c439e006d5e6fd4b"
+  },
+  "provenance": {
+    "path": "<LOCAL>/v049_v045_warmstart_engineering_run_02.provenance.json",
+    "sha256": "26c6f22d60c94002e2cfe93e762f7bf48ef69c187fb7bd2f7163d27470e8555e"
+  },
+  "ppo_proof": {
+    "path": "<LOCAL>/v049_warmstart_cpu_ppo_smoke_run_02.json",
+    "sha256": "df2bb144fafa8d134118d7e608c56c6a54118e7c24677254e48f5e8bddb79e37"
+  },
+  "formal_fail_closed_evidence": {
+    "formal_prepare_rejected": true,
+    "formal_prepare_error": "formal v045 training summary is absent or has the wrong schema; engineering evidence is never accepted without --engineering-smoke",
+    "formal_training_rejected": true,
+    "formal_training_error": "non-engineering training requires a completed formal v045 summary and candidate proof"
+  },
+  "checks": {
+    "artifact_hash_matches_provenance": true,
+    "source_checkpoint_hash_matches": true,
+    "summary_hash_matches": true,
+    "candidate_proof_hash_matches": true,
+    "all_recorded_source_hashes_are_current": true,
+    "live_layout_and_mapping_checks_passed": true,
+    "actor_source_shape_is_512x75": true,
+    "actor_target_shape_is_512x81": true,
+    "actor_first_75_exact": true,
+    "actor_new_6_zero": true,
+    "critic_source_shape_is_512x78": true,
+    "critic_target_shape_is_512x109": true,
+    "critic_common_75_exact": true,
+    "critic_base_lin_exactly_75_78_to_81_84": true,
+    "critic_other_new_columns_zero": true,
+    "optimizer_empty_before_target_training": true,
+    "iteration_zero_before_target_training": true,
+    "curriculum_zero_before_target_training": true,
+    "engineering_mode_validation_passes": true,
+    "formal_prepare_rejects_engineering_summary": true,
+    "formal_training_rejects_engineering_artifact": true,
+    "ppo_proof_schema": true,
+    "ppo_proof_binds_same_artifact": true,
+    "ppo_proof_binds_same_provenance": true,
+    "strict_load_and_one_ppo_update_completed": true,
+    "fresh_training_state_checks_passed": true,
+    "all_evidence_remains_non_promotable": true
+  },
+  "warmstart_semantics_passed": true,
+  "formal_v045_product_available": false,
+  "formal_training_allowed": false,
+  "training_completed": false,
+  "fixed_validation_passed": false,
+  "heldout_validation_passed": false,
+  "quality_passed": false,
+  "failed_checks": [],
+  "conclusion": "Shape-aware loading and one CPU PPO update passed, while formal use remains fail-closed because no completed v045 source product exists."
+}

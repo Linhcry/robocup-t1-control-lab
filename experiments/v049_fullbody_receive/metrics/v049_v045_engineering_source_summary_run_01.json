@@ -1,0 +1,25 @@
+{
+  "schema_version": "v049_v045_engineering_source_summary_v1",
+  "created_utc": "2026-08-20T08:20:00Z",
+  "purpose": "Bind one real v045 checkpoint to its scaling-probe and target-model audit for a non-promotable v049 shape-mapping smoke.",
+  "formal_protocol": false,
+  "source_checkpoint": {
+    "path": "<LOCAL>/model_0.pt",
+    "sha256": "300d8f1106372cc522897529d62c5e5ca4407a282ab35184bc19d8f41663941b"
+  },
+  "candidate_proof": {
+    "path": "<LOCAL>/v045_model800_safety_4096_probe_run_01.json",
+    "sha256": "48b7378a3971715b00c5447cc26655019fb491f5a8a2977869afca4f7b2bf9cf"
+  },
+  "v045_target_model_audit": {
+    "path": "<LOCAL>/v045_target_model_audit_run_05.json",
+    "sha256": "91361567bb5fd506a35cc2d81e0a34e20bbe8110ead26d738a6b9e5001f088ea"
+  },
+  "v045_training_run_complete": false,
+  "training_completed": false,
+  "candidate_selection_completed": false,
+  "formal_warm_start_allowed": false,
+  "fixed_validation_passed": false,
+  "heldout_validation_passed": false,
+  "quality_passed": false
+}

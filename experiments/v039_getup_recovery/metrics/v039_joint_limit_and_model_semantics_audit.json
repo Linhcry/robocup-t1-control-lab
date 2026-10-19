@@ -1,0 +1,391 @@
+{
+  "experiment": "v039_getup_recovery",
+  "created_at": "2026-08-19T19:48:47.484518+00:00",
+  "question": "Is joint_limit_violation_rate=1.0 a target-clamp bug or physical state excursion?",
+  "answer": "It is a real physical qpos excursion in the MuJoCo soft joint constraints, not an unclamped 23-D target. The old reset logic actually under-reported it by clearing violations after settle.",
+  "state_joint_limit_tolerance_rad": 0.002,
+  "models": {
+    "standalone_T1_serial": {
+      "source": "/mnt/d/机器人足球/third_party/booster_gym/resources/T1/T1_serial.xml",
+      "nq": 30,
+      "nv": 29,
+      "nu": 23,
+      "timestep_s": 0.002,
+      "body_mass_sum_kg": 35.1824972964464,
+      "actuator_semantics": "23 direct torque motors; v039 computes and clips PD torque before data.ctrl",
+      "joint_ranges_rad": [
+        [
+          -1.57,
+          1.57
+        ],
+        [
+          -0.35,
+          1.22
+        ],
+        [
+          -3.31,
+          1.22
+        ],
+        [
+          -1.74,
+          1.57
+        ],
+        [
+          -2.27,
+          2.27
+        ],
+        [
+          -2.44,
+          0.0
+        ],
+        [
+          -3.31,
+          1.22
+        ],
+        [
+          -1.57,
+          1.74
+        ],
+        [
+          -2.27,
+          2.27
+        ],
+        [
+          0.0,
+          2.44
+        ],
+        [
+          -1.57,
+          1.57
+        ],
+        [
+          -1.8,
+          1.57
+        ],
+        [
+          -0.2,
+          1.57
+        ],
+        [
+          -1.0,
+          1.0
+        ],
+        [
+          0.0,
+          2.34
+        ],
+        [
+          -0.87,
+          0.35
+        ],
+        [
+          -0.44,
+          0.44
+        ],
+        [
+          -1.8,
+          1.57
+        ],
+        [
+          -1.57,
+          0.2
+        ],
+        [
+          -1.0,
+          1.0
+        ],
+        [
+          0.0,
+          2.34
+        ],
+        [
+          -0.87,
+          0.35
+        ],
+        [
+          -0.44,
+          0.44
+        ]
+      ]
+    },
+    "rcss_full_T1": {
+      "nq_whole_match": 37,
+      "nv_whole_match": 35,
+      "nu_whole_match": 69,
+      "timestep_s": 0.005,
+      "robot_body_mass_sum_kg": 31.614357,
+      "robot_joint_count": 23,
+      "robot_actuator_count": 69,
+      "actuator_semantics": "three actuators per joint (tau + position + velocity); ctrl_motor configures PD gains; the competition controller handles ankle parallel-mechanism indexes separately",
+      "joint_ranges_rad": [
+        [
+          -1.57,
+          1.57
+        ],
+        [
+          -0.35,
+          1.22
+        ],
+        [
+          -3.31,
+          1.22
+        ],
+        [
+          -1.74,
+          1.57
+        ],
+        [
+          -2.27,
+          2.27
+        ],
+        [
+          -2.44,
+          0.0
+        ],
+        [
+          -3.31,
+          1.22
+        ],
+        [
+          -1.57,
+          1.74
+        ],
+        [
+          -2.27,
+          2.27
+        ],
+        [
+          0.0,
+          2.44
+        ],
+        [
+          -1.57,
+          1.57
+        ],
+        [
+          -1.8,
+          1.57
+        ],
+        [
+          -0.2,
+          1.57
+        ],
+        [
+          -1.0,
+          1.0
+        ],
+        [
+          0.0,
+          2.34
+        ],
+        [
+          -0.87,
+          0.35
+        ],
+        [
+          -0.44,
+          0.44
+        ],
+        [
+          -1.8,
+          1.57
+        ],
+        [
+          -1.57,
+          0.2
+        ],
+        [
+          -1.0,
+          1.0
+        ],
+        [
+          0.0,
+          2.34
+        ],
+        [
+          -0.87,
+          0.35
+        ],
+        [
+          -0.44,
+          0.44
+        ]
+      ]
+    },
+    "official_policy_training_T1_locomotion": {
+      "source": "/mnt/d/机器人足球/third_party/booster_gym/resources/T1/T1_locomotion.xml",
+      "nq": 19,
+      "nv": 18,
+      "nu": 12,
+      "body_mass_sum_kg": 31.6144,
+      "actuator_semantics": "12 leg-only direct torque motors; head, arms and waist are fixed into the trunk",
+      "left_hip_roll_range_rad": [
+        -0.3,
+        1.57
+      ],
+      "right_hip_roll_range_rad": [
+        -1.57,
+        0.3
+      ]
+    }
+  },
+  "range_comparison": {
+    "standalone_vs_rcss_exact": true,
+    "maximum_standalone_vs_rcss_delta_rad": 0.0,
+    "maximum_rule_vs_standalone_delta_rad": 0.006125631332397408
+  },
+  "pose_probes": [
+    {
+      "pose": "left_side",
+      "seed": 39910,
+      "configured_root_z_before_settle_m": 0.44,
+      "root_z_after_unactuated_0p30s_settle_m": 0.1807886179543189,
+      "root_z_drop_during_settle_m": 0.2592113820456811,
+      "reset_info": {
+        "stage": 3,
+        "pose": "left_side",
+        "floor_friction": 0.7307042601084358,
+        "model_nu": 23,
+        "all_23_targets": false,
+        "initial_joint_limit_violation": false,
+        "initial_max_joint_overshoot_rad": 0.0
+      },
+      "reset_state_violations": [],
+      "first_20_step_violations": {
+        "Left_Knee_Pitch": {
+          "control_step": 10,
+          "qpos_rad": -0.05447384453007063,
+          "overshoot_rad": 0.05447384453007063
+        }
+      },
+      "episode_joint_limit_violation": true,
+      "max_state_joint_overshoot_rad": 0.05447384453007063,
+      "requested_target_was_clamped": false,
+      "sent_target_limit_violation": false,
+      "max_sent_target_overshoot_rad": 0.0,
+      "all_23_targets": true
+    },
+    {
+      "pose": "right_side",
+      "seed": 39910,
+      "configured_root_z_before_settle_m": 0.44,
+      "root_z_after_unactuated_0p30s_settle_m": 0.19644607863664312,
+      "root_z_drop_during_settle_m": 0.24355392136335688,
+      "reset_info": {
+        "stage": 3,
+        "pose": "right_side",
+        "floor_friction": 0.7307042601084358,
+        "model_nu": 23,
+        "all_23_targets": false,
+        "initial_joint_limit_violation": true,
+        "initial_max_joint_overshoot_rad": 0.04819286944557555
+      },
+      "reset_state_violations": [
+        {
+          "joint": "Right_Hip_Roll",
+          "qpos_rad": 0.24890572907616026,
+          "overshoot_rad": 0.04819286944557555
+        }
+      ],
+      "first_20_step_violations": {
+        "Right_Hip_Roll": {
+          "control_step": 1,
+          "qpos_rad": 0.2402161939105346,
+          "overshoot_rad": 0.03950333427994987
+        },
+        "Left_Knee_Pitch": {
+          "control_step": 7,
+          "qpos_rad": -0.06111285824871571,
+          "overshoot_rad": 0.06111285824871571
+        },
+        "Right_Knee_Pitch": {
+          "control_step": 8,
+          "qpos_rad": -0.03107193178627793,
+          "overshoot_rad": 0.03107193178627793
+        }
+      },
+      "episode_joint_limit_violation": true,
+      "max_state_joint_overshoot_rad": 0.06111285824871571,
+      "requested_target_was_clamped": false,
+      "sent_target_limit_violation": false,
+      "max_sent_target_overshoot_rad": 0.0,
+      "all_23_targets": true
+    },
+    {
+      "pose": "prone",
+      "seed": 39910,
+      "configured_root_z_before_settle_m": 0.44,
+      "root_z_after_unactuated_0p30s_settle_m": 0.14007177840517782,
+      "root_z_drop_during_settle_m": 0.2999282215948222,
+      "reset_info": {
+        "stage": 3,
+        "pose": "prone",
+        "floor_friction": 1.181056495585446,
+        "model_nu": 23,
+        "all_23_targets": false,
+        "initial_joint_limit_violation": true,
+        "initial_max_joint_overshoot_rad": 0.028001091703853398
+      },
+      "reset_state_violations": [
+        {
+          "joint": "Head_pitch",
+          "qpos_rad": -0.3770669319481466,
+          "overshoot_rad": 0.028001091703853398
+        }
+      ],
+      "first_20_step_violations": {},
+      "episode_joint_limit_violation": true,
+      "max_state_joint_overshoot_rad": 0.028001091703853398,
+      "requested_target_was_clamped": false,
+      "sent_target_limit_violation": false,
+      "max_sent_target_overshoot_rad": 0.0,
+      "all_23_targets": true
+    },
+    {
+      "pose": "supine",
+      "seed": 39910,
+      "configured_root_z_before_settle_m": 0.44,
+      "root_z_after_unactuated_0p30s_settle_m": 0.028445755529715486,
+      "root_z_drop_during_settle_m": 0.4115542444702845,
+      "reset_info": {
+        "stage": 3,
+        "pose": "supine",
+        "floor_friction": 1.181056495585446,
+        "model_nu": 23,
+        "all_23_targets": false,
+        "initial_joint_limit_violation": false,
+        "initial_max_joint_overshoot_rad": 0.0
+      },
+      "reset_state_violations": [],
+      "first_20_step_violations": {
+        "Right_Knee_Pitch": {
+          "control_step": 3,
+          "qpos_rad": -0.02438364493316949,
+          "overshoot_rad": 0.02438364493316949
+        },
+        "Left_Knee_Pitch": {
+          "control_step": 14,
+          "qpos_rad": -0.01792998778846902,
+          "overshoot_rad": 0.01792998778846902
+        }
+      },
+      "episode_joint_limit_violation": true,
+      "max_state_joint_overshoot_rad": 0.05531200337736125,
+      "requested_target_was_clamped": false,
+      "sent_target_limit_violation": false,
+      "max_sent_target_overshoot_rad": 0.0,
+      "all_23_targets": true
+    }
+  ],
+  "all_probes_sent_23_targets": true,
+  "any_sent_target_limit_violation": false,
+  "any_physical_state_joint_limit_violation": true,
+  "initial_pose_contract_passed": false,
+  "handoff_compatibility_passed": false,
+  "handoff_blockers": [
+    "The official T1.pt was trained against the 12-actuator fixed-upper-body locomotion model.",
+    "T1_serial and RCSS differ in mass, timestep, joint friction, torso/foot collision geoms, and actuator API.",
+    "The official policy must be adapted or distilled and then validated in the complete RCSS T1 model."
+  ],
+  "quality_passed": false
+}

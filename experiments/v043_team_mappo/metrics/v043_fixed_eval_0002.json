@@ -1,0 +1,51 @@
+{
+  "version": "v043_team_mappo",
+  "checkpoint": "<LOCAL>/v043_mappo_local_v2_0002.pt",
+  "checkpoint_evidence_status": "short_training_checkpoint_not_promoted",
+  "learner_policy": "deterministic_neural_gru_actor",
+  "opponent_policy": "privileged_dynamic_role_heuristic",
+  "evaluation_seeds": [
+    43100,
+    43101
+  ],
+  "summary": {
+    "episodes": 2,
+    "wins": 0,
+    "draws": 2,
+    "losses": 0,
+    "win_rate": 0.0,
+    "mean_ball_progress_m": 0.0,
+    "mean_learner_possession_ratio": 0.5,
+    "fall_episode_rate": 0.0,
+    "all_23_targets_sent_rate": 1.0,
+    "teammate_touch_change_proxy_total": 0
+  },
+  "episodes": [
+    {
+      "seed": 43100,
+      "high_level_steps": 16,
+      "left_score": 0,
+      "right_score": 0,
+      "ball_progress_m": 0.0,
+      "learner_possession_ratio": 0.0,
+      "teammate_touch_change_proxy_count": 0,
+      "turnover_step_count": 0,
+      "maximum_fallen_players": 0,
+      "all_targets_sent": true
+    },
+    {
+      "seed": 43101,
+      "high_level_steps": 16,
+      "left_score": 0,
+      "right_score": 0,
+      "ball_progress_m": 0.0,
+      "learner_possession_ratio": 1.0,
+      "teammate_touch_change_proxy_count": 0,
+      "turnover_step_count": 0,
+      "maximum_fallen_players": 0,
+      "all_targets_sent": true
+    }
+  ],
+  "quality_passed": false,
+  "quality_reason": "The current action interface has no validated pass/dive/get-up skill and this run does not meet the configured 20-match promotion protocol. Teammate contact changes are only a proxy, not pass proof."
+}

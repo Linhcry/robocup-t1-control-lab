@@ -1,0 +1,108 @@
+{
+  "schema_version": "v046_competitive_acceptance_v1",
+  "experiment": "v046_fullbody_pass",
+  "task_id": "Mjlab-Directional-Pass-Flat-RCSS-T1-v046",
+  "current_stage": "directional_pass_foundation",
+  "quality_passed": false,
+  "model_contract": {
+    "robot": "exact installed RCSSServerMJ Booster T1 XML through v045 construction",
+    "robot_dof": 23,
+    "action_hz": 50,
+    "physics_hz": 200,
+    "ball_radius_m": 0.11,
+    "ball_mass_kg": 0.43,
+    "action_semantics": "canonical joint-position offsets, finite check, GPU batched clamp to locomotion/t1_spec.py"
+  },
+  "stage_1_directional_pass": {
+    "training_complete": false,
+    "fixed_validation": {
+      "seed": 460100,
+      "episodes": 80,
+      "minimum_true_foot_contact_rate": 0.98,
+      "minimum_pass_success_rate": 0.9,
+      "maximum_upper_body_ball_contact_rate": 0.0,
+      "maximum_fall_rate": 0.01,
+      "maximum_joint_limit_violation_rate": 0.0,
+      "maximum_torque_limit_violation_rate": 0.0,
+      "maximum_median_direction_error_deg": 10.0,
+      "maximum_median_relative_distance_error": 0.2
+    },
+    "held_out_test": {
+      "seed": 461100,
+      "episodes": 400,
+      "requires_fixed_validation_proof": true,
+      "minimum_pass_success_rate": 0.9,
+      "minimum_worst_direction_bin_success_rate": 0.85,
+      "minimum_worst_distance_bin_success_rate": 0.85,
+      "maximum_upper_body_ball_contact_rate": 0.0,
+      "maximum_fall_rate": 0.01,
+      "maximum_joint_limit_violation_rate": 0.0,
+      "maximum_torque_limit_violation_rate": 0.0
+    }
+  },
+  "contact_contract": {
+    "valid_kicker_geoms": [
+      "left_foot",
+      "right_foot"
+    ],
+    "invalid_upper_body_bodies": [
+      "torso",
+      "H1",
+      "H2",
+      "AL1",
+      "AL2",
+      "AL3",
+      "left_hand_link",
+      "AR1",
+      "AR2",
+      "AR3",
+      "right_hand_link",
+      "Waist"
+    ],
+    "success_requires_latched_real_foot_ball_contact": true,
+    "upper_body_ball_contact_is_failure": true,
+    "scripted_or_distance_only_touch_is_valid": false
+  },
+  "observation_contract": {
+    "actor_dim": 84,
+    "actor": "deployable proprioception plus perceived ball-relative position/velocity and target direction/distance",
+    "critic_dim": 101,
+    "critic_privilege": [
+      "base linear velocity",
+      "exact ball world state",
+      "exact contact latches",
+      "exact pass progress and lateral error",
+      "root height"
+    ],
+    "privileged_terms_allowed_in_actor": false
+  },
+  "curriculum": {
+    "source_idea": "Daffan/humanoid-soccer four-stage teacher-student pipeline",
+    "implemented_here": [
+      "stage-one stable approach shaping",
+      "stage-two directional velocity and target-corridor shaping"
+    ],
+    "not_implemented_here": [
+      "DAgger teacher-student distillation",
+      "N-P3O constrained adaptation",
+      "vision occlusion/delay student training",
+      "receiving"
+    ]
+  },
+  "receive_stage": {
+    "interface_reserved": true,
+    "implemented": false,
+    "trained": false,
+    "validated": false,
+    "quality_passed": false
+  },
+  "promotion": {
+    "semantic_audit_required": true,
+    "cpu_1_and_4_env_smoke_required": true,
+    "gpu_scaling_probe_required_before_long_training": true,
+    "fixed_validation_required": true,
+    "held_out_test_required": true,
+    "video_required": true,
+    "current_promotion_allowed": false
+  }
+}

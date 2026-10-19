@@ -1,0 +1,27 @@
+{
+  "version": "v043_team_mappo",
+  "method": "parameter_shared_gru_actor_centralized_critic_mappo",
+  "evidence_status": "short_training_execution_only_not_match_competitive_not_promoted",
+  "update": 2,
+  "players_per_team": 3,
+  "environment_steps_this_update": 8,
+  "player_samples_this_update": 24,
+  "mean_reward": 0.030109012499451637,
+  "mean_ball_progress_m": 0.0,
+  "mean_visible_entity_ratio": 0.190476194024086,
+  "mean_fallen_players": 0.0,
+  "turnover_steps": 0,
+  "teammate_touch_change_steps": 0,
+  "safety_passed": true,
+  "mean_loss": 0.0019137384369969368,
+  "mean_policy_loss": -2.9802322387695312e-08,
+  "mean_value_loss": 0.01639869250357151,
+  "opponent_kinds": [
+    "historical_neural_snapshot"
+  ],
+  "opponent_pool_size": 2,
+  "snapshot_added": "<LOCAL>/opponent_0002.pt",
+  "checkpoint": "<LOCAL>/v043_mappo_0002.pt",
+  "quality_passed": false,
+  "quality_reason": "No held-out match league evaluation has been run; short PPO training cannot satisfy promotion gates."
+}

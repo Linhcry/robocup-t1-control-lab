@@ -1,0 +1,19 @@
+{
+  "schema_version": "v049_current_evidence_supersession_v1",
+  "created_utc": "2026-08-20T08:02:00Z",
+  "current_engineering_evidence": {
+    "semantic_audit": "v049_model_semantic_audit_run_02.json",
+    "cpu_real_contact_smoke": "v049_cpu_dynamics_smoke_run_02.json",
+    "cpu_ppo_smoke": "v049_cpu_ppo_smoke_run_01.json",
+    "central_23dof_audit": "v049_t1_contract_audit_run_01.json"
+  },
+  "superseded_for_promotion": [
+    "v049_model_semantic_audit_run_01.json",
+    "v049_cpu_dynamics_smoke_run_01.json"
+  ],
+  "reason": "The strict evaluator was tightened to preserve the actor's seeded observation noise and delay; run_02 binds the final evaluator and all current source hashes.",
+  "training_completed": false,
+  "fixed_validation_passed": false,
+  "heldout_validation_passed": false,
+  "quality_passed": false
+}

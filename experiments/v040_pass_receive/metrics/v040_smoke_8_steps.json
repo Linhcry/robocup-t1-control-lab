@@ -1,0 +1,52 @@
+{
+  "version": "v040_pass_receive",
+  "smoke_steps": 8,
+  "quality_passed": true,
+  "result": {
+    "success": false,
+    "failed": false,
+    "passer_touched": false,
+    "receiver_touched": false,
+    "contact_transfer": false,
+    "ball_travel_m": 0.0,
+    "ball_lateral_error_m": 0.0,
+    "receiver_control_seconds": 0.0,
+    "episode_steps": 8,
+    "minimum_upright": 0.9966490601078866,
+    "minimum_height_m": 0.6432490437220885,
+    "fell": false,
+    "finite_state": true,
+    "all_23_targets_sent": true,
+    "ball_events_event_count": 0,
+    "ball_events_transfer_count": 0,
+    "ball_events_upper_body_contact_count": 0,
+    "ball_events_last_distinct_toucher": null,
+    "ball_events_events": [],
+    "teacher_action": [
+      0.5797012448310852,
+      -0.28790563344955444,
+      -0.3983554244041443,
+      0.2053234726190567,
+      -0.15942241251468658,
+      -0.604008674621582
+    ],
+    "residual_action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "executed_action": [
+      0.5797012448310852,
+      -0.28790563344955444,
+      -0.3983554244041443,
+      0.2053234726190567,
+      -0.15942241251468658,
+      -0.604008674621582
+    ],
+    "seed": 40000,
+    "episode_reward": 0.06910524171147757
+  }
+}

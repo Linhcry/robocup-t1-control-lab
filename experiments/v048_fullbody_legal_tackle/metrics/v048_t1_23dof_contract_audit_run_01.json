@@ -1,0 +1,12 @@
+{
+  "version": "v048",
+  "kind": "canonical_t1_23dof_contract_audit",
+  "command": "<LOCAL>/audit_t1_23dof.py",
+  "audit_script_sha256": "4a6e94df818011e26567e959020eb75ffa74695741eb64b707d48af93eb81a13",
+  "v048_task_sha256": "19a8eac667c682557ac7b42b45b69e8e1f86de819f5427e0a7866655f98085db",
+  "joint_count": 23,
+  "result": "PASS: T1_23_DOF_CONTRACT",
+  "contract_passed": true,
+  "quality_passed": false,
+  "note": "The control mapping contract passed; this is not behavioral tackle evidence."
+}

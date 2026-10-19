@@ -1,0 +1,9 @@
+checkpoints/*
+!checkpoints/.gitkeep
+logs/*
+!logs/.gitkeep
+videos/*
+!videos/.gitkeep
+artifacts/*
+!artifacts/.gitkeep
+

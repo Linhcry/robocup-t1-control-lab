@@ -1,0 +1,48 @@
+{
+  "schema_version": "v044_source_candidate_eval_v2",
+  "experiment": "v044_mjlab_t1_getup",
+  "backend": "Mjlab-Getup-Flat-Booster-T1",
+  "device": "cpu",
+  "seeds": [
+    44700
+  ],
+  "num_environments": 1,
+  "fall_probability": 1.0,
+  "steps": 2,
+  "duration_s": 0.04,
+  "identical_random_stream_replayed_for_each_checkpoint": true,
+  "results": [
+    {
+      "checkpoint": {
+        "path": "<LOCAL>/model_700.pt",
+        "sha256": "05473d2d72e8744b7bdaa0c38a5f23bceb17eb5a76f0ebc7d297657e134799e2"
+      },
+      "per_seed": [
+        {
+          "seed": 44700,
+          "stood_once_count": 0,
+          "stood_once_rate": 0.0,
+          "continuous_upright_3s_count": 0,
+          "continuous_upright_3s_rate": 0.0,
+          "early_termination_count": 0,
+          "early_termination_rate": 0.0,
+          "maximum_continuous_upright_steps": 0
+        }
+      ],
+      "minimum_continuous_upright_3s_rate": 0.0,
+      "mean_continuous_upright_3s_rate": 0.0,
+      "minimum_stood_once_rate": 0.0,
+      "mean_stood_once_rate": 0.0,
+      "mean_early_termination_rate": 0.0
+    }
+  ],
+  "ranking_by_source_metrics": [
+    0
+  ],
+  "formal_source_shortlist_protocol": false,
+  "selected_checkpoint_for_target_adaptation": null,
+  "source_shortlist_only": true,
+  "validation_passed": false,
+  "quality_passed": false,
+  "reason_quality_is_false": "This evaluation uses the official source robot and checks only height and orientation. It cannot replace RCSS contact safety, four-pose recovery, locomotion handoff, fixed validation, or held-out testing."
+}

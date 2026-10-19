@@ -1,0 +1,12 @@
+{
+  "version": "v038_high_speed_dribble",
+  "requested_steps": 8,
+  "completed_steps": 8,
+  "finite_observation": true,
+  "finite_rewards": true,
+  "fell": false,
+  "minimum_robot_height_m": 0.6410941976061911,
+  "minimum_robot_upright": 0.9970773148557941,
+  "all_23_targets_sent": true,
+  "quality_passed": true
+}

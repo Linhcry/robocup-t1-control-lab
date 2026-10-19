@@ -1,0 +1,15 @@
+{
+  "version": "v033_rcss_walk_kick",
+  "behavior": "Booster T1 official RoboCup Demo crab-walk kick logic",
+  "ball_start_xy_m": [
+    1.25,
+    -0.08
+  ],
+  "maximum_approach_speed_mps": 0.45,
+  "maximum_lateral_speed_mps": 0.2,
+  "success_thresholds": {
+    "ball_displacement_m": 0.18,
+    "ball_speed_mps": 0.55
+  },
+  "next_skill": "dynamic single-leg kick; do not confuse it with the validated walk-kick"
+}

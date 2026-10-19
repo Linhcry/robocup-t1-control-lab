@@ -1,0 +1,380 @@
+{
+  "version": "v042_goalkeeper_ground_block",
+  "policy": "zero residual lateral positioning teacher",
+  "summary": {
+    "episode_count": 10,
+    "success_count": 1,
+    "success_rate": 0.1,
+    "fall_rate": 0.0,
+    "finite_state_rate": 1.0,
+    "all_23_targets_sent_rate": 1.0,
+    "mean_episode_reward": -1.5228478262514389,
+    "block_rate": 0.1,
+    "concede_rate": 0.1,
+    "goalie_touch_rate": 0.1,
+    "mean_lateral_error_m": 1.5605247457607418
+  },
+  "gate_checks": {
+    "block_rate": false,
+    "concede_rate": true,
+    "fall_rate": true,
+    "finite_state": true,
+    "all_23_targets": true
+  },
+  "quality_passed": false,
+  "episodes": [
+    {
+      "success": false,
+      "conceded": false,
+      "goalie_touched": false,
+      "contact_body_parts": [],
+      "initial_shot_speed_mps": 3.9128047955074052,
+      "current_ball_speed_mps": 3.644949382663073e-08,
+      "current_ball_vx_mps": 2.0588728800658743e-08,
+      "shot_target_y_m": -0.41225266832977503,
+      "goalie_lateral_error_m": 2.266500273291789,
+      "safe_after_contact_seconds": 0.0,
+      "minimum_upright": 0.9965730258485724,
+      "minimum_height_m": 0.638633945116854,
+      "fell": false,
+      "episode_steps": 120,
+      "all_23_targets_sent": true,
+      "finite_state": true,
+      "teacher_action": [
+        0.0,
+        0.75,
+        0.0
+      ],
+      "residual_action": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "executed_action": [
+        0.0,
+        0.75,
+        0.0
+      ],
+      "seed": 42010,
+      "episode_reward": -2.2250936317930785
+    },
+    {
+      "success": false,
+      "conceded": false,
+      "goalie_touched": false,
+      "contact_body_parts": [],
+      "initial_shot_speed_mps": 4.066271358826025,
+      "current_ball_speed_mps": 3.4321937719659313e-08,
+      "current_ball_vx_mps": 2.2358502397732065e-08,
+      "shot_target_y_m": 0.20608207698053194,
+      "goalie_lateral_error_m": 1.3287137680765118,
+      "safe_after_contact_seconds": 0.0,
+      "minimum_upright": 0.9966848405385632,
+      "minimum_height_m": 0.6345131287420033,
+      "fell": false,
+      "episode_steps": 120,
+      "all_23_targets_sent": true,
+      "finite_state": true,
+      "teacher_action": [
+        0.0,
+        -0.75,
+        0.0
+      ],
+      "residual_action": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "executed_action": [
+        0.0,
+        -0.75,
+        0.0
+      ],
+      "seed": 42011,
+      "episode_reward": -1.3471615234765124
+    },
+    {
+      "success": false,
+      "conceded": true,
+      "goalie_touched": false,
+      "contact_body_parts": [],
+      "initial_shot_speed_mps": 4.15641151986404,
+      "current_ball_speed_mps": 0.0125975811995583,
+      "current_ball_vx_mps": -0.009105233550048162,
+      "shot_target_y_m": -0.2108582358954481,
+      "goalie_lateral_error_m": 1.190169392805284,
+      "safe_after_contact_seconds": 0.0,
+      "minimum_upright": 0.9966945385695497,
+      "minimum_height_m": 0.63861654887402,
+      "fell": false,
+      "episode_steps": 59,
+      "all_23_targets_sent": true,
+      "finite_state": true,
+      "teacher_action": [
+        0.0,
+        0.75,
+        0.0
+      ],
+      "residual_action": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "executed_action": [
+        0.0,
+        0.75,
+        0.0
+      ],
+      "seed": 42012,
+      "episode_reward": -41.17516989413046
+    },
+    {
+      "success": false,
+      "conceded": false,
+      "goalie_touched": false,
+      "contact_body_parts": [],
+      "initial_shot_speed_mps": 3.951537632960139,
+      "current_ball_speed_mps": 8.70884580092642e-09,
+      "current_ball_vx_mps": 3.2732256168737985e-09,
+      "shot_target_y_m": -0.13376518055237202,
+      "goalie_lateral_error_m": 0.7754652143447591,
+      "safe_after_contact_seconds": 0.0,
+      "minimum_upright": 0.9963543734470902,
+      "minimum_height_m": 0.6351617038060323,
+      "fell": false,
+      "episode_steps": 120,
+      "all_23_targets_sent": true,
+      "finite_state": true,
+      "teacher_action": [
+        0.0,
+        -0.75,
+        0.0
+      ],
+      "residual_action": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "executed_action": [
+        0.0,
+        -0.75,
+        0.0
+      ],
+      "seed": 42013,
+      "episode_reward": -0.7700365463895269
+    },
+    {
+      "success": false,
+      "conceded": false,
+      "goalie_touched": false,
+      "contact_body_parts": [],
+      "initial_shot_speed_mps": 3.628172573870106,
+      "current_ball_speed_mps": 3.873783614215292e-08,
+      "current_ball_vx_mps": 2.90800330668413e-08,
+      "shot_target_y_m": -0.3689562651896485,
+      "goalie_lateral_error_m": 2.1947280370609343,
+      "safe_after_contact_seconds": 0.0,
+      "minimum_upright": 0.9965688386919028,
+      "minimum_height_m": 0.6377806658183622,
+      "fell": false,
+      "episode_steps": 120,
+      "all_23_targets_sent": true,
+      "finite_state": true,
+      "teacher_action": [
+        0.0,
+        0.75,
+        0.0
+      ],
+      "residual_action": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "executed_action": [
+        0.0,
+        0.75,
+        0.0
+      ],
+      "seed": 42014,
+      "episode_reward": -2.1909226320842055
+    },
+    {
+      "success": false,
+      "conceded": false,
+      "goalie_touched": false,
+      "contact_body_parts": [],
+      "initial_shot_speed_mps": 3.769094570294164,
+      "current_ball_speed_mps": 2.2526119078484753e-09,
+      "current_ball_vx_mps": -1.4519276660765824e-09,
+      "shot_target_y_m": 0.22511376263254612,
+      "goalie_lateral_error_m": 1.220235774345598,
+      "safe_after_contact_seconds": 0.0,
+      "minimum_upright": 0.9968551373270933,
+      "minimum_height_m": 0.6356659631846042,
+      "fell": false,
+      "episode_steps": 120,
+      "all_23_targets_sent": true,
+      "finite_state": true,
+      "teacher_action": [
+        0.0,
+        -0.75,
+        0.0
+      ],
+      "residual_action": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "executed_action": [
+        0.0,
+        -0.75,
+        0.0
+      ],
+      "seed": 42015,
+      "episode_reward": -1.1941499082169995
+    },
+    {
+      "success": false,
+      "conceded": false,
+      "goalie_touched": false,
+      "contact_body_parts": [],
+      "initial_shot_speed_mps": 3.751995646128577,
+      "current_ball_speed_mps": 2.1227734627297375e-08,
+      "current_ball_vx_mps": 1.806056182362694e-08,
+      "shot_target_y_m": 0.003048658558892914,
+      "goalie_lateral_error_m": 1.727917351606186,
+      "safe_after_contact_seconds": 0.0,
+      "minimum_upright": 0.996772839577118,
+      "minimum_height_m": 0.6378615032343944,
+      "fell": false,
+      "episode_steps": 120,
+      "all_23_targets_sent": true,
+      "finite_state": true,
+      "teacher_action": [
+        0.0,
+        0.75,
+        0.0
+      ],
+      "residual_action": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "executed_action": [
+        0.0,
+        0.75,
+        0.0
+      ],
+      "seed": 42016,
+      "episode_reward": -2.0698459258180897
+    },
+    {
+      "success": false,
+      "conceded": false,
+      "goalie_touched": false,
+      "contact_body_parts": [],
+      "initial_shot_speed_mps": 3.696722767006687,
+      "current_ball_speed_mps": 1.4911271514415272e-08,
+      "current_ball_vx_mps": 9.618296821456962e-09,
+      "shot_target_y_m": -0.4936486292427924,
+      "goalie_lateral_error_m": 2.2641341166348186,
+      "safe_after_contact_seconds": 0.0,
+      "minimum_upright": 0.9964641691136726,
+      "minimum_height_m": 0.6390435336701243,
+      "fell": false,
+      "episode_steps": 120,
+      "all_23_targets_sent": true,
+      "finite_state": true,
+      "teacher_action": [
+        0.0,
+        0.75,
+        0.0
+      ],
+      "residual_action": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "executed_action": [
+        0.0,
+        0.75,
+        0.0
+      ],
+      "seed": 42017,
+      "episode_reward": -2.1245790907090942
+    },
+    {
+      "success": true,
+      "conceded": false,
+      "goalie_touched": true,
+      "contact_body_parts": [
+        "r-0-1-right_calf",
+        "r-0-1-right_foot"
+      ],
+      "initial_shot_speed_mps": 4.126763782240329,
+      "current_ball_speed_mps": 0.5217980725834841,
+      "current_ball_vx_mps": 0.35848899999442263,
+      "shot_target_y_m": -0.21033836346490964,
+      "goalie_lateral_error_m": 0.4180425470238806,
+      "safe_after_contact_seconds": 0.3,
+      "minimum_upright": 0.9963394909112495,
+      "minimum_height_m": 0.6414766542222428,
+      "fell": false,
+      "episode_steps": 32,
+      "all_23_targets_sent": true,
+      "finite_state": true,
+      "teacher_action": [
+        0.0,
+        -0.010650086216628551,
+        0.0
+      ],
+      "residual_action": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "executed_action": [
+        0.0,
+        -0.010650086216628551,
+        0.0
+      ],
+      "seed": 42018,
+      "episode_reward": 40.07075847389057
+    },
+    {
+      "success": false,
+      "conceded": false,
+      "goalie_touched": false,
+      "contact_body_parts": [],
+      "initial_shot_speed_mps": 3.713533089658372,
+      "current_ball_speed_mps": 1.987460460497579e-08,
+      "current_ball_vx_mps": 1.0285980702382772e-08,
+      "shot_target_y_m": -0.38410675079405293,
+      "goalie_lateral_error_m": 2.21934098241766,
+      "safe_after_contact_seconds": 0.0,
+      "minimum_upright": 0.9965514199293405,
+      "minimum_height_m": 0.6386040389467326,
+      "fell": false,
+      "episode_steps": 120,
+      "all_23_targets_sent": true,
+      "finite_state": true,
+      "teacher_action": [
+        0.0,
+        0.75,
+        0.0
+      ],
+      "residual_action": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "executed_action": [
+        0.0,
+        0.75,
+        0.0
+      ],
+      "seed": 42019,
+      "episode_reward": -2.2022775837869917
+    }
+  ]
+}

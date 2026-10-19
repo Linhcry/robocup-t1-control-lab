@@ -1,0 +1,396 @@
+{
+  "schema_version": "v047_cpu_smoke_8_steps_v1",
+  "seed": 47001,
+  "device": "cpu",
+  "steps_executed": 8,
+  "actor_observation_shape": [
+    1,
+    87
+  ],
+  "critic_observation_shape": [
+    1,
+    107
+  ],
+  "action_dim": 23,
+  "initial_ball_velocity_mps": [
+    -4.26900053024292,
+    0.0,
+    0.0
+  ],
+  "rewards": [
+    0.059534963220357895,
+    0.05951998755335808,
+    0.05939478427171707,
+    0.05945352092385292,
+    0.05950663983821869,
+    0.05952304229140282,
+    0.059520501643419266,
+    0.05951966717839241
+  ],
+  "evaluation_cells": [
+    {
+      "cell": [
+        0,
+        0,
+        0
+      ],
+      "shot_target_y_m": -1.5071940422058105,
+      "shot_forward_speed_mps": 4.2524518966674805,
+      "shot_target_z_m": 0.3443065881729126,
+      "in_requested_cell": true,
+      "observations_finite": true
+    },
+    {
+      "cell": [
+        1,
+        0,
+        0
+      ],
+      "shot_target_y_m": 0.3937433958053589,
+      "shot_forward_speed_mps": 4.367774486541748,
+      "shot_target_z_m": 0.22933463752269745,
+      "in_requested_cell": true,
+      "observations_finite": true
+    },
+    {
+      "cell": [
+        2,
+        0,
+        0
+      ],
+      "shot_target_y_m": 1.7524923086166382,
+      "shot_forward_speed_mps": 4.118070602416992,
+      "shot_target_z_m": 0.33724796772003174,
+      "in_requested_cell": true,
+      "observations_finite": true
+    },
+    {
+      "cell": [
+        0,
+        1,
+        0
+      ],
+      "shot_target_y_m": -1.545159935951233,
+      "shot_forward_speed_mps": 6.069061756134033,
+      "shot_target_z_m": 0.11837348341941833,
+      "in_requested_cell": true,
+      "observations_finite": true
+    },
+    {
+      "cell": [
+        1,
+        1,
+        0
+      ],
+      "shot_target_y_m": -0.40131646394729614,
+      "shot_forward_speed_mps": 6.374392509460449,
+      "shot_target_z_m": 0.24752281606197357,
+      "in_requested_cell": true,
+      "observations_finite": true
+    },
+    {
+      "cell": [
+        2,
+        1,
+        0
+      ],
+      "shot_target_y_m": 1.47044038772583,
+      "shot_forward_speed_mps": 5.613825798034668,
+      "shot_target_z_m": 0.2510986328125,
+      "in_requested_cell": true,
+      "observations_finite": true
+    },
+    {
+      "cell": [
+        0,
+        2,
+        0
+      ],
+      "shot_target_y_m": -1.4616973400115967,
+      "shot_forward_speed_mps": 7.3963236808776855,
+      "shot_target_z_m": 0.302046537399292,
+      "in_requested_cell": true,
+      "observations_finite": true
+    },
+    {
+      "cell": [
+        1,
+        2,
+        0
+      ],
+      "shot_target_y_m": -0.13169410824775696,
+      "shot_forward_speed_mps": 7.966090202331543,
+      "shot_target_z_m": 0.23547548055648804,
+      "in_requested_cell": true,
+      "observations_finite": true
+    },
+    {
+      "cell": [
+        2,
+        2,
+        0
+      ],
+      "shot_target_y_m": 1.3221909999847412,
+      "shot_forward_speed_mps": 7.663029670715332,
+      "shot_target_z_m": 0.2661430835723877,
+      "in_requested_cell": true,
+      "observations_finite": true
+    },
+    {
+      "cell": [
+        0,
+        0,
+        1
+      ],
+      "shot_target_y_m": -0.9767038822174072,
+      "shot_forward_speed_mps": 3.1630301475524902,
+      "shot_target_z_m": 0.6610584855079651,
+      "in_requested_cell": true,
+      "observations_finite": true
+    },
+    {
+      "cell": [
+        1,
+        0,
+        1
+      ],
+      "shot_target_y_m": -0.3282201290130615,
+      "shot_forward_speed_mps": 4.4049530029296875,
+      "shot_target_z_m": 0.35960888862609863,
+      "in_requested_cell": true,
+      "observations_finite": true
+    },
+    {
+      "cell": [
+        2,
+        0,
+        1
+      ],
+      "shot_target_y_m": 1.3400779962539673,
+      "shot_forward_speed_mps": 4.521169662475586,
+      "shot_target_z_m": 0.38162392377853394,
+      "in_requested_cell": true,
+      "observations_finite": true
+    },
+    {
+      "cell": [
+        0,
+        1,
+        1
+      ],
+      "shot_target_y_m": -1.1889457702636719,
+      "shot_forward_speed_mps": 6.651630401611328,
+      "shot_target_z_m": 0.46642938256263733,
+      "in_requested_cell": true,
+      "observations_finite": true
+    },
+    {
+      "cell": [
+        1,
+        1,
+        1
+      ],
+      "shot_target_y_m": 0.29552721977233887,
+      "shot_forward_speed_mps": 6.9876484870910645,
+      "shot_target_z_m": 0.5010055899620056,
+      "in_requested_cell": true,
+      "observations_finite": true
+    },
+    {
+      "cell": [
+        2,
+        1,
+        1
+      ],
+      "shot_target_y_m": 0.8108242750167847,
+      "shot_forward_speed_mps": 6.147576332092285,
+      "shot_target_z_m": 0.5375910997390747,
+      "in_requested_cell": true,
+      "observations_finite": true
+    },
+    {
+      "cell": [
+        0,
+        2,
+        1
+      ],
+      "shot_target_y_m": -0.6303441524505615,
+      "shot_forward_speed_mps": 7.470206260681152,
+      "shot_target_z_m": 0.7072520852088928,
+      "in_requested_cell": true,
+      "observations_finite": true
+    },
+    {
+      "cell": [
+        1,
+        2,
+        1
+      ],
+      "shot_target_y_m": -0.42487290501594543,
+      "shot_forward_speed_mps": 7.273226737976074,
+      "shot_target_z_m": 0.6302390098571777,
+      "in_requested_cell": true,
+      "observations_finite": true
+    },
+    {
+      "cell": [
+        2,
+        2,
+        1
+      ],
+      "shot_target_y_m": 0.7358436584472656,
+      "shot_forward_speed_mps": 8.13952350616455,
+      "shot_target_z_m": 0.7010490894317627,
+      "in_requested_cell": true,
+      "observations_finite": true
+    },
+    {
+      "cell": [
+        0,
+        0,
+        2
+      ],
+      "shot_target_y_m": -1.0977909564971924,
+      "shot_forward_speed_mps": 4.614319324493408,
+      "shot_target_z_m": 0.843989372253418,
+      "in_requested_cell": true,
+      "observations_finite": true
+    },
+    {
+      "cell": [
+        1,
+        0,
+        2
+      ],
+      "shot_target_y_m": 0.34883368015289307,
+      "shot_forward_speed_mps": 3.9233317375183105,
+      "shot_target_z_m": 0.9126656651496887,
+      "in_requested_cell": true,
+      "observations_finite": true
+    },
+    {
+      "cell": [
+        2,
+        0,
+        2
+      ],
+      "shot_target_y_m": 0.6838163137435913,
+      "shot_forward_speed_mps": 3.6951425075531006,
+      "shot_target_z_m": 1.1183381080627441,
+      "in_requested_cell": true,
+      "observations_finite": true
+    },
+    {
+      "cell": [
+        0,
+        1,
+        2
+      ],
+      "shot_target_y_m": -1.249218225479126,
+      "shot_forward_speed_mps": 5.132996559143066,
+      "shot_target_z_m": 0.7570806741714478,
+      "in_requested_cell": true,
+      "observations_finite": true
+    },
+    {
+      "cell": [
+        1,
+        1,
+        2
+      ],
+      "shot_target_y_m": -0.07474273443222046,
+      "shot_forward_speed_mps": 6.143255233764648,
+      "shot_target_z_m": 1.042048692703247,
+      "in_requested_cell": true,
+      "observations_finite": true
+    },
+    {
+      "cell": [
+        2,
+        1,
+        2
+      ],
+      "shot_target_y_m": 0.8860832452774048,
+      "shot_forward_speed_mps": 6.939538955688477,
+      "shot_target_z_m": 0.7945178747177124,
+      "in_requested_cell": true,
+      "observations_finite": true
+    },
+    {
+      "cell": [
+        0,
+        2,
+        2
+      ],
+      "shot_target_y_m": -1.5249228477478027,
+      "shot_forward_speed_mps": 7.037816047668457,
+      "shot_target_z_m": 0.8153293132781982,
+      "in_requested_cell": true,
+      "observations_finite": true
+    },
+    {
+      "cell": [
+        1,
+        2,
+        2
+      ],
+      "shot_target_y_m": 0.16444295644760132,
+      "shot_forward_speed_mps": 8.343107223510742,
+      "shot_target_z_m": 1.092888355255127,
+      "in_requested_cell": true,
+      "observations_finite": true
+    },
+    {
+      "cell": [
+        2,
+        2,
+        2
+      ],
+      "shot_target_y_m": 1.3562896251678467,
+      "shot_forward_speed_mps": 7.696847915649414,
+      "shot_target_z_m": 0.9084908366203308,
+      "in_requested_cell": true,
+      "observations_finite": true
+    }
+  ],
+  "deterministic_replay": {
+    "seed": 47999,
+    "cell": [
+      2,
+      1,
+      0
+    ],
+    "first": [
+      0.8799894452095032,
+      5.415192127227783,
+      0.16523054242134094
+    ],
+    "second": [
+      0.8799894452095032,
+      5.415192127227783,
+      0.16523054242134094
+    ]
+  },
+  "checks": {
+    "actor_shape_is_1x87": true,
+    "critic_shape_is_1x107": true,
+    "action_dim_is_23": true,
+    "all_eight_steps_executed": true,
+    "all_steps_finite": true,
+    "shot_moves_toward_keeper": true,
+    "curriculum_stage_is_zero": true,
+    "no_nonfinite_state_recorded": true,
+    "all_27_evaluation_cells_exercised": true,
+    "all_evaluation_resets_are_in_requested_cell": true,
+    "all_evaluation_reset_observations_are_finite": true,
+    "same_seed_and_cell_replay_exactly": true
+  },
+  "smoke_passed": true,
+  "gpu_parallel_probe_completed": false,
+  "training_completed": false,
+  "fixed_validation_completed": false,
+  "held_out_test_completed": false,
+  "deployment_ready": false,
+  "quality_passed": false,
+  "scope_note": "Eight CPU steps prove construction and tensor flow only; they do not train or validate goalkeeper ability."
+}

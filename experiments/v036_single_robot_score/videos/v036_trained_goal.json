@@ -1,0 +1,21 @@
+{
+  "model": "/mnt/d/机器人足球/training_runs/rcss_t1_training_20260706/experiments/v036_single_robot_score/checkpoints/v036_policy_iter_0001.zip",
+  "seed": 36010,
+  "episode_reward": 112.47840648565578,
+  "video": "/mnt/d/机器人足球/training_runs/rcss_t1_training_20260706/experiments/v036_single_robot_score/videos/v036_trained_goal.mp4",
+  "scored": true,
+  "official_goal": true,
+  "contacted_ball": true,
+  "fell": false,
+  "episode_steps": 43,
+  "episode_seconds": 4.3,
+  "initial_ball_distance_m": 1.2685226200473376,
+  "minimum_ball_distance_m": 0.26837536050253485,
+  "ball_forward_m": 0.5517541409080451,
+  "ball_lateral_m": 0.0472403160922501,
+  "maximum_ball_speed_mps": 1.5231854519894557,
+  "minimum_robot_height_m": 0.636246279677048,
+  "minimum_robot_upright": 0.9968312182539049,
+  "left_team_score": 1,
+  "all_23_targets_sent": true
+}

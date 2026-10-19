@@ -1,0 +1,19 @@
+{
+  "schema_version": "v046_t1_contract_audit_v1",
+  "created_utc": "2026-08-20T07:34:39.7032616Z",
+  "command": "<LOCAL>/audit_t1_23dof.py",
+  "script": {
+    "path": "scripts/audit_t1_23dof.py",
+    "sha256": "4a6e94df818011e26567e959020eb75ffa74695741eb64b707d48af93eb81a13"
+  },
+  "stdout_result": "PASS: T1_23_DOF_CONTRACT",
+  "canonical_joint_count": 23,
+  "canonical_order_verified": true,
+  "motor_mapping_verified": true,
+  "joint_limits_verified": true,
+  "contract_passed": true,
+  "training_completed": false,
+  "validation_passed": false,
+  "quality_passed": false,
+  "conclusion": "The central 23-DoF control contract passed after adding v046. This is structural evidence only."
+}

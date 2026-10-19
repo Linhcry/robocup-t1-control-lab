@@ -1,0 +1,67 @@
+{
+  "version": "v034_residual_ppo",
+  "parent_baselines": {
+    "locomotion": "v032_official_t1_walk",
+    "ball_contact": "v033_closed_loop_walk_kick"
+  },
+  "environment": {
+    "control_repeat": 2,
+    "warmup_seconds": 1.5,
+    "kick_seconds": 1.6,
+    "episode_seconds": 2.4,
+    "target_retention": 0.12
+  },
+  "ball_randomization": {
+    "x_m": [
+      0.4,
+      0.44
+    ],
+    "y_m": [
+      -0.13,
+      -0.09
+    ],
+    "target_angle_deg": [
+      -5.0,
+      5.0
+    ]
+  },
+  "episode_success": {
+    "ball_speed_mps": 0.8,
+    "direction_error_deg": 25.0,
+    "ball_forward_m": 0.25
+  },
+  "quality_gates": {
+    "success_rate": 0.6,
+    "ball_speed_mps": 1.0,
+    "direction_error_deg": 20.0,
+    "fall_rate": 0.2,
+    "single_touch_rate": 0.8,
+    "recovery_time_s": 1.2
+  },
+  "ppo": {
+    "learning_rate": 0.0003,
+    "n_steps": 256,
+    "batch_size": 64,
+    "n_epochs": 5,
+    "gamma": 0.99,
+    "gae_lambda": 0.95,
+    "clip_range": 0.2,
+    "ent_coef": 0.003,
+    "policy_layers": [
+      128,
+      128
+    ],
+    "seed": 34001
+  },
+  "training": {
+    "short_chunk_timesteps": 2048,
+    "long_chunk_timesteps": 16384,
+    "evaluation_seeds": [
+      34010,
+      34011,
+      34012,
+      34013,
+      34014
+    ]
+  }
+}

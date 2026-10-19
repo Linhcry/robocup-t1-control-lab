@@ -1,0 +1,100 @@
+{
+  "version": "v042_goalkeeper_ground_block",
+  "environment": {
+    "prepare_seconds": 1.2,
+    "action_repeat": 5,
+    "episode_seconds": 12.0,
+    "shot_speed_mps": [
+      4.2,
+      4.8
+    ],
+    "shot_target_y_m": [
+      -0.55,
+      0.55
+    ]
+  },
+  "residual_action_scale": [
+    0.1,
+    0.25,
+    0.15
+  ],
+  "quality_gates": {
+    "minimum_safe_after_contact_seconds": 0.3,
+    "minimum_block_rate": 0.8,
+    "maximum_concede_rate": 0.2,
+    "maximum_fall_rate": 0.0
+  },
+  "curriculum_stages": [
+    {
+      "index": 0,
+      "name": "门心附近直线地滚球站立封堵",
+      "implemented": true
+    },
+    {
+      "index": 1,
+      "name": "全门宽角度速度扰动与300球分格测试",
+      "implemented": false
+    },
+    {
+      "index": 2,
+      "name": "出击、倒地扑救与起身",
+      "implemented": false,
+      "blocked_by": "v039起身和新扑救底层技能"
+    },
+    {
+      "index": 3,
+      "name": "控球后安全传出与后卫冲突处理",
+      "implemented": false,
+      "blocked_by": "v040和stage 2"
+    }
+  ],
+  "evaluation_seeds": [
+    42010,
+    42011,
+    42012,
+    42013,
+    42014,
+    42015,
+    42016,
+    42017,
+    42018,
+    42019
+  ],
+  "held_out_test_seeds": [
+    52010,
+    52011,
+    52012,
+    52013,
+    52014,
+    52015,
+    52016,
+    52017,
+    52018,
+    52019,
+    52020,
+    52021,
+    52022,
+    52023,
+    52024,
+    52025,
+    52026,
+    52027,
+    52028,
+    52029
+  ],
+  "ppo": {
+    "learning_rate": 5e-05,
+    "n_steps": 256,
+    "batch_size": 64,
+    "n_epochs": 5,
+    "gamma": 0.995,
+    "gae_lambda": 0.95,
+    "clip_range": 0.1,
+    "ent_coef": 0.0,
+    "policy_layers": [
+      128,
+      128
+    ],
+    "seed": 42001
+  }
+}

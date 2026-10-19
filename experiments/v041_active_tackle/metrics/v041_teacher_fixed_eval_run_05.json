@@ -1,0 +1,378 @@
+{
+  "version": "v041_active_tackle",
+  "policy": "zero residual intercept teacher",
+  "summary": {
+    "episode_count": 10,
+    "success_count": 7,
+    "success_rate": 0.7,
+    "fall_rate": 0.0,
+    "finite_state_rate": 1.0,
+    "all_23_targets_sent_rate": 1.0,
+    "mean_episode_reward": 26.24915687545252,
+    "turnover_rate": 1.0,
+    "attacker_touch_rate": 1.0,
+    "defender_touch_rate": 1.0,
+    "upper_body_contact_rate": 0.0,
+    "mean_clearance_m": 0.2811984284523018
+  },
+  "gate_checks": {
+    "success_rate": false,
+    "fall_rate": true,
+    "upper_body_contact_rate": true,
+    "finite_state": true,
+    "all_23_targets": true
+  },
+  "quality_passed": false,
+  "episodes": [
+    {
+      "success": true,
+      "failed": false,
+      "attacker_touched": true,
+      "defender_touched": true,
+      "turnover": true,
+      "clearance_away_from_own_goal_m": 0.050927145457520195,
+      "current_clearance_m": -0.043944514194364404,
+      "defender_control_seconds": 0.4,
+      "current_defender_control_seconds": 0.4,
+      "upper_body_contacts": 0,
+      "minimum_upright": 0.9745216418003748,
+      "minimum_height_m": 0.5496016748238286,
+      "fell": false,
+      "episode_steps": 119,
+      "all_23_targets_sent": true,
+      "finite_state": true,
+      "defender_teacher_action": [
+        0.19130349159240723,
+        -0.8693686723709106,
+        -1.0
+      ],
+      "residual_action": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "executed_defender_action": [
+        0.19130349159240723,
+        -0.8693686723709106,
+        -1.0
+      ],
+      "seed": 41010,
+      "episode_reward": 36.69700749907023
+    },
+    {
+      "success": false,
+      "failed": false,
+      "attacker_touched": true,
+      "defender_touched": true,
+      "turnover": true,
+      "clearance_away_from_own_goal_m": 0.601281476153919,
+      "current_clearance_m": 0.5571397806420292,
+      "defender_control_seconds": 0.3,
+      "current_defender_control_seconds": 0.0,
+      "upper_body_contacts": 0,
+      "minimum_upright": 0.9931782754261749,
+      "minimum_height_m": 0.5956914708762128,
+      "fell": false,
+      "episode_steps": 140,
+      "all_23_targets_sent": true,
+      "finite_state": true,
+      "defender_teacher_action": [
+        0.29487699270248413,
+        0.1526966392993927,
+        0.4145538806915283
+      ],
+      "residual_action": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "executed_defender_action": [
+        0.29487699270248413,
+        0.1526966392993927,
+        0.4145538806915283
+      ],
+      "seed": 41011,
+      "episode_reward": 6.4147315938407745
+    },
+    {
+      "success": true,
+      "failed": false,
+      "attacker_touched": true,
+      "defender_touched": true,
+      "turnover": true,
+      "clearance_away_from_own_goal_m": 0.058537761481118666,
+      "current_clearance_m": -0.3460403235860878,
+      "defender_control_seconds": 0.4,
+      "current_defender_control_seconds": 0.4,
+      "upper_body_contacts": 0,
+      "minimum_upright": 0.9965848294630987,
+      "minimum_height_m": 0.6327757169186616,
+      "fell": false,
+      "episode_steps": 57,
+      "all_23_targets_sent": true,
+      "finite_state": true,
+      "defender_teacher_action": [
+        0.0,
+        -0.04798605665564537,
+        -1.0
+      ],
+      "residual_action": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "executed_defender_action": [
+        0.0,
+        -0.04798605665564537,
+        -1.0
+      ],
+      "seed": 41012,
+      "episode_reward": 34.355809087641056
+    },
+    {
+      "success": false,
+      "failed": false,
+      "attacker_touched": true,
+      "defender_touched": true,
+      "turnover": true,
+      "clearance_away_from_own_goal_m": 0.04209532926355397,
+      "current_clearance_m": -1.378112743071098,
+      "defender_control_seconds": 0.3,
+      "current_defender_control_seconds": 0.0,
+      "upper_body_contacts": 0,
+      "minimum_upright": 0.9886391781022282,
+      "minimum_height_m": 0.6042035674939689,
+      "fell": false,
+      "episode_steps": 140,
+      "all_23_targets_sent": true,
+      "finite_state": true,
+      "defender_teacher_action": [
+        0.6197887063026428,
+        -1.0,
+        -1.0
+      ],
+      "residual_action": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "executed_defender_action": [
+        0.6197887063026428,
+        -1.0,
+        -1.0
+      ],
+      "seed": 41013,
+      "episode_reward": -9.553185661285688
+    },
+    {
+      "success": true,
+      "failed": false,
+      "attacker_touched": true,
+      "defender_touched": true,
+      "turnover": true,
+      "clearance_away_from_own_goal_m": 0.0,
+      "current_clearance_m": -0.4480610198582827,
+      "defender_control_seconds": 0.4,
+      "current_defender_control_seconds": 0.4,
+      "upper_body_contacts": 0,
+      "minimum_upright": 0.9964166204397557,
+      "minimum_height_m": 0.6313063514795729,
+      "fell": false,
+      "episode_steps": 57,
+      "all_23_targets_sent": true,
+      "finite_state": true,
+      "defender_teacher_action": [
+        0.0,
+        -0.9698227643966675,
+        -1.0
+      ],
+      "residual_action": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "executed_defender_action": [
+        0.0,
+        -0.9698227643966675,
+        -1.0
+      ],
+      "seed": 41014,
+      "episode_reward": 33.1160856231464
+    },
+    {
+      "success": true,
+      "failed": false,
+      "attacker_touched": true,
+      "defender_touched": true,
+      "turnover": true,
+      "clearance_away_from_own_goal_m": 0.057978334599001924,
+      "current_clearance_m": -0.2214103819564292,
+      "defender_control_seconds": 0.4,
+      "current_defender_control_seconds": 0.4,
+      "upper_body_contacts": 0,
+      "minimum_upright": 0.991606239718261,
+      "minimum_height_m": 0.6273448777043915,
+      "fell": false,
+      "episode_steps": 87,
+      "all_23_targets_sent": true,
+      "finite_state": true,
+      "defender_teacher_action": [
+        0.0,
+        -0.9615321755409241,
+        -1.0
+      ],
+      "residual_action": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "executed_defender_action": [
+        0.0,
+        -0.9615321755409241,
+        -1.0
+      ],
+      "seed": 41015,
+      "episode_reward": 35.51449717094548
+    },
+    {
+      "success": true,
+      "failed": false,
+      "attacker_touched": true,
+      "defender_touched": true,
+      "turnover": true,
+      "clearance_away_from_own_goal_m": 0.04397981144069796,
+      "current_clearance_m": 0.013806370260958434,
+      "defender_control_seconds": 0.4,
+      "current_defender_control_seconds": 0.4,
+      "upper_body_contacts": 0,
+      "minimum_upright": 0.9927584141720258,
+      "minimum_height_m": 0.6319935786415446,
+      "fell": false,
+      "episode_steps": 57,
+      "all_23_targets_sent": true,
+      "finite_state": true,
+      "defender_teacher_action": [
+        0.0,
+        -0.6596740484237671,
+        -1.0
+      ],
+      "residual_action": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "executed_defender_action": [
+        0.0,
+        -0.6596740484237671,
+        -1.0
+      ],
+      "seed": 41016,
+      "episode_reward": 37.381202111955766
+    },
+    {
+      "success": false,
+      "failed": false,
+      "attacker_touched": true,
+      "defender_touched": true,
+      "turnover": true,
+      "clearance_away_from_own_goal_m": 1.8872311710813445,
+      "current_clearance_m": 1.8872311710813445,
+      "defender_control_seconds": 0.3,
+      "current_defender_control_seconds": 0.0,
+      "upper_body_contacts": 0,
+      "minimum_upright": 0.9913259706316216,
+      "minimum_height_m": 0.6054395849149384,
+      "fell": false,
+      "episode_steps": 140,
+      "all_23_targets_sent": true,
+      "finite_state": true,
+      "defender_teacher_action": [
+        0.7131335139274597,
+        0.42095527052879333,
+        0.46922779083251953
+      ],
+      "residual_action": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "executed_defender_action": [
+        0.7131335139274597,
+        0.42095527052879333,
+        0.46922779083251953
+      ],
+      "seed": 41017,
+      "episode_reward": 16.492227209451148
+    },
+    {
+      "success": true,
+      "failed": false,
+      "attacker_touched": true,
+      "defender_touched": true,
+      "turnover": true,
+      "clearance_away_from_own_goal_m": 0.02186500128328772,
+      "current_clearance_m": -0.25805470065164754,
+      "defender_control_seconds": 0.4,
+      "current_defender_control_seconds": 0.4,
+      "upper_body_contacts": 0,
+      "minimum_upright": 0.9965200673190145,
+      "minimum_height_m": 0.6321786796226122,
+      "fell": false,
+      "episode_steps": 57,
+      "all_23_targets_sent": true,
+      "finite_state": true,
+      "defender_teacher_action": [
+        0.0,
+        -1.0,
+        -1.0
+      ],
+      "residual_action": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "executed_defender_action": [
+        0.0,
+        -1.0,
+        -1.0
+      ],
+      "seed": 41018,
+      "episode_reward": 34.669580819646384
+    },
+    {
+      "success": true,
+      "failed": false,
+      "attacker_touched": true,
+      "defender_touched": true,
+      "turnover": true,
+      "clearance_away_from_own_goal_m": 0.04808825376257431,
+      "current_clearance_m": 0.0028579336555165646,
+      "defender_control_seconds": 0.4,
+      "current_defender_control_seconds": 0.4,
+      "upper_body_contacts": 0,
+      "minimum_upright": 0.9927198625628972,
+      "minimum_height_m": 0.6281992569581148,
+      "fell": false,
+      "episode_steps": 57,
+      "all_23_targets_sent": true,
+      "finite_state": true,
+      "defender_teacher_action": [
+        0.0,
+        -0.5567372441291809,
+        -1.0
+      ],
+      "residual_action": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "executed_defender_action": [
+        0.0,
+        -0.5567372441291809,
+        -1.0
+      ],
+      "seed": 41019,
+      "episode_reward": 37.40361330011364
+    }
+  ]
+}

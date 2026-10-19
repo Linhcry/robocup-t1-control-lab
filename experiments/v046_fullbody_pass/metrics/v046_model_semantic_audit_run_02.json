@@ -1,0 +1,89 @@
+{
+  "schema_version": "v046_model_semantic_audit_v1",
+  "created_utc": "2026-08-20T07:37:02.158127+00:00",
+  "task_id": "Mjlab-Directional-Pass-Flat-RCSS-T1-v046",
+  "rcss_robot_xml": {
+    "path": "<LOCAL>/robot.xml",
+    "sha256": "b81087d7d04ecfa1064ee5392cc632fc69b4d7de644b3a5318b0c5e12276d083"
+  },
+  "counts": {
+    "robot_bodies_excluding_world": 24,
+    "robot_geoms": 36,
+    "robot_hinge_joints": 23,
+    "robot_actuators": 23,
+    "ball_dynamic_bodies": 1,
+    "combined_contact_sensor_channels": 92
+  },
+  "observation_contract": {
+    "actor_terms": [
+      "base_ang_vel",
+      "projected_gravity",
+      "joint_pos",
+      "joint_vel",
+      "last_action",
+      "ball_relative_position",
+      "ball_relative_velocity",
+      "target_direction",
+      "target_distance"
+    ],
+    "critic_terms": [
+      "base_ang_vel",
+      "projected_gravity",
+      "joint_pos",
+      "joint_vel",
+      "last_action",
+      "ball_relative_position",
+      "ball_relative_velocity",
+      "target_direction",
+      "target_distance",
+      "base_linear_velocity_privileged",
+      "ball_world_state_privileged",
+      "contact_state_privileged",
+      "pass_progress_privileged",
+      "root_height_privileged"
+    ],
+    "actor_expected_dim": 84,
+    "critic_expected_dim": 101
+  },
+  "checks": {
+    "source_and_v046_have_24_robot_bodies": true,
+    "source_and_v046_have_36_robot_geoms": true,
+    "source_and_v046_robot_mass_match": true,
+    "source_and_v046_body_mass_inertia_match": true,
+    "source_and_v046_geom_names_match": true,
+    "source_and_v046_geom_physics_match": true,
+    "joint_order_is_canonical_23": true,
+    "source_and_v046_joint_ranges_match": true,
+    "v046_has_one_actuator_per_joint": true,
+    "policy_action_order_is_canonical_23": true,
+    "gpu_clamp_matches_deployment_contract": true,
+    "ball_is_free_0_43kg_0_11m_sphere": true,
+    "foot_contact_sensor_is_named_feet_to_ball": true,
+    "upper_contact_sensor_is_separate_and_fail_closed": true,
+    "compiled_scene_contains_all_contact_channels": true,
+    "actor_has_only_deployable_terms": true,
+    "critic_is_actor_superset_with_explicit_privilege": true,
+    "success_is_gated_by_foot_and_rejects_upper_contact": true,
+    "strict_safety_terminations_present": true,
+    "receive_stage_is_explicitly_unimplemented": true
+  },
+  "source_sha256": {
+    "__init__.py": "d790ef2e843fe728bff6476a0aef3e97b1c050287a2099b387802a1f2564e1a0",
+    "mdp/__init__.py": "a17c362915e0da57d4a769a98be29d302aca287aa51981311e9c37f3c9168347",
+    "mdp/actions.py": "3e2571e07eb4deb391082042a59865216da42f83d6bd3d2cd534a8daa5345b52",
+    "mdp/commands.py": "085e933d99434a2e7c0bf93c09553457b04d8fb3d2fe87a9e6dd9f8b83f4ed6e",
+    "mdp/observations.py": "d81255e53a0a151b249f6ee07fdd6a4d7c19b9a575cc66ac2d4736f72e302e8e",
+    "mdp/rewards.py": "a05fc0a9c6597eb6e37b3e517357efcfa875901b9709bafa9aa5d047eb3e6b7d",
+    "mdp/terminations.py": "e26a5a60b17906cb28d7d5644707a78e463be19ecbba53636f1da85d404b52fd",
+    "rcss_mjlab_task.py": "26c95900c68192cd33374fbbdfcecc9bd84f4b82d3df507b5b7e0f9dd67eca71",
+    "scripts/audit_v046_model.py": "6b8fe0ef75360d969d27e846eec0c8918d363ea7ce8cf0e3e7785330a1998708",
+    "scripts/smoke_v046.py": "392f6ceed817ea31ab800ca11bf84ff1fa140e9af1c275a083a3cf7a9ad9c6f7",
+    "scripts/train_v046.py": "6edafde5b7542d80acb3281aca47b432e57c77c1225a7df42204676bb77cc8b7"
+  },
+  "model_semantics_passed": true,
+  "training_completed": false,
+  "validation_passed": false,
+  "quality_passed": false,
+  "failed_checks": [],
+  "conclusion": "The exact-RCSS v046 task contract is structurally valid; skill training and independent evaluation are still required."
+}

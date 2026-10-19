@@ -1,0 +1,11 @@
+{
+  "version": "v043_team_mappo",
+  "actor_teammate_row_isolation": true,
+  "central_critic_not_called_by_actor": true,
+  "global_ball_event_not_broadcast": true,
+  "invisible_teammate_role_invariance": true,
+  "no_socket_or_ipc_import_in_deployment_path": true,
+  "single_process_note": "The simulator batches agents in one process for speed. Each Actor row is independent and has its own GRU state; this is not an inter-player communication channel.",
+  "ctde_note": "Global state, global contacts and privileged teacher roles are used only for training critic, rewards, teacher baseline and metrics. They are not inputs to deterministic_step.",
+  "quality_passed": true
+}

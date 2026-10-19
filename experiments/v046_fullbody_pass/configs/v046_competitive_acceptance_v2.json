@@ -1,0 +1,97 @@
+{
+  "schema_version": "v046_competitive_acceptance_v2",
+  "experiment": "v046_fullbody_pass",
+  "task_id": "Mjlab-Directional-Pass-Flat-RCSS-T1-v046",
+  "required_splits": {
+    "fixed_validation": {
+      "seed_start": 460100,
+      "episodes": 80
+    },
+    "held_out_test": {
+      "seed_start": 461100,
+      "episodes": 400,
+      "requires_passing_fixed_proof": true
+    }
+  },
+  "scenario_grid": {
+    "target_angle_bin_edges_deg": [
+      -60.0,
+      -36.0,
+      -12.0,
+      12.0,
+      36.0,
+      60.0
+    ],
+    "pass_distance_bin_edges_m": [
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "ball_x_range_m": [
+      0.28,
+      0.48
+    ],
+    "ball_y_range_m": [
+      -0.16,
+      0.16
+    ],
+    "minimum_fixed_samples_per_direction_bin": 16,
+    "minimum_fixed_samples_per_distance_bin": 20,
+    "minimum_heldout_samples_per_direction_bin": 80,
+    "minimum_heldout_samples_per_distance_bin": 100
+  },
+  "episode_contract": {
+    "duration_s": 8.0,
+    "policy_hz": 50,
+    "success_distance_fraction": 0.85,
+    "corridor_half_width_m": 0.35,
+    "maximum_ball_height_m": 0.35,
+    "fall_minimum_root_height_m": 0.48,
+    "fall_maximum_tilt_sine": 0.72,
+    "joint_limit_tolerance_rad": 0.0001,
+    "actual_torque_tolerance_nm": 0.05,
+    "torque_saturation_fraction": 0.98,
+    "actual_torque_limit_source": "locomotion/rcss_t1_controller.py::TORQUE_LIMIT",
+    "valid_foot_contact_channels": [
+      "left_foot",
+      "right_foot"
+    ],
+    "illegal_upper_body_channels": [
+      "torso",
+      "H1",
+      "H2",
+      "AL1",
+      "AL2",
+      "AL3",
+      "left_hand_link",
+      "AR1",
+      "AR2",
+      "AR3",
+      "right_hand_link",
+      "Waist"
+    ]
+  },
+  "quality_gates": {
+    "minimum_true_foot_contact_rate": 0.98,
+    "minimum_pass_success_rate": 0.9,
+    "maximum_upper_body_ball_contact_rate": 0.0,
+    "maximum_fall_rate": 0.01,
+    "maximum_joint_limit_violation_rate": 0.0,
+    "maximum_actual_torque_limit_violation_rate": 0.0,
+    "maximum_nonfinite_rate": 0.0,
+    "maximum_incomplete_episode_rate": 0.0,
+    "maximum_mean_torque_saturation_fraction": 0.1,
+    "maximum_median_direction_error_deg": 10.0,
+    "maximum_median_relative_distance_error": 0.2,
+    "minimum_worst_direction_bin_success_rate": 0.85,
+    "minimum_worst_distance_bin_success_rate": 0.85
+  },
+  "promotion": {
+    "fixed_validation_alone_is_quality": false,
+    "heldout_requires_same_checkpoint_contract_sources_and_audit": true,
+    "video_proof_still_required_outside_this_evaluator": true,
+    "current_quality_passed": false
+  }
+}

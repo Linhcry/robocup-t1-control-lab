@@ -1,0 +1,245 @@
+{
+  "version": "v038_high_speed_dribble",
+  "goal": "从 v037 中场控球模型继续训练，逐级提高速度，同时保持控球、进球、站立和23自由度安全。",
+  "bootstrap_model": "experiments/v037_midfield_dribble_score/checkpoints/v037r2_stage_04_iter_0002.zip",
+  "bootstrap_evaluation": "experiments/v037_midfield_dribble_score/metrics/v037r2_stage_04_iter_0002_fixed_eval.json",
+  "base_environment": {
+    "prepare_seconds": 1.5,
+    "action_repeat": 5,
+    "player_ball_distance_m": [
+      1.1,
+      1.35
+    ],
+    "max_vy_mps": 0.24,
+    "max_yaw_rate_rps": 0.24,
+    "observation_vx_scale_mps": 0.45,
+    "observation_vy_scale_mps": 0.2,
+    "sideline_guard_start_m": 8.0
+  },
+  "reward": {
+    "goal_bonus": 150.0,
+    "center_progress_weight": 10.0,
+    "lateral_error_weight": 0.02,
+    "controlled_possession_bonus": 0.025,
+    "lost_possession_weight": 0.1,
+    "timeout_penalty": 30.0,
+    "control_distance_m": 0.9,
+    "lost_distance_m": 2.5,
+    "controlled_speed_weight": 0.035,
+    "decision_time_penalty": 0.004,
+    "residual_l2_penalty": 0.01
+  },
+  "ppo": {
+    "learning_rate": 4e-05,
+    "n_steps": 512,
+    "batch_size": 128,
+    "n_epochs": 5,
+    "gamma": 0.997,
+    "gae_lambda": 0.95,
+    "clip_range": 0.1,
+    "ent_coef": 0.0,
+    "policy_layers": [
+      128,
+      128
+    ],
+    "log_std_init": -2.0,
+    "max_log_std": -1.2,
+    "default_chunk_timesteps": 4096,
+    "seed": 38001
+  },
+  "residual_action_scale": [
+    0.18,
+    0.35,
+    0.45
+  ],
+  "quality_gates": {
+    "required_goal_count": 7,
+    "target_success_rate": 0.7,
+    "maximum_fall_rate": 0.0,
+    "minimum_contact_rate": 1.0,
+    "minimum_controlled_possession_ratio": 0.75,
+    "maximum_lost_possession_rate": 0.0
+  },
+  "stages": [
+    {
+      "index": 0,
+      "name": "0.60m/s指令的短距离高速控球",
+      "max_vx_mps": 0.6,
+      "teacher_cruise_speed_mps": 0.56,
+      "teacher_approach_speed_mps": 0.44,
+      "gait_frequency_hz": 1.0,
+      "target_controlled_speed_mps": 0.24,
+      "ball_goal_distance_m": [
+        7.0,
+        9.0
+      ],
+      "ball_y_m": [
+        -1.2,
+        1.2
+      ],
+      "player_y_offset_m": [
+        -0.3,
+        0.3
+      ],
+      "player_yaw_rad": [
+        -0.16,
+        0.16
+      ],
+      "episode_seconds": 45.0,
+      "evaluation_seeds": [
+        38010,
+        38011,
+        38012,
+        38013,
+        38014,
+        38015,
+        38016,
+        38017,
+        38018,
+        38019
+      ],
+      "held_out_test_seeds": [
+        48010,
+        48011,
+        48012,
+        48013,
+        48014,
+        48015,
+        48016,
+        48017,
+        48018,
+        48019,
+        48020,
+        48021,
+        48022,
+        48023,
+        48024,
+        48025,
+        48026,
+        48027,
+        48028,
+        48029
+      ]
+    },
+    {
+      "index": 1,
+      "name": "0.80m/s指令的进攻三区高速控球",
+      "max_vx_mps": 0.8,
+      "teacher_cruise_speed_mps": 0.62,
+      "teacher_approach_speed_mps": 0.5,
+      "gait_frequency_hz": 1.0,
+      "target_controlled_speed_mps": 0.3,
+      "ball_goal_distance_m": [
+        14.0,
+        16.0
+      ],
+      "ball_y_m": [
+        -2.0,
+        2.0
+      ],
+      "player_y_offset_m": [
+        -0.4,
+        0.4
+      ],
+      "player_yaw_rad": [
+        -0.2,
+        0.2
+      ],
+      "episode_seconds": 72.0,
+      "evaluation_seeds": [
+        38110,
+        38111,
+        38112,
+        38113,
+        38114,
+        38115,
+        38116,
+        38117,
+        38118,
+        38119
+      ],
+      "held_out_test_seeds": [
+        48110,
+        48111,
+        48112,
+        48113,
+        48114,
+        48115,
+        48116,
+        48117,
+        48118,
+        48119,
+        48120,
+        48121,
+        48122,
+        48123,
+        48124,
+        48125,
+        48126,
+        48127,
+        48128,
+        48129
+      ]
+    },
+    {
+      "index": 2,
+      "name": "1.00m/s指令的中场高速控球",
+      "max_vx_mps": 1.0,
+      "teacher_cruise_speed_mps": 0.82,
+      "teacher_approach_speed_mps": 0.55,
+      "gait_frequency_hz": 1.0,
+      "target_controlled_speed_mps": 0.36,
+      "ball_goal_distance_m": [
+        26.0,
+        27.0
+      ],
+      "ball_y_m": [
+        -3.0,
+        3.0
+      ],
+      "player_y_offset_m": [
+        -0.5,
+        0.5
+      ],
+      "player_yaw_rad": [
+        -0.25,
+        0.25
+      ],
+      "episode_seconds": 130.0,
+      "evaluation_seeds": [
+        38210,
+        38211,
+        38212,
+        38213,
+        38214,
+        38215,
+        38216,
+        38217,
+        38218,
+        38219
+      ],
+      "held_out_test_seeds": [
+        48210,
+        48211,
+        48212,
+        48213,
+        48214,
+        48215,
+        48216,
+        48217,
+        48218,
+        48219,
+        48220,
+        48221,
+        48222,
+        48223,
+        48224,
+        48225,
+        48226,
+        48227,
+        48228,
+        48229
+      ]
+    }
+  ]
+}

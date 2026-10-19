@@ -1,0 +1,5 @@
+{
+  "version": "v041_active_tackle",
+  "timesteps": 512,
+  "checkpoint": "/mnt/d/机器人足球/training_runs/rcss_t1_training_20260706/experiments/v041_active_tackle/checkpoints/v041_policy_iter_0001.zip"
+}

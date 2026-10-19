@@ -1,0 +1,978 @@
+{
+  "schema_version": "v044_mjlab_training_summary_v1",
+  "experiment": "v044_mjlab_t1_getup",
+  "run_directory": "<LOCAL>/2026-08-20_13-43-49_v044_official_getup_4096_full_r1",
+  "expected_iterations": 3000,
+  "completed_iterations_from_events": 3000,
+  "run_complete": true,
+  "num_environments": 4096,
+  "steps_per_environment_per_iteration": 24,
+  "total_environment_steps": 294912000,
+  "agent_config": {
+    "path": "<LOCAL>/agent.yaml",
+    "sha256": "2b8667f4085928729c043137c0a41c102680863656eae487d5d2f2f040dbc314"
+  },
+  "environment_config": {
+    "path": "<LOCAL>/env.yaml",
+    "sha256": "5935315ed1332f845e9945efa6dddee61d1a9deb3acadca124bc451f02c3d5db"
+  },
+  "tensorboard_event": {
+    "path": "<LOCAL>/events.out.tfevents.1787204632.LAPTOP-65BHT2IV.1663.0",
+    "sha256": "3cb371607a56e70f8ffb9cde6ca52934b0b0b2d6d3c28ebc488a93d5b55b4c40"
+  },
+  "checkpoints": [
+    {
+      "iteration": 0,
+      "name": "model_0.pt",
+      "size_bytes": 4953419,
+      "sha256": "4bb85f6f3f66948eef663cad852591b380f90e3a805a9ac29d0fa461d86e4116",
+      "training_getup_success_at_iteration": 0.47100943326950073
+    },
+    {
+      "iteration": 50,
+      "name": "model_50.pt",
+      "size_bytes": 4953945,
+      "sha256": "ce39bd72229cadd8191a46632129c7181f90d26cbd10c135cc3c905642e29c94",
+      "training_getup_success_at_iteration": 0.37907928228378296
+    },
+    {
+      "iteration": 100,
+      "name": "model_100.pt",
+      "size_bytes": 4954023,
+      "sha256": "455648b5ff2f139b013ff6004e8bcd305ed9d1ebdc3f803dab1bd1b45dbeab2b",
+      "training_getup_success_at_iteration": 0.41793274879455566
+    },
+    {
+      "iteration": 150,
+      "name": "model_150.pt",
+      "size_bytes": 4954023,
+      "sha256": "610ab7fef5a229e16e762137b4fe13493770dc4221b3922c7b00a8ce8bf52c69",
+      "training_getup_success_at_iteration": 0.4050825238227844
+    },
+    {
+      "iteration": 200,
+      "name": "model_200.pt",
+      "size_bytes": 4954023,
+      "sha256": "a6b516ede51b4194729f2c5ca14dbc8f7e72161d249cedc6da83c1bda732031f",
+      "training_getup_success_at_iteration": 0.41763901710510254
+    },
+    {
+      "iteration": 250,
+      "name": "model_250.pt",
+      "size_bytes": 4954023,
+      "sha256": "851f7da469be8d31d0abc9e8ad2b07ee6b3971258eed19f77a4fda3578abf145",
+      "training_getup_success_at_iteration": 0.384833425283432
+    },
+    {
+      "iteration": 300,
+      "name": "model_300.pt",
+      "size_bytes": 4954023,
+      "sha256": "eeff4264f9966302a486e2adfddc845535879d7700b1ff5853e68ffa03d6100e",
+      "training_getup_success_at_iteration": 0.39429864287376404
+    },
+    {
+      "iteration": 350,
+      "name": "model_350.pt",
+      "size_bytes": 4954023,
+      "sha256": "d3f53615df8590ed7a0d375b727ca5a742c04a424161267e94f07768ffff9c4f",
+      "training_getup_success_at_iteration": 0.6418884992599487
+    },
+    {
+      "iteration": 400,
+      "name": "model_400.pt",
+      "size_bytes": 4954023,
+      "sha256": "388cbad7920ce661cd391e3258953943577e0f9a3001debfa3511321975b7402",
+      "training_getup_success_at_iteration": 0.9631554484367371
+    },
+    {
+      "iteration": 450,
+      "name": "model_450.pt",
+      "size_bytes": 4954023,
+      "sha256": "e8220be332161e7efe261a3df0a4f63dfd6dbb9742295d888edd596f3cdacd69",
+      "training_getup_success_at_iteration": 1.0
+    },
+    {
+      "iteration": 500,
+      "name": "model_500.pt",
+      "size_bytes": 4954023,
+      "sha256": "2bad91a1f004c849ca7ab5d52dec74e80acb21b18fbd473e908a851c27f14982",
+      "training_getup_success_at_iteration": 1.0
+    },
+    {
+      "iteration": 550,
+      "name": "model_550.pt",
+      "size_bytes": 4954023,
+      "sha256": "2df62af5df588ef19ab30dfa969345d9d27a9c7774a2980780be8fb966d45785",
+      "training_getup_success_at_iteration": 1.0
+    },
+    {
+      "iteration": 600,
+      "name": "model_600.pt",
+      "size_bytes": 4954023,
+      "sha256": "5c0e7862c0560403be7dcf59f760ffb932e657446f2ccc5fcbed22dbbd089710",
+      "training_getup_success_at_iteration": 1.0
+    },
+    {
+      "iteration": 650,
+      "name": "model_650.pt",
+      "size_bytes": 4954023,
+      "sha256": "c905b3f1cf062a3d9f97281ec0fd51668228a3a6cc8fb5cb650bf535ca16f4eb",
+      "training_getup_success_at_iteration": 1.0
+    },
+    {
+      "iteration": 700,
+      "name": "model_700.pt",
+      "size_bytes": 4954023,
+      "sha256": "05473d2d72e8744b7bdaa0c38a5f23bceb17eb5a76f0ebc7d297657e134799e2",
+      "training_getup_success_at_iteration": 1.0
+    },
+    {
+      "iteration": 750,
+      "name": "model_750.pt",
+      "size_bytes": 4954023,
+      "sha256": "babd87d13899de21392105f0bcaee95140f58c63e96fb71b0997070c5f53ae70",
+      "training_getup_success_at_iteration": 1.0
+    },
+    {
+      "iteration": 800,
+      "name": "model_800.pt",
+      "size_bytes": 4954023,
+      "sha256": "5ffe68a7f0e4668db3285bf76dbc8e763081b70e97e8a5a9938640c0e18112ff",
+      "training_getup_success_at_iteration": 1.0
+    },
+    {
+      "iteration": 850,
+      "name": "model_850.pt",
+      "size_bytes": 4954023,
+      "sha256": "6b56ce90bbae582f9dc634e2ab25673ba65472267bb83518ca55852cdaeb4f80",
+      "training_getup_success_at_iteration": 1.0
+    },
+    {
+      "iteration": 900,
+      "name": "model_900.pt",
+      "size_bytes": 4954023,
+      "sha256": "c80662fbd09e3902b41a5b9e0d7b96cd403e5908e16416b0312d322cbc36a559",
+      "training_getup_success_at_iteration": 0.9604228734970093
+    },
+    {
+      "iteration": 950,
+      "name": "model_950.pt",
+      "size_bytes": 4954023,
+      "sha256": "d765f47db91db72d5c9182cc8249b6298ef417f67e152f0ce3a5d4ea2c991aa4",
+      "training_getup_success_at_iteration": 0.9914726614952087
+    },
+    {
+      "iteration": 1000,
+      "name": "model_1000.pt",
+      "size_bytes": 4954101,
+      "sha256": "6678996944f9bfb01b46f7e115550088372a70fb7c61d2ae27c5678183ed4923",
+      "training_getup_success_at_iteration": 1.0
+    },
+    {
+      "iteration": 1050,
+      "name": "model_1050.pt",
+      "size_bytes": 4954101,
+      "sha256": "495c6402b45e2ec30b256b851b934299a4e9ce94a365ec8f92801524d12a1169",
+      "training_getup_success_at_iteration": 0.9970238208770752
+    },
+    {
+      "iteration": 1100,
+      "name": "model_1100.pt",
+      "size_bytes": 4954101,
+      "sha256": "4269a9271dc9427b42b76f533c4870ea9b22a35831352a2f87f59369bcf7a3ff",
+      "training_getup_success_at_iteration": 0.9933227300643921
+    },
+    {
+      "iteration": 1150,
+      "name": "model_1150.pt",
+      "size_bytes": 4954101,
+      "sha256": "99c7d911980ae9bb2d42d62512bec0606063dea494a7d2b9077606b7aac72dde",
+      "training_getup_success_at_iteration": 0.9972223043441772
+    },
+    {
+      "iteration": 1200,
+      "name": "model_1200.pt",
+      "size_bytes": 4954101,
+      "sha256": "be5867960755f9b939adb0c5e433c3d8ff2bab754483a4fbb87d84f64c7e09d1",
+      "training_getup_success_at_iteration": 0.9715533256530762
+    },
+    {
+      "iteration": 1250,
+      "name": "model_1250.pt",
+      "size_bytes": 4954101,
+      "sha256": "5ae63aa13d9b2fe8d81be5fdb93efb98123bbc50db8c813ed21b03fbdb2ff612",
+      "training_getup_success_at_iteration": 0.9729757308959961
+    },
+    {
+      "iteration": 1300,
+      "name": "model_1300.pt",
+      "size_bytes": 4954101,
+      "sha256": "9d2d733f9952a18398742c3255ebfdc97221c770cd900cdc8124daeb95dfc089",
+      "training_getup_success_at_iteration": 0.9802043437957764
+    },
+    {
+      "iteration": 1350,
+      "name": "model_1350.pt",
+      "size_bytes": 4954101,
+      "sha256": "4fe25ca44fd5568985edaf188eab1be44085512698fda394e46688dd0f3c0a8c",
+      "training_getup_success_at_iteration": 0.9728337526321411
+    },
+    {
+      "iteration": 1400,
+      "name": "model_1400.pt",
+      "size_bytes": 4954101,
+      "sha256": "68677edb1965c3b5ce8eaea8ad065d037bae3d227998b1600575fda5c16706ef",
+      "training_getup_success_at_iteration": 0.9829060435295105
+    },
+    {
+      "iteration": 1450,
+      "name": "model_1450.pt",
+      "size_bytes": 4954101,
+      "sha256": "25a9da81f0b8b8c47ccaa0082b9f1e29e20f88df5c57933ee8cf82686438bd40",
+      "training_getup_success_at_iteration": 0.9934343695640564
+    },
+    {
+      "iteration": 1500,
+      "name": "model_1500.pt",
+      "size_bytes": 4954101,
+      "sha256": "2edb739710823e89de49e7ef1fb8961a0949a65867244ddfe8b69f1fb3f9fdc0",
+      "training_getup_success_at_iteration": 0.9268635511398315
+    },
+    {
+      "iteration": 1550,
+      "name": "model_1550.pt",
+      "size_bytes": 4954101,
+      "sha256": "82d463c1c195ce419efd5444d835ec691a2d1ab25f9b5949bae4f6f9496a3377",
+      "training_getup_success_at_iteration": 0.9589786529541016
+    },
+    {
+      "iteration": 1600,
+      "name": "model_1600.pt",
+      "size_bytes": 4954101,
+      "sha256": "5e9c3f5376f644a0cf16603eeccd2fc0ac41c7f5864899852a6df0084f808f79",
+      "training_getup_success_at_iteration": 0.9490272402763367
+    },
+    {
+      "iteration": 1650,
+      "name": "model_1650.pt",
+      "size_bytes": 4954101,
+      "sha256": "aa427ba2e1c24ac65b88cfe578fa91da8396a6e4e42b34cb1a83d1d3ac9e9a4c",
+      "training_getup_success_at_iteration": 0.975369393825531
+    },
+    {
+      "iteration": 1700,
+      "name": "model_1700.pt",
+      "size_bytes": 4954101,
+      "sha256": "a34efb4afabe726483d62d3e8225aa9de4db74803fe0d238e1662856135d44ff",
+      "training_getup_success_at_iteration": 0.7084674835205078
+    },
+    {
+      "iteration": 1750,
+      "name": "model_1750.pt",
+      "size_bytes": 4954101,
+      "sha256": "53ec871a16fa51412dabd07403b5a0d9c628fdf485469d426c57f5eb9f089724",
+      "training_getup_success_at_iteration": 0.7371980547904968
+    },
+    {
+      "iteration": 1800,
+      "name": "model_1800.pt",
+      "size_bytes": 4954101,
+      "sha256": "b007d3ce0a55d8d1cb228f45eda2ecb11c9d349e41591e9976d127157d4c3ec3",
+      "training_getup_success_at_iteration": 0.7912706732749939
+    },
+    {
+      "iteration": 1850,
+      "name": "model_1850.pt",
+      "size_bytes": 4954101,
+      "sha256": "0b11f769bdc7bad85dd4f9512ca1b755c107f2b3667db24a39e85266aab4f470",
+      "training_getup_success_at_iteration": 0.856214702129364
+    },
+    {
+      "iteration": 1900,
+      "name": "model_1900.pt",
+      "size_bytes": 4954101,
+      "sha256": "8381412ba796538fd92d42ec4ed53f5452dfd825f8d820196c015276f37e0ad7",
+      "training_getup_success_at_iteration": 0.875627875328064
+    },
+    {
+      "iteration": 1950,
+      "name": "model_1950.pt",
+      "size_bytes": 4954101,
+      "sha256": "770d5b36908b927f725d74f010f09ef4b394fa6e4d1ef567a89ee9c3cbe81f29",
+      "training_getup_success_at_iteration": 0.8631198406219482
+    },
+    {
+      "iteration": 2000,
+      "name": "model_2000.pt",
+      "size_bytes": 4954101,
+      "sha256": "3f6324c97dddbd5589f937e213b9e3aaa299f5db6fad4156b957f1fbbf1fb502",
+      "training_getup_success_at_iteration": 0.8707572221755981
+    },
+    {
+      "iteration": 2050,
+      "name": "model_2050.pt",
+      "size_bytes": 4954101,
+      "sha256": "d3716db89fa8d8c31f7e58ae252a70f9664eb07b250da7bc3a6e2956100e4d18",
+      "training_getup_success_at_iteration": 0.9027235507965088
+    },
+    {
+      "iteration": 2100,
+      "name": "model_2100.pt",
+      "size_bytes": 4954101,
+      "sha256": "4eb09ef5e559005825e4148d54069ce1c3bac99da068e2224cd900cbe8ed030a",
+      "training_getup_success_at_iteration": 0.9410125017166138
+    },
+    {
+      "iteration": 2150,
+      "name": "model_2150.pt",
+      "size_bytes": 4954101,
+      "sha256": "649a3d09e36b8fe60479845548d50d7355e8b6b2f51f90defeb22363a83f0bf9",
+      "training_getup_success_at_iteration": 0.8966814875602722
+    },
+    {
+      "iteration": 2200,
+      "name": "model_2200.pt",
+      "size_bytes": 4954101,
+      "sha256": "5def7886d515c28cf3d79dafeb089582c0ebe52f78cadb3f4e13630351863d0a",
+      "training_getup_success_at_iteration": 0.5111563801765442
+    },
+    {
+      "iteration": 2250,
+      "name": "model_2250.pt",
+      "size_bytes": 4954101,
+      "sha256": "2808971795274e2e13961e4175919f94ecc7138455ba4c1276991f77dedd20ae",
+      "training_getup_success_at_iteration": 0.6485923528671265
+    },
+    {
+      "iteration": 2300,
+      "name": "model_2300.pt",
+      "size_bytes": 4954101,
+      "sha256": "2a78478fd4445e606ad58ba97e9b46f8751602a946240fe9d56772ffe78ccced",
+      "training_getup_success_at_iteration": 0.6593295931816101
+    },
+    {
+      "iteration": 2350,
+      "name": "model_2350.pt",
+      "size_bytes": 4954101,
+      "sha256": "d6183a9c1301e0b75dbc149aa033f28c0b3673441828d8058cd20b250f710513",
+      "training_getup_success_at_iteration": 0.7349348068237305
+    },
+    {
+      "iteration": 2400,
+      "name": "model_2400.pt",
+      "size_bytes": 4954101,
+      "sha256": "31e48157344e665bcbe04184204ed946e2bfe649e01c1734decc2c94655f9612",
+      "training_getup_success_at_iteration": 0.7696582674980164
+    },
+    {
+      "iteration": 2450,
+      "name": "model_2450.pt",
+      "size_bytes": 4954101,
+      "sha256": "ae0ba962c2d13a7848d9d82d3bb51a17f06b5e7f82c21dd77e355091986a3ca0",
+      "training_getup_success_at_iteration": 0.7959822416305542
+    },
+    {
+      "iteration": 2500,
+      "name": "model_2500.pt",
+      "size_bytes": 4954101,
+      "sha256": "4cff1643dff4a757a8d17d9b76f4f2c96884e21e7d6ded838ef75f1a54fdad81",
+      "training_getup_success_at_iteration": 0.7901336550712585
+    },
+    {
+      "iteration": 2550,
+      "name": "model_2550.pt",
+      "size_bytes": 4954101,
+      "sha256": "8d1f1a7accaccb184f651f263792b10a4fc5f16ad304ba557141b464d58486cb",
+      "training_getup_success_at_iteration": 0.831283450126648
+    },
+    {
+      "iteration": 2600,
+      "name": "model_2600.pt",
+      "size_bytes": 4954101,
+      "sha256": "c92c84b518977f50d05d7ee65f03f02125f791331ca4f3ff262b80f1e0bc5c6b",
+      "training_getup_success_at_iteration": 0.8208423852920532
+    },
+    {
+      "iteration": 2650,
+      "name": "model_2650.pt",
+      "size_bytes": 4954101,
+      "sha256": "283f9904f6efbdee4cd503fb2897d907b6464a9ed61c1f60a7ae9dc656d31648",
+      "training_getup_success_at_iteration": 0.8267137408256531
+    },
+    {
+      "iteration": 2700,
+      "name": "model_2700.pt",
+      "size_bytes": 4954101,
+      "sha256": "014f12fbd3539256bb001b1410b8e95de94ecf57b4f32b6778707c2450cf3674",
+      "training_getup_success_at_iteration": 0.8237513303756714
+    },
+    {
+      "iteration": 2750,
+      "name": "model_2750.pt",
+      "size_bytes": 4954101,
+      "sha256": "60be53fb3f983d6a87803ff62d2d45a4187516d76441321bd042bcbff683a128",
+      "training_getup_success_at_iteration": 0.834880530834198
+    },
+    {
+      "iteration": 2800,
+      "name": "model_2800.pt",
+      "size_bytes": 4954101,
+      "sha256": "65a705128001cd564b88ff56dc6bfd08aa538896d27aea12b501df0a69b8afdb",
+      "training_getup_success_at_iteration": 0.8560594320297241
+    },
+    {
+      "iteration": 2850,
+      "name": "model_2850.pt",
+      "size_bytes": 4954101,
+      "sha256": "1f06d6e5a44bd34b21f9909f9749220b8a1c21598733eda3386aaa95028e1bed",
+      "training_getup_success_at_iteration": 0.8837358951568604
+    },
+    {
+      "iteration": 2900,
+      "name": "model_2900.pt",
+      "size_bytes": 4954101,
+      "sha256": "3acf7729752f59996234fd2bd056b95e5c9179a0d9394e8ababe7fe98d130185",
+      "training_getup_success_at_iteration": 0.8597009181976318
+    },
+    {
+      "iteration": 2950,
+      "name": "model_2950.pt",
+      "size_bytes": 4954101,
+      "sha256": "0b96f97ed69cfb0abf1e2459bdee6066ef3c752ba7fafc60c8ff9d650841eb85",
+      "training_getup_success_at_iteration": 0.8801734447479248
+    },
+    {
+      "iteration": 2999,
+      "name": "model_2999.pt",
+      "size_bytes": 4954101,
+      "sha256": "62c2530c16502f9dbc86f8c72704914af399fcbc89fae641e0124cdd39bd52bd",
+      "training_getup_success_at_iteration": 0.8854742050170898
+    }
+  ],
+  "scalar_summaries": {
+    "Episode_Reward/orientation": {
+      "count": 3000,
+      "first": {
+        "step": 0,
+        "value": 0.020411072298884392
+      },
+      "last": {
+        "step": 2999,
+        "value": 0.6990243792533875
+      },
+      "minimum": {
+        "step": 0,
+        "value": 0.020411072298884392
+      },
+      "maximum": {
+        "step": 825,
+        "value": 0.8332392573356628
+      },
+      "last_50_mean": 0.6872347986698151
+    },
+    "Episode_Reward/torso_height": {
+      "count": 3000,
+      "first": {
+        "step": 0,
+        "value": 0.03735630586743355
+      },
+      "last": {
+        "step": 2999,
+        "value": 0.7628782987594604
+      },
+      "minimum": {
+        "step": 0,
+        "value": 0.03735630586743355
+      },
+      "maximum": {
+        "step": 825,
+        "value": 0.8962534666061401
+      },
+      "last_50_mean": 0.7544015598297119
+    },
+    "Episode_Reward/posture": {
+      "count": 3000,
+      "first": {
+        "step": 0,
+        "value": 0.005017789546400309
+      },
+      "last": {
+        "step": 2999,
+        "value": 0.5783463716506958
+      },
+      "minimum": {
+        "step": 6,
+        "value": 0.00414029136300087
+      },
+      "maximum": {
+        "step": 1402,
+        "value": 0.7091895937919617
+      },
+      "last_50_mean": 0.569763525724411
+    },
+    "Episode_Reward/action_rate_l2": {
+      "count": 3000,
+      "first": {
+        "step": 0,
+        "value": -0.01856244169175625
+      },
+      "last": {
+        "step": 2999,
+        "value": -0.5571225881576538
+      },
+      "minimum": {
+        "step": 612,
+        "value": -2.2765917778015137
+      },
+      "maximum": {
+        "step": 0,
+        "value": -0.01856244169175625
+      },
+      "last_50_mean": -0.5564038920402526
+    },
+    "Episode_Reward/joint_vel_l2": {
+      "count": 3000,
+      "first": {
+        "step": 0,
+        "value": 0.0
+      },
+      "last": {
+        "step": 2999,
+        "value": -0.4067384898662567
+      },
+      "minimum": {
+        "step": 914,
+        "value": -0.7829132080078125
+      },
+      "maximum": {
+        "step": 0,
+        "value": 0.0
+      },
+      "last_50_mean": -0.407990100979805
+    },
+    "Episode_Reward/dof_pos_limits": {
+      "count": 3000,
+      "first": {
+        "step": 0,
+        "value": -0.005108347162604332
+      },
+      "last": {
+        "step": 2999,
+        "value": -0.0265036728233099
+      },
+      "minimum": {
+        "step": 17,
+        "value": -0.31876668334007263
+      },
+      "maximum": {
+        "step": 0,
+        "value": -0.005108347162604332
+      },
+      "last_50_mean": -0.02895802102982998
+    },
+    "Episode_Reward/self_collisions": {
+      "count": 3000,
+      "first": {
+        "step": 0,
+        "value": -0.0014898711815476418
+      },
+      "last": {
+        "step": 2999,
+        "value": -0.009496859274804592
+      },
+      "minimum": {
+        "step": 11,
+        "value": -0.053207360208034515
+      },
+      "maximum": {
+        "step": 0,
+        "value": -0.0014898711815476418
+      },
+      "last_50_mean": -0.01143433852121234
+    },
+    "Episode_Reward/waist_height": {
+      "count": 3000,
+      "first": {
+        "step": 0,
+        "value": 0.03907013684511185
+      },
+      "last": {
+        "step": 2999,
+        "value": 0.7916594743728638
+      },
+      "minimum": {
+        "step": 0,
+        "value": 0.03907013684511185
+      },
+      "maximum": {
+        "step": 865,
+        "value": 0.9217686653137207
+      },
+      "last_50_mean": 0.7835378730297089
+    },
+    "Episode_Metrics/getup_success": {
+      "count": 3000,
+      "first": {
+        "step": 0,
+        "value": 0.47100943326950073
+      },
+      "last": {
+        "step": 2999,
+        "value": 0.8854742050170898
+      },
+      "minimum": {
+        "step": 290,
+        "value": 0.3291042447090149
+      },
+      "maximum": {
+        "step": 408,
+        "value": 1.0
+      },
+      "last_50_mean": 0.8700400590896606
+    },
+    "Curriculum/action_rate_weight/weight": {
+      "count": 3000,
+      "first": {
+        "step": 0,
+        "value": -0.009999999776482582
+      },
+      "last": {
+        "step": 2999,
+        "value": -0.10000000894069672
+      },
+      "minimum": {
+        "step": 1200,
+        "value": -0.10000000894069672
+      },
+      "maximum": {
+        "step": 0,
+        "value": -0.009999999776482582
+      },
+      "last_50_mean": -0.10000000894069672
+    },
+    "Curriculum/joint_vel_weight/weight": {
+      "count": 3000,
+      "first": {
+        "step": 0,
+        "value": 0.0
+      },
+      "last": {
+        "step": 2999,
+        "value": -0.009999999776482582
+      },
+      "minimum": {
+        "step": 1500,
+        "value": -0.009999999776482582
+      },
+      "maximum": {
+        "step": 0,
+        "value": 0.0
+      },
+      "last_50_mean": -0.009999999776482582
+    },
+    "Curriculum/energy_threshold/threshold": {
+      "count": 3000,
+      "first": {
+        "step": 0,
+        "value": Infinity
+      },
+      "last": {
+        "step": 2999,
+        "value": 700.0
+      },
+      "minimum": {
+        "step": 2200,
+        "value": 700.0
+      },
+      "maximum": {
+        "step": 0,
+        "value": Infinity
+      },
+      "last_50_mean": 700.0
+    },
+    "Episode_Termination/time_out": {
+      "count": 3000,
+      "first": {
+        "step": 0,
+        "value": 13.291666984558105
+      },
+      "last": {
+        "step": 2999,
+        "value": 14.541666984558105
+      },
+      "minimum": {
+        "step": 2210,
+        "value": 6.625
+      },
+      "maximum": {
+        "step": 1633,
+        "value": 15.583333969116211
+      },
+      "last_50_mean": 13.17833372116089
+    },
+    "Episode_Termination/energy": {
+      "count": 3000,
+      "first": {
+        "step": 0,
+        "value": 0.0
+      },
+      "last": {
+        "step": 2999,
+        "value": 2.0
+      },
+      "minimum": {
+        "step": 0,
+        "value": 0.0
+      },
+      "maximum": {
+        "step": 2200,
+        "value": 13.958333969116211
+      },
+      "last_50_mean": 2.060833399295807
+    },
+    "Loss/value": {
+      "count": 3000,
+      "first": {
+        "step": 0,
+        "value": 0.04033251106739044
+      },
+      "last": {
+        "step": 2999,
+        "value": 0.024486899375915527
+      },
+      "minimum": {
+        "step": 73,
+        "value": 0.003862435230985284
+      },
+      "maximum": {
+        "step": 2200,
+        "value": 0.19124025106430054
+      },
+      "last_50_mean": 0.023854237496852875
+    },
+    "Loss/surrogate": {
+      "count": 3000,
+      "first": {
+        "step": 0,
+        "value": 0.0007093115127645433
+      },
+      "last": {
+        "step": 2999,
+        "value": -0.009084890596568584
+      },
+      "minimum": {
+        "step": 48,
+        "value": -0.01264182198792696
+      },
+      "maximum": {
+        "step": 0,
+        "value": 0.0007093115127645433
+      },
+      "last_50_mean": -0.009792830236256123
+    },
+    "Loss/entropy": {
+      "count": 3000,
+      "first": {
+        "step": 0,
+        "value": 32.663658142089844
+      },
+      "last": {
+        "step": 2999,
+        "value": 9.632875442504883
+      },
+      "minimum": {
+        "step": 1699,
+        "value": 5.883173942565918
+      },
+      "maximum": {
+        "step": 5,
+        "value": 32.7486457824707
+      },
+      "last_50_mean": 9.737021522521973
+    },
+    "Loss/learning_rate": {
+      "count": 3000,
+      "first": {
+        "step": 0,
+        "value": 0.0001316872367169708
+      },
+      "last": {
+        "step": 2999,
+        "value": 0.00017085937724914402
+      },
+      "minimum": {
+        "step": 1350,
+        "value": 9.999999747378752e-06
+      },
+      "maximum": {
+        "step": 13,
+        "value": 0.0006666666595265269
+      },
+      "last_50_mean": 0.00014864765806123613
+    },
+    "Policy/mean_std": {
+      "count": 3000,
+      "first": {
+        "step": 0,
+        "value": 1.0018682479858398
+      },
+      "last": {
+        "step": 2999,
+        "value": 0.3686103820800781
+      },
+      "minimum": {
+        "step": 1699,
+        "value": 0.31312909722328186
+      },
+      "maximum": {
+        "step": 5,
+        "value": 1.0049306154251099
+      },
+      "last_50_mean": 0.370275319814682
+    },
+    "Perf/total_fps": {
+      "count": 3000,
+      "first": {
+        "step": 0,
+        "value": 47169.0
+      },
+      "last": {
+        "step": 2999,
+        "value": 51754.0
+      },
+      "minimum": {
+        "step": 2420,
+        "value": 32468.0
+      },
+      "maximum": {
+        "step": 30,
+        "value": 62666.0
+      },
+      "last_50_mean": 48876.28
+    },
+    "Perf/collection_time": {
+      "count": 3000,
+      "first": {
+        "step": 0,
+        "value": 1.7378175258636475
+      },
+      "last": {
+        "step": 2999,
+        "value": 1.7141399383544922
+      },
+      "minimum": {
+        "step": 30,
+        "value": 1.3627829551696777
+      },
+      "maximum": {
+        "step": 2420,
+        "value": 2.742137908935547
+      },
+      "last_50_mean": 1.80736346244812
+    },
+    "Perf/learning_time": {
+      "count": 3000,
+      "first": {
+        "step": 0,
+        "value": 0.346235990524292
+      },
+      "last": {
+        "step": 2999,
+        "value": 0.18528962135314941
+      },
+      "minimum": {
+        "step": 2868,
+        "value": 0.18208551406860352
+      },
+      "maximum": {
+        "step": 0,
+        "value": 0.346235990524292
+      },
+      "last_50_mean": 0.204520845413208
+    },
+    "Train/mean_reward": {
+      "count": 3000,
+      "first": {
+        "step": 0,
+        "value": 0.6945648193359375
+      },
+      "last": {
+        "step": 2999,
+        "value": 11.692877769470215
+      },
+      "minimum": {
+        "step": 12,
+        "value": -2.032931089401245
+      },
+      "maximum": {
+        "step": 578,
+        "value": 16.125072479248047
+      },
+      "last_50_mean": 10.654603137969971
+    },
+    "Train/mean_episode_length": {
+      "count": 3000,
+      "first": {
+        "step": 0,
+        "value": 21.1200008392334
+      },
+      "last": {
+        "step": 2999,
+        "value": 277.6199951171875
+      },
+      "minimum": {
+        "step": 0,
+        "value": 21.1200008392334
+      },
+      "maximum": {
+        "step": 12,
+        "value": 300.0
+      },
+      "last_50_mean": 268.30040130615237
+    },
+    "Train/mean_reward/time": {
+      "count": 3000,
+      "first": {
+        "step": 2,
+        "value": 0.6945648193359375
+      },
+      "last": {
+        "step": 6377,
+        "value": 11.692877769470215
+      },
+      "minimum": {
+        "step": 21,
+        "value": -2.032931089401245
+      },
+      "maximum": {
+        "step": 1023,
+        "value": 16.125072479248047
+      },
+      "last_50_mean": 10.654603137969971
+    },
+    "Train/mean_episode_length/time": {
+      "count": 3000,
+      "first": {
+        "step": 2,
+        "value": 21.1200008392334
+      },
+      "last": {
+        "step": 6377,
+        "value": 277.6199951171875
+      },
+      "minimum": {
+        "step": 2,
+        "value": 21.1200008392334
+      },
+      "maximum": {
+        "step": 21,
+        "value": 300.0
+      },
+      "last_50_mean": 268.30040130615237
+    }
+  },
+  "training_metric_is_not_promotion_evidence": true,
+  "validation_passed": false,
+  "quality_passed": false,
+  "reason_quality_is_false": "The upstream getup_success scalar only records whether a robot ever reached the height/upright condition and includes training-domain resets. Candidate checkpoints still require strict RCSS four-pose validation and a disjoint held-out test."
+}

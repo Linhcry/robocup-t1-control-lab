@@ -1,0 +1,195 @@
+{
+  "version": "v037_midfield_dribble_score",
+  "goal": "从门前逐级扩展到中场，让单台T1连续控球推进并由官方裁判判定进球。",
+  "bootstrap_model": "experiments/v036_single_robot_score/checkpoints/v036_policy_iter_0001.zip",
+  "base_environment": {
+    "prepare_seconds": 1.5,
+    "action_repeat": 5,
+    "player_ball_distance_m": [
+      1.1,
+      1.35
+    ]
+  },
+  "reward": {
+    "goal_bonus": 150.0,
+    "center_progress_weight": 10.0,
+    "lateral_error_weight": 0.02,
+    "controlled_possession_bonus": 0.025,
+    "lost_possession_weight": 0.08,
+    "timeout_penalty": 30.0,
+    "control_distance_m": 0.9,
+    "lost_distance_m": 2.5
+  },
+  "ppo": {
+    "learning_rate": 5e-05,
+    "n_steps": 512,
+    "batch_size": 128,
+    "n_epochs": 5,
+    "gamma": 0.997,
+    "gae_lambda": 0.95,
+    "clip_range": 0.1,
+    "ent_coef": 0.0,
+    "policy_layers": [
+      128,
+      128
+    ],
+    "log_std_init": -2.0,
+    "max_log_std": -1.1,
+    "default_chunk_timesteps": 4096,
+    "seed": 38701
+  },
+  "residual_action_scale": [
+    0.25,
+    0.45,
+    0.6
+  ],
+  "quality_gates": {
+    "required_goal_count": 1,
+    "target_success_rate": 0.6,
+    "maximum_fall_rate": 0.2,
+    "minimum_contact_rate": 0.8,
+    "minimum_controlled_possession_ratio": 0.25
+  },
+  "stages": [
+    {
+      "index": 0,
+      "name": "门前连续控球",
+      "ball_goal_distance_m": [
+        1.2,
+        1.6
+      ],
+      "ball_y_m": [
+        -0.6,
+        0.6
+      ],
+      "player_y_offset_m": [
+        -0.12,
+        0.12
+      ],
+      "player_yaw_rad": [
+        -0.08,
+        0.08
+      ],
+      "episode_seconds": 14.0,
+      "evaluation_seeds": [
+        37010,
+        37011,
+        37012,
+        37013,
+        37014
+      ]
+    },
+    {
+      "index": 1,
+      "name": "禁区内控球",
+      "ball_goal_distance_m": [
+        3.0,
+        4.0
+      ],
+      "ball_y_m": [
+        -1.0,
+        1.0
+      ],
+      "player_y_offset_m": [
+        -0.2,
+        0.2
+      ],
+      "player_yaw_rad": [
+        -0.12,
+        0.12
+      ],
+      "episode_seconds": 26.0,
+      "evaluation_seeds": [
+        37110,
+        37111,
+        37112,
+        37113,
+        37114
+      ]
+    },
+    {
+      "index": 2,
+      "name": "禁区外控球",
+      "ball_goal_distance_m": [
+        7.0,
+        9.0
+      ],
+      "ball_y_m": [
+        -1.5,
+        1.5
+      ],
+      "player_y_offset_m": [
+        -0.3,
+        0.3
+      ],
+      "player_yaw_rad": [
+        -0.16,
+        0.16
+      ],
+      "episode_seconds": 46.0,
+      "evaluation_seeds": [
+        37210,
+        37211,
+        37212,
+        37213,
+        37214
+      ]
+    },
+    {
+      "index": 3,
+      "name": "进攻三区控球",
+      "ball_goal_distance_m": [
+        14.0,
+        16.0
+      ],
+      "ball_y_m": [
+        -2.2,
+        2.2
+      ],
+      "player_y_offset_m": [
+        -0.4,
+        0.4
+      ],
+      "player_yaw_rad": [
+        -0.2,
+        0.2
+      ],
+      "episode_seconds": 90.0,
+      "evaluation_seeds": [
+        37310,
+        37311,
+        37312,
+        37313,
+        37314
+      ]
+    },
+    {
+      "index": 4,
+      "name": "中场完整控球射门",
+      "ball_goal_distance_m": [
+        26.0,
+        27.0
+      ],
+      "ball_y_m": [
+        -3.0,
+        3.0
+      ],
+      "player_y_offset_m": [
+        -0.5,
+        0.5
+      ],
+      "player_yaw_rad": [
+        -0.25,
+        0.25
+      ],
+      "episode_seconds": 170.0,
+      "evaluation_seeds": [
+        37410,
+        37411,
+        37412,
+        37413,
+        37414
+      ]
+    }
+  ]
+}

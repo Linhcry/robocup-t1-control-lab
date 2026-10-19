@@ -1,0 +1,13 @@
+{
+  "schema_version": "v047_v045_engineering_source_v1",
+  "source_checkpoint": {
+    "path": "<LOCAL>/model_50.pt",
+    "sha256": "4772fefc9c073a3ca95699b07d037f75a194e2924a5e7d3f087e6a458b5d869b"
+  },
+  "reason": "Formal v045 training summary and target-candidate proof are not yet available; this checkpoint is used only to test transfer plumbing.",
+  "engineering_smoke_only": true,
+  "formal_v045_training_summary_bound": false,
+  "formal_v045_candidate_proof_bound": false,
+  "promotable": false,
+  "quality_passed": false
+}

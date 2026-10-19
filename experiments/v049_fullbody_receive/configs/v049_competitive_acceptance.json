@@ -1,0 +1,107 @@
+{
+  "schema_version": "v049_competitive_acceptance_v1",
+  "experiment": "v049_fullbody_receive",
+  "task_id": "Mjlab-Fullbody-Receive-RCSS-T1-v049",
+  "quality_passed": false,
+  "model_contract": {
+    "robot": "exact installed RCSSServerMJ Booster T1 XML through v045 construction",
+    "robot_dof": 23,
+    "action_hz": 50,
+    "physics_hz": 200,
+    "ball": "RCSS world ball: radius 0.11 m, mass 0.41 kg, friction 0.4/0.01/0.01",
+    "success_hold_seconds": 1.0,
+    "control_radius_m": 0.55,
+    "maximum_controlled_ball_speed_mps": 0.65,
+    "maximum_controlled_relative_speed_mps": 0.45,
+    "minimum_speed_reduction_fraction": 0.5
+  },
+  "contact_contract": {
+    "legal_bodies": [
+      "Shank_Left",
+      "left_foot_link",
+      "Shank_Right",
+      "right_foot_link"
+    ],
+    "all_other_robot_bodies_are_illegal": true,
+    "success_requires_real_legal_contact": true,
+    "illegal_contact_is_immediate_failure": true,
+    "distance_only_or_timeout_success_is_forbidden": true
+  },
+  "observation_contract": {
+    "actor_dim": 81,
+    "actor_terms": "deployable proprioception plus delayed/noisy ball-relative position and velocity",
+    "actor_privileged_truth_forbidden": true,
+    "critic_dim": 109,
+    "critic_privilege": [
+      "base linear velocity",
+      "exact ball world pose and velocity",
+      "launch speed angle and landing point",
+      "contact safety and continuous-control latches"
+    ]
+  },
+  "curriculum": {
+    "stages": 4,
+    "axes": [
+      "incoming speed",
+      "arrival angle",
+      "physical landing point"
+    ],
+    "stage_0": "0.9-1.4 m/s, +/-4 degrees, central ground ball",
+    "stage_1": "1.0-2.2 m/s, +/-14 degrees, wider ground ball",
+    "stage_2": "1.2-3.3 m/s, +/-28 degrees, wider and low bouncing arrivals",
+    "stage_3": "1.0-4.5 m/s, +/-45 degrees, full landing spread, height and spin"
+  },
+  "fixed_validation": {
+    "seed_start_inclusive": 490100,
+    "seed_end_exclusive": 490262,
+    "required_episodes": 162,
+    "samples_per_speed_angle_landing_cell": 6
+  },
+  "held_out_test": {
+    "seed_start_inclusive": 491100,
+    "seed_end_exclusive": 491640,
+    "required_episodes": 540,
+    "samples_per_speed_angle_landing_cell": 20,
+    "requires_passing_fixed_proof_for_same_checkpoint_sources_contract_and_audit": true
+  },
+  "quality_gates": {
+    "minimum_fixed_success_rate": 0.9,
+    "minimum_heldout_success_rate": 0.9,
+    "minimum_worst_cell_success_rate": 0.82,
+    "minimum_legal_touch_given_success_rate": 1.0,
+    "maximum_illegal_contact_rate": 0.0,
+    "maximum_dangerous_ground_contact_rate": 0.0,
+    "maximum_fall_rate": 0.01,
+    "maximum_joint_violation_rate": 0.0,
+    "maximum_torque_violation_rate": 0.0,
+    "minimum_success_hold_seconds": 1.0,
+    "minimum_success_speed_reduction_fraction": 0.5,
+    "maximum_success_control_distance_m": 0.55
+  },
+  "anti_fraud": {
+    "immutable_incrementing_evidence_files": true,
+    "checkpoint_sha256_required": true,
+    "acceptance_contract_sha256_required": true,
+    "source_and_evaluator_sha256_required": true,
+    "passing_current_semantic_audit_required": true,
+    "fixed_and_heldout_seed_sets_must_be_disjoint": true,
+    "exact_episode_count_and_order_required": true,
+    "heldout_requires_same_checkpoint_fixed_proof": true,
+    "actor_privileged_terms_forbidden": true,
+    "manual_sensor_bits_or_scripted_success_forbidden": true,
+    "success_from_timeout_forbidden": true,
+    "all_27_speed_angle_landing_cells_required": true,
+    "video_grid_manifest_required_for_final_promotion": true
+  },
+  "promotion": {
+    "semantic_audit_required": true,
+    "central_t1_23dof_audit_required": true,
+    "cpu_real_contact_smoke_required": true,
+    "cpu_one_update_ppo_smoke_required": true,
+    "gpu_scaling_probe_required_before_long_training": true,
+    "fixed_validation_required": true,
+    "heldout_test_required": true,
+    "video_grid_required": true,
+    "current_promotion_allowed": false
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "version": "v043_team_mappo",
+  "evaluation": "/mnt/d/机器人足球/training_runs/rcss_t1_training_20260706/experiments/v043_team_mappo/metrics/v043_fixed_eval_0003.json",
+  "gate_results": {
+    "checkpoint_exists": true,
+    "checkpoint_format": true,
+    "checkpoint_metadata": false,
+    "checkpoint_digest": false,
+    "episode_records": false,
+    "seed_manifest": false,
+    "summary_recomputed": false,
+    "held_out_split": false,
+    "held_out_match_count": false,
+    "ten_minute_matches": false,
+    "win_rate": false,
+    "fall_rate": false,
+    "all_23_targets_sent": false,
+    "possession": false,
+    "true_pass_completion": false,
+    "goals_conceded": false,
+    "opponent_diversity": false,
+    "validated_team_skill_interface": false,
+    "decentralized_execution_audit": true,
+    "observation_schema_v2": true
+  },
+  "quality_passed": false,
+  "communication_audit": "/mnt/d/机器人足球/training_runs/rcss_t1_training_20260706/experiments/v043_team_mappo/metrics/v043_decentralized_execution_audit_0003.json",
+  "checkpoint_evidence": {
+    "exists": true,
+    "format_valid": true,
+    "metadata_matches": false,
+    "digest_matches": false,
+    "resolved_path": "<LOCAL>/v043_mappo_local_v2_0002.pt",
+    "actual_sha256": "a02ff9429c5ab398eaf02fbfa394eba9dd8a3ff3f651262aa11e85a947035794"
+  },
+  "episode_evidence": {
+    "records_valid": false,
+    "summary_matches": false,
+    "episode_count": 2
+  },
+  "failed_gates": [
+    "checkpoint_metadata",
+    "checkpoint_digest",
+    "episode_records",
+    "seed_manifest",
+    "summary_recomputed",
+    "held_out_split",
+    "held_out_match_count",
+    "ten_minute_matches",
+    "win_rate",
+    "fall_rate",
+    "all_23_targets_sent",
+    "possession",
+    "true_pass_completion",
+    "goals_conceded",
+    "opponent_diversity",
+    "validated_team_skill_interface"
+  ]
+}

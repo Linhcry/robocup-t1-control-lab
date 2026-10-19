@@ -1,0 +1,94 @@
+{
+  "version": "v041_active_tackle",
+  "environment": {
+    "prepare_seconds": 1.2,
+    "action_repeat": 5,
+    "episode_seconds": 14.0
+  },
+  "residual_action_scale": [
+    0.15,
+    0.25,
+    0.3
+  ],
+  "quality_gates": {
+    "minimum_clearance_m": 0.25,
+    "minimum_control_seconds": 0.4,
+    "minimum_success_rate": 0.75,
+    "maximum_fall_rate": 0.0,
+    "maximum_upper_body_contact_rate": 0.0,
+    "maximum_foul_rate": 0.0
+  },
+  "curriculum_stages": [
+    {
+      "index": 0,
+      "name": "单一直线脚本带球者的正面拦截",
+      "implemented": true
+    },
+    {
+      "index": 1,
+      "name": "慢速、变向与护球三类脚本对手",
+      "implemented": false
+    },
+    {
+      "index": 2,
+      "name": "历史策略池与抢断后2秒控球",
+      "implemented": false,
+      "blocked_by": "stage 1"
+    },
+    {
+      "index": 3,
+      "name": "2v2协防与安全传出",
+      "implemented": false,
+      "blocked_by": "stage 2和v040"
+    }
+  ],
+  "evaluation_seeds": [
+    41010,
+    41011,
+    41012,
+    41013,
+    41014,
+    41015,
+    41016,
+    41017,
+    41018,
+    41019
+  ],
+  "held_out_test_seeds": [
+    51010,
+    51011,
+    51012,
+    51013,
+    51014,
+    51015,
+    51016,
+    51017,
+    51018,
+    51019,
+    51020,
+    51021,
+    51022,
+    51023,
+    51024,
+    51025,
+    51026,
+    51027,
+    51028,
+    51029
+  ],
+  "ppo": {
+    "learning_rate": 5e-05,
+    "n_steps": 256,
+    "batch_size": 64,
+    "n_epochs": 5,
+    "gamma": 0.995,
+    "gae_lambda": 0.95,
+    "clip_range": 0.1,
+    "ent_coef": 0.0,
+    "policy_layers": [
+      128,
+      128
+    ],
+    "seed": 41001
+  }
+}

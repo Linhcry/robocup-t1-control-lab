@@ -1,0 +1,72 @@
+{
+  "schema_version": "v047_v045_warmstart_cpu_ppo_smoke_v1",
+  "task_id": "Mjlab-Fullbody-Goalkeeper-RCSS-T1-v047",
+  "source_checkpoint": {
+    "path": "<LOCAL>/model_50.pt",
+    "sha256": "4772fefc9c073a3ca95699b07d037f75a194e2924a5e7d3f087e6a458b5d869b"
+  },
+  "warmstart_checkpoint": {
+    "path": "<LOCAL>/model_50.v047_warmstart.pt",
+    "sha256": "bd5cd18e02fbcf663440d0fd3c1a1bbf5dce04bc78c5eed96f6542e1e60fd0d9"
+  },
+  "provenance": {
+    "path": "<LOCAL>/warmstart_provenance.json",
+    "sha256": "fea6793df71505a45fbfa6a13fa6911063edebf677e2fa9b03c1e09b3bc612ac"
+  },
+  "engineering_source_proof": {
+    "path": "<LOCAL>/v047_v045_engineering_source_proof_run_01.json",
+    "sha256": "db7c6bf7d75705490b5abbdd1e6dcbac27933b0278bcda124a96680b29a39b97"
+  },
+  "source_manifest": {
+    "warmstart.py": "d9d94ca8758f54ec1de0c1e3e664178efd50b6e186bd3cbe8e93ae3d583c93ce",
+    "rcss_goalkeeper_task.py": "d9c7244c5e7cfff272b0d4ea4ed90b2a2ac57924f60f052dad25ea36c445d464",
+    "scripts/train_v047.py": "5bc4886e47f25908b01fda7d09002c26a82ba5b5f245852d44c5c5b43613d209",
+    "scripts/smoke_v047_warmstart.py": "de6dce93fe61262ac56e366f3b9ceaaccd0b07e185c2ff25a5a8f21b25a7baa5"
+  },
+  "device": "cpu",
+  "num_environments": 1,
+  "rollout_steps": 8,
+  "ppo_learning_epochs": 1,
+  "ppo_mini_batches": 2,
+  "checks": {
+    "source_checkpoint_hash_matches_engineering_proof": true,
+    "cached_checkpoint_hash_matches_provenance": true,
+    "transform_source_manifest_matches_current_files": true,
+    "provenance_is_explicitly_non_quality": true,
+    "engineering_binding_is_not_formal": true,
+    "actor_shape_is_512x87": true,
+    "actor_first_75_columns_are_exact": true,
+    "actor_new_12_columns_are_zero": true,
+    "actor_later_layers_and_distribution_are_exact": true,
+    "critic_shape_is_512x107": true,
+    "critic_first_75_columns_are_exact": true,
+    "critic_base_lin_vel_is_remapped_exactly": true,
+    "all_new_critic_weight_columns_are_zero": true,
+    "critic_later_layers_are_exact": true,
+    "optimizer_state_is_empty": true,
+    "optimizer_learning_rate_reset": true,
+    "target_iteration_is_zero": true,
+    "target_curriculum_counter_is_zero": true,
+    "source_and_target_states_are_finite": true,
+    "critic_obs_normalizer._mean_shared_is_exact": true,
+    "critic_obs_normalizer._mean_base_lin_is_exact": true,
+    "critic_obs_normalizer._var_shared_is_exact": true,
+    "critic_obs_normalizer._var_base_lin_is_exact": true,
+    "critic_obs_normalizer._std_shared_is_exact": true,
+    "critic_obs_normalizer._std_base_lin_is_exact": true,
+    "formal_validator_rejects_engineering_proof": true,
+    "strict_runner_load_succeeded": true,
+    "loaded_curriculum_counter_is_zero": true,
+    "rsl_last_completed_iteration_index_is_zero": true,
+    "one_cpu_ppo_update_completed": true,
+    "actor_parameters_changed_after_update": true,
+    "critic_parameters_changed_after_update": true,
+    "post_update_parameters_are_finite": true
+  },
+  "smoke_passed": true,
+  "formal_v045_source_proof_available": false,
+  "gpu_training_completed": false,
+  "fixed_validation_completed": false,
+  "held_out_test_completed": false,
+  "quality_passed": false
+}

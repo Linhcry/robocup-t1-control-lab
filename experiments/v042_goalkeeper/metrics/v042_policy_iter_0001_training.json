@@ -1,0 +1,5 @@
+{
+  "version": "v042_goalkeeper_ground_block",
+  "timesteps": 512,
+  "checkpoint": "/mnt/d/机器人足球/training_runs/rcss_t1_training_20260706/experiments/v042_goalkeeper/checkpoints/v042_policy_iter_0001.zip"
+}

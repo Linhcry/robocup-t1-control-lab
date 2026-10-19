@@ -1,0 +1,478 @@
+{
+  "schema_version": "v048_strict_evaluation_v2",
+  "evaluation_split": "fixed_validation",
+  "formal_protocol": false,
+  "engineering_smoke": true,
+  "checkpoint": {
+    "path": "<LOCAL>/model_0.pt",
+    "sha256": "fbe059ec58e651cb776da27a29a1a88b950eb87b440f84d74e79b17b88e08c8e"
+  },
+  "contract": {
+    "path": "<LOCAL>/v048_competitive_acceptance_v2.json",
+    "sha256": "fba372023a0b202dc05b8be6d4d16e4cb071f60a5909ad7807db540eb2d8c01f"
+  },
+  "semantic_audit": {
+    "path": "/mnt/d/机器人足球/training_runs/rcss_t1_training_20260706/experiments/v048_fullbody_legal_tackle/metrics/v048_semantic_audit_run_11.json",
+    "sha256": "298e477c0ef4f703410f9679dbc2868d00e06ea8c3cec7a1200df721139eca79"
+  },
+  "control_sources": {
+    "v048_task": {
+      "path": "<LOCAL>/rcss_mjlab_task.py",
+      "sha256": "b805e7e418d61cc6bdd2d7e31efabffab7517d4acd1aa8ee4238a9967db22841"
+    },
+    "v048_safe_actions": {
+      "path": "<LOCAL>/safe_actions.py",
+      "sha256": "3587235a930ef8a1416662d996da69693a57668468ca7c0359feb9f3c389ee16"
+    },
+    "v048_warmstart": {
+      "path": "<LOCAL>/warmstart.py",
+      "sha256": "7db5bacd1c3caba33d8a2393ac2b3d8188392ed12f973eb873854bc86aa17cd8"
+    },
+    "v048_training_entry": {
+      "path": "<LOCAL>/train_v048.py",
+      "sha256": "3289285bea5e645ef3478b80330f8d08c89873026341d03dbe7aabde2e7ce96b"
+    },
+    "v048_evaluator": {
+      "path": "<LOCAL>/evaluate_v048.py",
+      "sha256": "8438de48188db8c253d8688538c39b33ea76e47a3ad297efb92fd7b853b1aea0"
+    },
+    "v048_semantic_audit": {
+      "path": "<LOCAL>/audit_v048_semantics.py",
+      "sha256": "d43c6db5c7426f64761eeb662afb7ba8db7dbd1fb6234ec4c29f66733952572b"
+    },
+    "v048_evidence_helper": {
+      "path": "<LOCAL>/_evidence.py",
+      "sha256": "d2f3b6b9c8f3b15ea5c2f2dabb7727cb477dcf822fb2dad4f0d02951bf37d9f3"
+    },
+    "t1_23dof_spec": {
+      "path": "<LOCAL>/t1_spec.py",
+      "sha256": "a25e32ac84216624e1e2382722e247620ddb5f2326195f6267b80bc1e58bba33"
+    },
+    "acceptance_contract_v2": {
+      "path": "<LOCAL>/v048_competitive_acceptance_v2.json",
+      "sha256": "fba372023a0b202dc05b8be6d4d16e4cb071f60a5909ad7807db540eb2d8c01f"
+    },
+    "installed_rcss_t1_xml": {
+      "path": "<LOCAL>/robot.xml",
+      "sha256": "b81087d7d04ecfa1064ee5392cc632fc69b4d7de644b3a5318b0c5e12276d083"
+    },
+    "mjlab_contact_sensor": {
+      "path": "<LOCAL>/contact_sensor.py",
+      "sha256": "7b9df6a56df48ca93749abb627177e0670c35fe111fd5fe47bdf287cea86068d"
+    },
+    "mjlab_policy_step": {
+      "path": "<LOCAL>/manager_based_rl_env.py",
+      "sha256": "46108f9d04f93cdc0baf0343d58fe347c6997cc32b90a07627c55c3499658e27"
+    }
+  },
+  "fixed_validation_proof": null,
+  "video_proof": null,
+  "deterministic_actor": true,
+  "manual_contact_success_or_safety_mutation": false,
+  "auto_reset_disabled_for_evidence_integrity": true,
+  "runtime": {
+    "device": "cpu",
+    "num_parallel_environments": 1,
+    "policy_steps_requested": 8,
+    "policy_steps_executed": 8,
+    "physics_substeps_per_policy_step": 4,
+    "contact_force_history_shapes": {
+      "attacker_ball_legal": [
+        1,
+        4,
+        4,
+        3
+      ],
+      "defender_ball_legal": [
+        1,
+        4,
+        4,
+        3
+      ],
+      "cross_robot_impact": [
+        1,
+        4,
+        4,
+        3
+      ],
+      "defender_upper_vs_attacker": [
+        1,
+        6,
+        4,
+        3
+      ],
+      "attacker_upper_vs_defender": [
+        1,
+        6,
+        4,
+        3
+      ],
+      "defender_lower_vs_attacker": [
+        1,
+        6,
+        4,
+        3
+      ],
+      "attacker_lower_vs_defender": [
+        1,
+        6,
+        4,
+        3
+      ]
+    },
+    "evaluation_exception": null
+  },
+  "summary": {
+    "episodes": 1,
+    "success_rate": 0.0,
+    "attacker_first_touch_rate": 1.0,
+    "real_transfer_rate": 0.0,
+    "real_transfer_given_success_rate": 0.0,
+    "minimum_clearance_given_success_m": 0.0,
+    "minimum_control_given_success_s": 0.0,
+    "upper_body_foul_rate": 0.0,
+    "lower_body_foul_rate": 0.0,
+    "attacker_fall_rate": 0.0,
+    "defender_fall_rate": 0.0,
+    "joint_violation_rate": 0.0,
+    "actual_torque_violation_rate": 0.0,
+    "nonfinite_rate": 0.0,
+    "unexpected_termination_rate": 0.0,
+    "robot_collision_rate": 0.0,
+    "maximum_cross_robot_force_n": 0.0,
+    "worst_direction_success_rate": 0.0,
+    "worst_speed_success_rate": 0.0,
+    "worst_direction_speed_cell_success_rate": 0.0
+  },
+  "direction_bin_evidence": {
+    "0": {
+      "episodes": 1,
+      "success_rate": 0.0
+    },
+    "1": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "2": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "3": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "4": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "5": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "6": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "7": {
+      "episodes": 0,
+      "success_rate": 0.0
+    }
+  },
+  "speed_bin_evidence": {
+    "0": {
+      "episodes": 1,
+      "success_rate": 0.0
+    },
+    "1": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "2": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "3": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "4": {
+      "episodes": 0,
+      "success_rate": 0.0
+    }
+  },
+  "direction_speed_cell_evidence": {
+    "direction_0_speed_0": {
+      "episodes": 1,
+      "success_rate": 0.0
+    },
+    "direction_0_speed_1": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_0_speed_2": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_0_speed_3": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_0_speed_4": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_1_speed_0": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_1_speed_1": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_1_speed_2": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_1_speed_3": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_1_speed_4": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_2_speed_0": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_2_speed_1": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_2_speed_2": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_2_speed_3": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_2_speed_4": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_3_speed_0": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_3_speed_1": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_3_speed_2": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_3_speed_3": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_3_speed_4": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_4_speed_0": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_4_speed_1": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_4_speed_2": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_4_speed_3": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_4_speed_4": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_5_speed_0": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_5_speed_1": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_5_speed_2": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_5_speed_3": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_5_speed_4": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_6_speed_0": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_6_speed_1": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_6_speed_2": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_6_speed_3": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_6_speed_4": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_7_speed_0": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_7_speed_1": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_7_speed_2": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_7_speed_3": {
+      "episodes": 0,
+      "success_rate": 0.0
+    },
+    "direction_7_speed_4": {
+      "episodes": 0,
+      "success_rate": 0.0
+    }
+  },
+  "common_gate_checks": {
+    "semantic_audit_matches_all_current_sources": true,
+    "evaluation_completed_without_exception": true,
+    "four_physics_substeps_per_action": true,
+    "all_contact_histories_cover_four_substeps": true,
+    "exact_episode_count": false,
+    "all_40_cells_have_exact_samples": false,
+    "attacker_real_first_touch_rate": true,
+    "real_transfer_given_success": false,
+    "clearance_given_success": false,
+    "two_second_control_given_success": false,
+    "upper_body_foul_rate": true,
+    "lower_body_foul_rate": true,
+    "attacker_fall_rate": true,
+    "defender_fall_rate": true,
+    "joint_violation_rate": true,
+    "actual_torque_violation_rate": true,
+    "nonfinite_rate": true,
+    "unexpected_termination_rate": true
+  },
+  "split_gate_checks": {
+    "global_success_rate": false,
+    "worst_direction_success_rate": false,
+    "worst_speed_success_rate": false,
+    "worst_direction_speed_cell_success_rate": false
+  },
+  "engineering_smoke_passed": true,
+  "fixed_validation_passed": false,
+  "heldout_validation_passed": false,
+  "quality_passed": false,
+  "episodes": [
+    {
+      "seed": 4820000,
+      "direction_bin": 0,
+      "speed_bin": 0,
+      "direction_rad": -2.748893571891069,
+      "speed_mps": 0.2,
+      "lateral_offset_m": -0.08921252143713754,
+      "first_touch_owner": 1,
+      "attacker_real_legal_first_touch": true,
+      "defender_real_legal_touch": false,
+      "attacker_then_defender_transfer": false,
+      "simultaneous_contact_steps": 0,
+      "maximum_clearance_m": 0.0,
+      "maximum_continuous_control_seconds": 0.0,
+      "cross_robot_contact_seconds": 0.0,
+      "maximum_cross_robot_force_n": 0.0,
+      "upper_body_foul": false,
+      "lower_body_foul": false,
+      "attacker_fell": false,
+      "defender_fell": false,
+      "attacker_joint_violation": false,
+      "defender_joint_violation": false,
+      "attacker_actual_torque_violation": false,
+      "defender_actual_torque_violation": false,
+      "nonfinite": false,
+      "attacker_max_abs_actual_torque_nm_by_joint": {
+        "AAHead_yaw": 0.00021975849813316017,
+        "Head_pitch": 0.037751588970422745,
+        "Left_Shoulder_Pitch": 0.3421231508255005,
+        "Left_Shoulder_Roll": 0.5136146545410156,
+        "Left_Elbow_Pitch": 0.012210225686430931,
+        "Left_Elbow_Yaw": 0.17433738708496094,
+        "Right_Shoulder_Pitch": 0.3611230254173279,
+        "Right_Shoulder_Roll": 0.5255393981933594,
+        "Right_Elbow_Pitch": 0.016572104766964912,
+        "Right_Elbow_Yaw": 0.19413185119628906,
+        "Waist": 0.14957305788993835,
+        "Left_Hip_Pitch": 1.5962896347045898,
+        "Left_Hip_Roll": 23.559040069580078,
+        "Left_Hip_Yaw": 5.646475791931152,
+        "Left_Knee_Pitch": 6.689882278442383,
+        "Left_Ankle_Pitch": 5.077002048492432,
+        "Left_Ankle_Roll": 10.820367813110352,
+        "Right_Hip_Pitch": 1.4767341613769531,
+        "Right_Hip_Roll": 23.313859939575195,
+        "Right_Hip_Yaw": 5.50401496887207,
+        "Right_Knee_Pitch": 7.94584846496582,
+        "Right_Ankle_Pitch": 5.622866153717041,
+        "Right_Ankle_Roll": 11.760451316833496
+      },
+      "defender_max_abs_actual_torque_nm_by_joint": {
+        "AAHead_yaw": 0.882404088973999,
+        "Head_pitch": 0.6956391334533691,
+        "Left_Shoulder_Pitch": 9.824849128723145,
+        "Left_Shoulder_Roll": 14.48233413696289,
+        "Left_Elbow_Pitch": 11.893780708312988,
+        "Left_Elbow_Yaw": 13.377878189086914,
+        "Right_Shoulder_Pitch": 12.819225311279297,
+        "Right_Shoulder_Roll": 12.43722915649414,
+        "Right_Elbow_Pitch": 13.576196670532227,
+        "Right_Elbow_Yaw": 14.328594207763672,
+        "Waist": 30.0,
+        "Left_Hip_Pitch": 25.472312927246094,
+        "Left_Hip_Roll": 14.317529678344727,
+        "Left_Hip_Yaw": 25.44721221923828,
+        "Left_Knee_Pitch": 40.78982162475586,
+        "Left_Ankle_Pitch": 19.80289649963379,
+        "Left_Ankle_Roll": 15.0,
+        "Right_Hip_Pitch": 27.756319046020508,
+        "Right_Hip_Roll": 14.15671443939209,
+        "Right_Hip_Yaw": 20.573467254638672,
+        "Right_Knee_Pitch": 33.57048416137695,
+        "Right_Ankle_Pitch": 16.148962020874023,
+        "Right_Ankle_Roll": 15.0
+      },
+      "attacker_max_actual_torque_ratio": 0.7853013277053833,
+      "defender_max_actual_torque_ratio": 1.0,
+      "unexpected_termination": false,
+      "steps_executed": 8,
+      "success": false
+    }
+  ]
+}

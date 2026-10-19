@@ -1,0 +1,76 @@
+{
+  "schema_version": "v049_v045_warmstart_cpu_ppo_smoke_v1",
+  "created_utc": "2026-08-20T08:18:38.022384+00:00",
+  "task_id": "Mjlab-Fullbody-Receive-RCSS-T1-v049",
+  "device": "cpu",
+  "num_envs": 4,
+  "seed": 49041,
+  "requested_iterations": 1,
+  "ppo_update_completed": true,
+  "strict_checkpoint_load_completed": true,
+  "warm_start": {
+    "checkpoint": {
+      "path": "<LOCAL>/v049_v045_warmstart_engineering_run_01.pt",
+      "sha256": "c4f7872d3d07c37b23a4cdb43b6b1048f405e8487724a23a79b832c0930a2202"
+    },
+    "proof": {
+      "path": "<LOCAL>/v049_v045_warmstart_engineering_run_01.provenance.json",
+      "sha256": "9752571833eb907a20884965a82b6418d36c1adb2269d46313174af7c07b401b"
+    },
+    "formal_source_approved": false,
+    "engineering_smoke_only": true,
+    "source_checkpoint": {
+      "path": "<LOCAL>/model_0.pt",
+      "sha256": "300d8f1106372cc522897529d62c5e5ca4407a282ab35184bc19d8f41663941b"
+    },
+    "v045_training_summary": {
+      "path": "<LOCAL>/v049_v045_engineering_source_summary_run_01.json",
+      "sha256": "9fc594f9acdc51e83de8c22c61f758fe4ee3811c5325d8297286ead93cb7b636",
+      "schema_version": "v049_v045_engineering_source_summary_v1"
+    },
+    "v045_candidate_proof": {
+      "path": "<LOCAL>/v045_model800_safety_4096_probe_run_01.json",
+      "sha256": "48b7378a3971715b00c5447cc26655019fb491f5a8a2977869afca4f7b2bf9cf",
+      "schema_version": "v045_model800_safety_4096_probe_v1"
+    },
+    "mapping_checks": {
+      "live_v045_actor_dim_is_75": true,
+      "live_v045_critic_dim_is_78": true,
+      "live_v049_actor_dim_is_81": true,
+      "live_v049_critic_dim_is_109": true,
+      "actor_first_75_columns_copied_exactly": true,
+      "actor_new_6_columns_are_zero": true,
+      "critic_common_75_columns_copied_exactly": true,
+      "critic_base_lin_75_78_mapped_to_81_84": true,
+      "critic_other_new_columns_are_zero": true,
+      "all_other_actor_layers_and_distribution_copied": true,
+      "all_other_critic_layers_copied": true,
+      "critic_common_normalizer_stats_copied": true,
+      "critic_base_lin_normalizer_stats_remapped": true,
+      "new_normalizer_dimensions_are_neutral": true,
+      "optimizer_state_empty": true,
+      "learning_rate_reset": true,
+      "iteration_reset": true,
+      "curriculum_counter_reset": true
+    }
+  },
+  "log_directory": "<LOCAL>/2026-08-20_16-18-33_v049_v045_warmstart_cpu_smoke_r1",
+  "checkpoint": {
+    "path": "<LOCAL>/model_0.pt",
+    "sha256": "0cc8440f85aee899eb832410391e1bae2b7c2ebe31a0b4a028478373bccf9b36",
+    "size_bytes": 5182719,
+    "iteration": 0,
+    "common_step_counter": 32,
+    "optimizer_state_entries": 17
+  },
+  "fresh_training_state_checks": {
+    "loaded_iteration_started_at_zero": true,
+    "one_rollout_advanced_counter_to_32": true,
+    "optimizer_populated_only_after_new_update": true
+  },
+  "training_completed": false,
+  "fixed_validation_passed": false,
+  "heldout_validation_passed": false,
+  "quality_passed": false,
+  "conclusion": "One CPU PPO update proves only that the v049 training pipeline runs; it is not receiving ability evidence."
+}

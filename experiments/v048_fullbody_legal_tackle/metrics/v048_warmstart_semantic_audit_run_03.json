@@ -1,0 +1,414 @@
+{
+  "schema_version": "v048_warmstart_semantic_audit_v1",
+  "source_binding": {
+    "mode": "engineering_smoke",
+    "source_checkpoint": {
+      "path": "<LOCAL>/model_0.pt",
+      "sha256": "e9cd6fe490daa11db55629131ff7b572be966f680035b2111716c7f5b98e01cc"
+    },
+    "v045_training_summary": {
+      "path": "<LOCAL>/v045_safe_four_pose_cpu_smoke_training_summary_run_01.json",
+      "sha256": "bad94d0354a52e0043e5ff5a035b8b49be870bfdf82ee7739ab55d1df518d34f",
+      "schema_version": "v045_mjlab_training_summary_v1"
+    },
+    "v045_candidate_proof": {
+      "path": "<LOCAL>/v045_candidate_selector_cpu_smoke_run_01.json",
+      "sha256": "a970c31e4117a85b14617100ee38744d801c14429170b3fc9a5904ac1d7e2864",
+      "schema_version": "v045_target_candidate_eval_v1"
+    },
+    "formal_source_approved": false,
+    "promotable_source_binding": false
+  },
+  "source_checkpoint": {
+    "path": "<LOCAL>/model_0.pt",
+    "sha256": "e9cd6fe490daa11db55629131ff7b572be966f680035b2111716c7f5b98e01cc"
+  },
+  "warmstart_checkpoint": {
+    "path": "<LOCAL>/model_0.v048_warmstart.pt",
+    "sha256": "7319a178814c4f3273a76b23c052267f443256afe5dc2c026db426186d8769ef"
+  },
+  "warmstart_provenance": {
+    "path": "<LOCAL>/warmstart_provenance.json",
+    "sha256": "67734eafeef578592249ee6dc228557165171f4b845d47d942e9d218f55dd73c"
+  },
+  "training_run": "<LOCAL>/2026-08-20_17-04-21_v048_v045_semantic_warmstart_cpu_smoke_r2",
+  "training_output_checkpoint": {
+    "path": "<LOCAL>/model_0.pt",
+    "sha256": "fbe059ec58e651cb776da27a29a1a88b950eb87b440f84d74e79b17b88e08c8e"
+  },
+  "live_observation_contract": {
+    "v045_actor": [
+      [
+        "base_ang_vel",
+        [
+          0,
+          3
+        ]
+      ],
+      [
+        "projected_gravity",
+        [
+          3,
+          6
+        ]
+      ],
+      [
+        "joint_pos",
+        [
+          6,
+          29
+        ]
+      ],
+      [
+        "joint_vel",
+        [
+          29,
+          52
+        ]
+      ],
+      [
+        "actions",
+        [
+          52,
+          75
+        ]
+      ]
+    ],
+    "v045_critic": [
+      [
+        "base_ang_vel",
+        [
+          0,
+          3
+        ]
+      ],
+      [
+        "projected_gravity",
+        [
+          3,
+          6
+        ]
+      ],
+      [
+        "joint_pos",
+        [
+          6,
+          29
+        ]
+      ],
+      [
+        "joint_vel",
+        [
+          29,
+          52
+        ]
+      ],
+      [
+        "actions",
+        [
+          52,
+          75
+        ]
+      ],
+      [
+        "base_lin_vel",
+        [
+          75,
+          78
+        ]
+      ]
+    ],
+    "v048_actor": [
+      [
+        "projected_gravity",
+        [
+          0,
+          3
+        ]
+      ],
+      [
+        "base_ang_vel",
+        [
+          3,
+          6
+        ]
+      ],
+      [
+        "base_lin_vel",
+        [
+          6,
+          9
+        ]
+      ],
+      [
+        "joint_pos",
+        [
+          9,
+          32
+        ]
+      ],
+      [
+        "joint_vel",
+        [
+          32,
+          55
+        ]
+      ],
+      [
+        "last_action",
+        [
+          55,
+          78
+        ]
+      ],
+      [
+        "ball_relative_position",
+        [
+          78,
+          81
+        ]
+      ],
+      [
+        "ball_relative_velocity",
+        [
+          81,
+          84
+        ]
+      ],
+      [
+        "attacker_relative_position",
+        [
+          84,
+          87
+        ]
+      ],
+      [
+        "attacker_relative_velocity",
+        [
+          87,
+          90
+        ]
+      ],
+      [
+        "attack_direction",
+        [
+          90,
+          92
+        ]
+      ],
+      [
+        "episode_phase",
+        [
+          92,
+          93
+        ]
+      ]
+    ],
+    "v048_critic": [
+      [
+        "local_deployable_state",
+        [
+          0,
+          93
+        ]
+      ],
+      [
+        "privileged_world_state",
+        [
+          93,
+          190
+        ]
+      ]
+    ],
+    "v048_live_component_widths": {
+      "projected_gravity": 3,
+      "base_ang_vel": 3,
+      "base_lin_vel": 3,
+      "joint_pos": 23,
+      "joint_vel": 23,
+      "last_action": 23,
+      "ball_relative_position": 3,
+      "ball_relative_velocity": 3,
+      "attacker_relative_position": 3,
+      "attacker_relative_velocity": 3,
+      "attack_direction": 2,
+      "episode_phase": 1
+    },
+    "actor_mapping": [
+      {
+        "semantic": "base_ang_vel",
+        "source": [
+          0,
+          3
+        ],
+        "target": [
+          3,
+          6
+        ]
+      },
+      {
+        "semantic": "projected_gravity",
+        "source": [
+          3,
+          6
+        ],
+        "target": [
+          0,
+          3
+        ]
+      },
+      {
+        "semantic": "joint_pos",
+        "source": [
+          6,
+          29
+        ],
+        "target": [
+          9,
+          32
+        ]
+      },
+      {
+        "semantic": "joint_vel",
+        "source": [
+          29,
+          52
+        ],
+        "target": [
+          32,
+          55
+        ]
+      },
+      {
+        "semantic": "actions",
+        "source": [
+          52,
+          75
+        ],
+        "target": [
+          55,
+          78
+        ]
+      }
+    ],
+    "critic_mapping": [
+      {
+        "semantic": "base_ang_vel",
+        "source": [
+          0,
+          3
+        ],
+        "target": [
+          3,
+          6
+        ]
+      },
+      {
+        "semantic": "projected_gravity",
+        "source": [
+          3,
+          6
+        ],
+        "target": [
+          0,
+          3
+        ]
+      },
+      {
+        "semantic": "joint_pos",
+        "source": [
+          6,
+          29
+        ],
+        "target": [
+          9,
+          32
+        ]
+      },
+      {
+        "semantic": "joint_vel",
+        "source": [
+          29,
+          52
+        ],
+        "target": [
+          32,
+          55
+        ]
+      },
+      {
+        "semantic": "actions",
+        "source": [
+          52,
+          75
+        ],
+        "target": [
+          55,
+          78
+        ]
+      },
+      {
+        "semantic": "base_lin_vel",
+        "source": [
+          75,
+          78
+        ],
+        "target": [
+          6,
+          9
+        ]
+      }
+    ]
+  },
+  "checks": {
+    "target_top_level_keys_exact": true,
+    "target_actor_keys_exact": true,
+    "target_critic_keys_exact": true,
+    "actor_first_layer_shape_512x93": true,
+    "actor_semantic_columns_exact": true,
+    "actor_football_opponent_columns_zero": true,
+    "actor_normalizer_identity": true,
+    "actor_later_layers_and_distribution_exact": true,
+    "critic_first_layer_shape_512x190": true,
+    "critic_semantic_columns_exact": true,
+    "critic_all_new_columns_zero": true,
+    "critic_normalizer_semantic_columns_exact": true,
+    "critic_new_normalizer_columns_identity": true,
+    "critic_normalizer_count_copied": true,
+    "critic_later_layers_exact": true,
+    "optimizer_state_reset": true,
+    "iteration_reset_to_zero": true,
+    "curriculum_counter_reset_to_zero": true,
+    "transform_version_bound": true,
+    "all_target_tensors_finite": true,
+    "live_v045_actor_layout_is_75": true,
+    "live_v045_critic_layout_is_78": true,
+    "live_v048_actor_layout_is_93": true,
+    "live_v048_critic_layout_is_190": true,
+    "provenance_schema_current": true,
+    "provenance_binds_exact_source_chain": true,
+    "provenance_binds_cached_checkpoint": true,
+    "provenance_binds_current_transform_source_hashes": true,
+    "formal_mode_flag_matches_request": true,
+    "warmstart_optimizer_empty": true,
+    "warmstart_iteration_zero": true,
+    "warmstart_curriculum_zero": true,
+    "training_output_has_target_actor_shape": true,
+    "training_output_has_target_critic_shape": true,
+    "training_output_optimizer_completed_update": true,
+    "training_output_actor_weights_updated": true,
+    "training_output_critic_weights_updated": true,
+    "training_output_advanced_environment_counter": true,
+    "agent_yaml_resumes_from_cached_run": true,
+    "agent_yaml_loads_cached_checkpoint": true,
+    "one_tensorboard_event_file_exists": true,
+    "source_checkpoint_unchanged": true
+  },
+  "warmstart_semantic_audit_passed": true,
+  "engineering_smoke": true,
+  "training_completed": false,
+  "fixed_validation_passed": false,
+  "heldout_validation_passed": false,
+  "quality_passed": false,
+  "conclusion": "This proves semantic column mapping, strict evidence binding, CPU checkpoint loading and one PPO update only. It is not tackle ability."
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": "v044_getup_acceptance_v1",
+  "skill": "booster_t1_23dof_getup_and_locomotion_handoff",
+  "training_backend": "official_mjlab_playground_mjwarp",
+  "formal_evaluation_backend": "rcssservermj_mujoco_3_5",
+  "evaluation_is_fail_closed": true,
+  "required_splits": {
+    "fixed_validation": {
+      "seed_start": 440100,
+      "episodes_per_pose": 20
+    },
+    "held_out_test": {
+      "seed_start": 10440100,
+      "episodes_per_pose": 100,
+      "open_once_after_model_selection": true
+    }
+  },
+  "required_initial_poses": [
+    "prone",
+    "supine",
+    "left_side",
+    "right_side"
+  ],
+  "success_definition": {
+    "torso_height_m_min": 0.6,
+    "upright_score_min": 0.9,
+    "root_speed_mps_max": 0.45,
+    "both_feet_in_contact": true,
+    "continuous_standing_s": 3.0,
+    "then_walk_s": 5.0,
+    "walk_distance_m_min": 1.0
+  },
+  "safety_thresholds": {
+    "unsafe_contact_force_n": 900.0,
+    "joint_limit_tolerance_rad": 0.0001,
+    "torque_saturation_epsilon": 0.001
+  },
+  "quality_gates": {
+    "overall_recovery_rate_min": 0.97,
+    "per_pose_recovery_rate_min": 0.95,
+    "post_recovery_walk_rate_min": 0.95,
+    "fall_rate_max": 0.0,
+    "joint_limit_violation_rate_max": 0.0,
+    "nonfinite_action_rate_max": 0.0,
+    "unsafe_head_contact_rate_max": 0.0,
+    "unsafe_hand_or_torso_contact_rate_max": 0.01,
+    "torque_saturation_fraction_max": 0.02
+  },
+  "promotion_rule": "All fixed-validation gates and all unopened held-out-test gates must pass in RCSSServerMJ. The mjlab getup_success metric alone never promotes a checkpoint."
+}

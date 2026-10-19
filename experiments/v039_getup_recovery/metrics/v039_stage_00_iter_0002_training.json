@@ -1,0 +1,15 @@
+{
+  "experiment": "v039_getup_recovery",
+  "created_at": "2026-08-19T18:08:21.507344+00:00",
+  "stage": 0,
+  "timesteps_requested": 100000,
+  "num_envs": 4,
+  "seed": 39002,
+  "device": "cpu",
+  "resume": "experiments/v039_getup_recovery/checkpoints/v039_stage_00_iter_0001.zip",
+  "checkpoint": "<LOCAL>/v039_stage_00_iter_0002.zip",
+  "elapsed_s": 167.64915679,
+  "training_loop_completed": true,
+  "quality_passed": false,
+  "quality_note": "Training completion is not a quality pass; run fixed evaluation next."
+}

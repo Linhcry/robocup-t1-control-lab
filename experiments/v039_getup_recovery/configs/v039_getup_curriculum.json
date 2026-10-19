@@ -1,0 +1,210 @@
+{
+  "experiment": "v039_getup_recovery",
+  "created_at": "2026-08-20",
+  "control": {
+    "physics_dt_s": 0.002,
+    "decimation": 10,
+    "action_filter_retention": 0.65,
+    "target_scale_rad": [
+      0.35,
+      0.35,
+      1.2,
+      1.2,
+      1.2,
+      1.2,
+      1.2,
+      1.2,
+      1.2,
+      1.2,
+      0.8,
+      1.0,
+      0.75,
+      0.75,
+      1.0,
+      0.6,
+      0.45,
+      1.0,
+      0.75,
+      0.75,
+      1.0,
+      0.6,
+      0.45
+    ],
+    "stiffness": [
+      4.0,
+      4.0,
+      50.0,
+      50.0,
+      50.0,
+      50.0,
+      50.0,
+      50.0,
+      50.0,
+      50.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      50.0,
+      50.0,
+      200.0,
+      200.0,
+      200.0,
+      200.0,
+      50.0,
+      50.0
+    ],
+    "damping": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      5.0,
+      5.0,
+      5.0,
+      5.0,
+      5.0,
+      2.0,
+      2.0,
+      5.0,
+      5.0,
+      5.0,
+      5.0,
+      2.0,
+      2.0
+    ],
+    "torque_limit_nm": [
+      7.0,
+      7.0,
+      18.0,
+      18.0,
+      18.0,
+      18.0,
+      18.0,
+      18.0,
+      18.0,
+      18.0,
+      25.0,
+      45.0,
+      25.0,
+      25.0,
+      60.0,
+      24.0,
+      15.0,
+      45.0,
+      25.0,
+      25.0,
+      60.0,
+      24.0,
+      15.0
+    ]
+  },
+  "environment": {
+    "episode_length_s": 12.0,
+    "stand_hold_s": 3.0,
+    "post_recovery_walk_s": 5.0,
+    "success_height_m": 0.6,
+    "success_upright_cos": 0.9,
+    "success_joint_mean_error_rad": 0.42,
+    "success_root_speed_mps": 0.45,
+    "unsafe_contact_force_n": 900.0,
+    "unsafe_joint_overshoot_rad": 0.2,
+    "settle_time_s": 0.3,
+    "friction_range": [
+      0.65,
+      1.25
+    ],
+    "joint_noise_rad": 0.06,
+    "root_velocity_noise_mps": 0.08,
+    "root_angular_velocity_noise_rps": 0.12
+  },
+  "training": {
+    "algorithm": "PPO",
+    "seed": 39001,
+    "learning_rate": 0.0001,
+    "n_steps": 1024,
+    "batch_size": 256,
+    "n_epochs": 10,
+    "gamma": 0.995,
+    "gae_lambda": 0.95,
+    "ent_coef": 0.0,
+    "log_std_init": -1.5,
+    "clip_range": 0.2,
+    "policy_layers": [
+      256,
+      256,
+      128
+    ],
+    "short_train_steps": 4096
+  },
+  "quality_gate": {
+    "validation_episodes_per_pose": 20,
+    "held_out_episodes_per_pose": 100,
+    "minimum_success_rate": 0.97,
+    "minimum_worst_pose_success_rate": 0.95,
+    "maximum_median_getup_time_s": 5.0,
+    "maximum_p95_getup_time_s": 8.0,
+    "minimum_post_recovery_chain_success_rate": 0.95,
+    "maximum_unsafe_rate": 0.0,
+    "maximum_joint_limit_violation_rate": 0.0,
+    "require_all_23_targets": true
+  },
+  "stages": [
+    {
+      "stage": 0,
+      "name": "near_fall_balance_recovery",
+      "poses": [
+        "near_fall"
+      ],
+      "tilt_deg": [
+        8.0,
+        25.0
+      ]
+    },
+    {
+      "stage": 1,
+      "name": "left_right_side_getup",
+      "poses": [
+        "left_side",
+        "right_side"
+      ],
+      "tilt_deg": [
+        70.0,
+        105.0
+      ]
+    },
+    {
+      "stage": 2,
+      "name": "prone_supine_getup",
+      "poses": [
+        "prone",
+        "supine"
+      ],
+      "tilt_deg": [
+        75.0,
+        105.0
+      ]
+    },
+    {
+      "stage": 3,
+      "name": "all_pose_domain_randomized_recovery",
+      "poses": [
+        "left_side",
+        "right_side",
+        "prone",
+        "supine"
+      ],
+      "tilt_deg": [
+        70.0,
+        110.0
+      ]
+    }
+  ]
+}

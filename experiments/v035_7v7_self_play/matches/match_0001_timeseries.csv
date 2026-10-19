@@ -1,0 +1,3 @@
+phase,play_time_s,play_mode,left_team,right_team,left_score,right_score,ball_x_m,ball_y_m,standing_players,minimum_upright
+FIRST_HALF,0.02,KickOff_Left,QiBlue,QiRed,0,0,0.0,0.0,14,0.999997476721685
+FIRST_HALF,1.0,KickOff_Left,QiBlue,QiRed,0,0,0.0,0.0,7,-0.29598415320178745

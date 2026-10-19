@@ -1,0 +1,33 @@
+{
+  "version": "v043_team_mappo",
+  "test": "parameterized_team_eight_step_smoke",
+  "players_per_team": 3,
+  "physics_steps": 8,
+  "executed_policy": "privileged_dynamic_role_heuristic",
+  "neural_network_status": "untrained_forward_pass_only",
+  "prerequisite_passed": true,
+  "prerequisite_reason": "v038 stage-0 held-out locomotion/ball-control gate passed",
+  "network_finite": true,
+  "shapes_passed": true,
+  "entity_masks_passed": true,
+  "role_contract_passed": true,
+  "role_ids_seen": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "safety": {
+    "finite_qpos": true,
+    "finite_qvel": true,
+    "finite_ctrl": true,
+    "all_targets_sent": true,
+    "targets_expected": 138,
+    "standing_players": 6,
+    "total_players": 6,
+    "minimum_height_m": 0.6693389734688416,
+    "minimum_upright": 0.9981642813011428
+  },
+  "quality_passed": true,
+  "claim_boundary": "This smoke proves wiring and safety only. It is not evidence of learned teamwork or match competitiveness."
+}

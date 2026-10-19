@@ -1,0 +1,22 @@
+{
+  "schema_version": "v047_training_launch_v1",
+  "task_id": "Mjlab-Fullbody-Goalkeeper-RCSS-T1-v047",
+  "num_envs": 1,
+  "iterations_requested": 1,
+  "seed": 47993,
+  "run_name": "v047_v045_shape_warmstart_v2_cpu_train_smoke_r1",
+  "device_request": "cpu",
+  "nan_guard": true,
+  "engineering_smoke": true,
+  "resume": null,
+  "warmstart": {
+    "path": "<LOCAL>/warmstart_provenance.json",
+    "sha256": "0e5a9918338dabee1a4ef6584fc7510b85f97a8ae59beb7e6f40a184ca543f18",
+    "source_binding_mode": "engineering_smoke",
+    "formal_source_binding": false
+  },
+  "training_completed": false,
+  "fixed_validation_completed": false,
+  "held_out_test_completed": false,
+  "quality_passed": false
+}

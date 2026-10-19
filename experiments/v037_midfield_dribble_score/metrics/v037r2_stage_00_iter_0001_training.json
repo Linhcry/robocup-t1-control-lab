@@ -1,0 +1,283 @@
+{
+  "checkpoint": "/mnt/d/机器人足球/training_runs/rcss_t1_training_20260706/experiments/v037_midfield_dribble_score/checkpoints/v037r2_stage_00_iter_0001.zip",
+  "resumed_from": "zero residual on geometric dribble teacher",
+  "config": "/mnt/d/机器人足球/training_runs/rcss_t1_training_20260706/experiments/v037_midfield_dribble_score/configs/v037_curriculum.json",
+  "chunk_timesteps": 4096,
+  "total_model_timesteps": 4096,
+  "elapsed_seconds": 28.33494782447815,
+  "method": "geometric_dribble_teacher_plus_ppo_residual",
+  "stage": {
+    "index": 0,
+    "name": "门前连续控球",
+    "ball_goal_distance_m": [
+      1.2,
+      1.6
+    ],
+    "ball_y_m": [
+      -0.6,
+      0.6
+    ],
+    "player_y_offset_m": [
+      -0.12,
+      0.12
+    ],
+    "player_yaw_rad": [
+      -0.08,
+      0.08
+    ],
+    "episode_seconds": 14.0,
+    "evaluation_seeds": [
+      37010,
+      37011,
+      37012,
+      37013,
+      37014
+    ]
+  },
+  "summary": {
+    "stage_index": 0,
+    "stage_name": "门前连续控球",
+    "episodes": 5,
+    "goal_count": 3,
+    "official_goal_count": 3,
+    "success_rate": 0.6,
+    "contact_rate": 1.0,
+    "fall_rate": 0.0,
+    "mean_goal_progress_m": 0.7057875948730015,
+    "mean_controlled_possession_ratio": 0.9853112404836543,
+    "lost_possession_rate": 0.0,
+    "mean_episode_seconds": 11.16,
+    "all_23_targets_sent": true
+  },
+  "gate_results": {
+    "at_least_one_goal": true,
+    "target_success_rate": true,
+    "fall_rate": true,
+    "contact_rate": true,
+    "controlled_possession": true,
+    "finite_and_23dof": true
+  },
+  "quality_passed": true,
+  "episodes": [
+    {
+      "seed": 37010,
+      "episode_reward": 234.01723081860095,
+      "scored": true,
+      "official_goal": true,
+      "contacted_ball": true,
+      "fell": false,
+      "episode_steps": 110,
+      "episode_seconds": 11.0,
+      "initial_ball_distance_m": 1.1136929454439146,
+      "minimum_ball_distance_m": 0.2820644337316904,
+      "ball_forward_m": 1.594220052668934,
+      "ball_lateral_m": 0.4570579986210622,
+      "maximum_ball_speed_mps": 1.0899514439080529,
+      "minimum_robot_height_m": 0.632503585449501,
+      "minimum_robot_upright": 0.9947009594360647,
+      "left_team_score": 1,
+      "all_23_targets_sent": true,
+      "stage_index": 0,
+      "stage_name": "门前连续控球",
+      "initial_goal_distance_m": 1.6633024421896414,
+      "remaining_goal_distance_m": 0.025589643274905406,
+      "goal_distance_progress_m": 1.637712798914736,
+      "post_contact_steps": 77,
+      "controlled_possession_steps": 74,
+      "controlled_possession_ratio": 0.961038961038961,
+      "maximum_distance_after_contact_m": 0.9487182275155063,
+      "lost_possession": false,
+      "teacher_action": [
+        0.5705753564834595,
+        1.0,
+        1.0
+      ],
+      "residual_action": [
+        0.011011408641934395,
+        -0.003148752497509122,
+        -0.009373695589601994
+      ],
+      "executed_action": [
+        0.5738787651062012,
+        0.9990553855895996,
+        0.9962505102157593
+      ]
+    },
+    {
+      "seed": 37011,
+      "episode_reward": 222.64881349014848,
+      "scored": true,
+      "official_goal": true,
+      "contacted_ball": true,
+      "fell": false,
+      "episode_steps": 94,
+      "episode_seconds": 9.4,
+      "initial_ball_distance_m": 1.1740394223131634,
+      "minimum_ball_distance_m": 0.14055254452303942,
+      "ball_forward_m": 1.387463472425278,
+      "ball_lateral_m": 0.9515412645121305,
+      "maximum_ball_speed_mps": 1.2554879368162737,
+      "minimum_robot_height_m": 0.6324865319848294,
+      "minimum_robot_upright": 0.9957841817704621,
+      "left_team_score": 1,
+      "all_23_targets_sent": true,
+      "stage_index": 0,
+      "stage_name": "门前连续控球",
+      "initial_goal_distance_m": 1.4110790988581794,
+      "remaining_goal_distance_m": 1.2245175910725699,
+      "goal_distance_progress_m": 0.18656150778560954,
+      "post_contact_steps": 58,
+      "controlled_possession_steps": 56,
+      "controlled_possession_ratio": 0.9655172413793104,
+      "maximum_distance_after_contact_m": 0.9071209482777219,
+      "lost_possession": false,
+      "teacher_action": [
+        0.7417977452278137,
+        -0.32293781638145447,
+        -0.42472198605537415
+      ],
+      "residual_action": [
+        0.008553602732717991,
+        1.0318173735868186e-05,
+        0.0026894283946603537
+      ],
+      "executed_action": [
+        0.7443638443946838,
+        -0.32293471693992615,
+        -0.4236462116241455
+      ]
+    },
+    {
+      "seed": 37012,
+      "episode_reward": -13.308759301614677,
+      "scored": false,
+      "official_goal": false,
+      "contacted_ball": true,
+      "fell": false,
+      "episode_steps": 140,
+      "episode_seconds": 14.0,
+      "initial_ball_distance_m": 1.1212962246882845,
+      "minimum_ball_distance_m": 0.015445206741134618,
+      "ball_forward_m": -0.5371901725498134,
+      "ball_lateral_m": -0.14719083946778025,
+      "maximum_ball_speed_mps": 0.6630498961036942,
+      "minimum_robot_height_m": 0.6335243754274773,
+      "minimum_robot_upright": 0.996945240681283,
+      "left_team_score": 0,
+      "all_23_targets_sent": true,
+      "stage_index": 0,
+      "stage_name": "门前连续控球",
+      "initial_goal_distance_m": 1.4922285528251387,
+      "remaining_goal_distance_m": 2.025541336488205,
+      "goal_distance_progress_m": -0.5333127836630662,
+      "post_contact_steps": 104,
+      "controlled_possession_steps": 104,
+      "controlled_possession_ratio": 1.0,
+      "maximum_distance_after_contact_m": 0.5106265363112047,
+      "lost_possession": false,
+      "teacher_action": [
+        0.0,
+        -1.0,
+        -1.0
+      ],
+      "residual_action": [
+        0.014125795103609562,
+        -0.00223097437992692,
+        -0.0074658747762441635
+      ],
+      "executed_action": [
+        0.004237738903611898,
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "seed": 37013,
+      "episode_reward": 228.0682490625248,
+      "scored": true,
+      "official_goal": true,
+      "contacted_ball": true,
+      "fell": false,
+      "episode_steps": 74,
+      "episode_seconds": 7.4,
+      "initial_ball_distance_m": 1.1422406561434095,
+      "minimum_ball_distance_m": 0.09961429146212125,
+      "ball_forward_m": 1.3690124933738836,
+      "ball_lateral_m": -0.8607576385954845,
+      "maximum_ball_speed_mps": 1.228735325711074,
+      "minimum_robot_height_m": 0.6315210415096726,
+      "minimum_robot_upright": 0.9968470755021799,
+      "left_team_score": 1,
+      "all_23_targets_sent": true,
+      "stage_index": 0,
+      "stage_name": "门前连续控球",
+      "initial_goal_distance_m": 1.4650808398114354,
+      "remaining_goal_distance_m": 0.3366659400753236,
+      "goal_distance_progress_m": 1.1284148997361119,
+      "post_contact_steps": 39,
+      "controlled_possession_steps": 39,
+      "controlled_possession_ratio": 1.0,
+      "maximum_distance_after_contact_m": 0.7298450990878881,
+      "lost_possession": false,
+      "teacher_action": [
+        0.6160004734992981,
+        -0.984378457069397,
+        -1.0
+      ],
+      "residual_action": [
+        0.00956693384796381,
+        -0.002376379445195198,
+        0.00220502563752234
+      ],
+      "executed_action": [
+        0.6188705563545227,
+        -0.9850913882255554,
+        -0.9991179704666138
+      ]
+    },
+    {
+      "seed": 37014,
+      "episode_reward": 17.142351410752692,
+      "scored": false,
+      "official_goal": false,
+      "contacted_ball": true,
+      "fell": false,
+      "episode_steps": 140,
+      "episode_seconds": 14.0,
+      "initial_ball_distance_m": 1.134595535030662,
+      "minimum_ball_distance_m": 0.17885666255083024,
+      "ball_forward_m": 1.3121425070671862,
+      "ball_lateral_m": 0.746267772914001,
+      "maximum_ball_speed_mps": 1.3348943882261703,
+      "minimum_robot_height_m": 0.6322876157353366,
+      "minimum_robot_upright": 0.9943895736430759,
+      "left_team_score": 0,
+      "all_23_targets_sent": true,
+      "stage_index": 0,
+      "stage_name": "门前连续控球",
+      "initial_goal_distance_m": 1.428093411097143,
+      "remaining_goal_distance_m": 0.3185318595055271,
+      "goal_distance_progress_m": 1.109561551591616,
+      "post_contact_steps": 108,
+      "controlled_possession_steps": 108,
+      "controlled_possession_ratio": 1.0,
+      "maximum_distance_after_contact_m": 0.7029584732482064,
+      "lost_possession": false,
+      "teacher_action": [
+        0.5173683762550354,
+        1.0,
+        1.0
+      ],
+      "residual_action": [
+        0.01219189167022705,
+        -0.0016060390044003725,
+        -0.008589090779423714
+      ],
+      "executed_action": [
+        0.5210259556770325,
+        0.9995182156562805,
+        0.9965643882751465
+      ]
+    }
+  ]
+}

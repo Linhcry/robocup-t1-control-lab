@@ -1,0 +1,44 @@
+{
+  "version": "v035_7v7_self_play",
+  "status": "staged_until_v034_dynamic_kick_passes",
+  "rule_source": "中国机器人大赛 RoboCup 仿真3D组 2026年度赛事规则",
+  "teams": [
+    "QiBlue",
+    "QiRed"
+  ],
+  "players_per_team": 7,
+  "goalkeeper_number": 1,
+  "halves": 2,
+  "seconds_per_half": 300,
+  "total_play_seconds": 600,
+  "change_sides_at_half_time": true,
+  "server_field": "fifa7vs7",
+  "server_rules": "ssim26",
+  "installed_rcsssmj_version": "0.2.1",
+  "installed_field_size_m": [
+    55,
+    36
+  ],
+  "pdf_field_size_m": [
+    14,
+    9
+  ],
+  "field_size_note": "当前 rcsssmj 0.2.1 的官方 fifa7vs7 实现与赛事 PDF 尺寸不一致；运行时采用服务器真实尺寸并记录，赛前按 TC 最终服务器复核。",
+  "physics_dt_s": 0.02,
+  "tactical_dt_s": 0.1,
+  "local_observation_dim": 64,
+  "action_dim_per_player": 3,
+  "action_semantics": [
+    "normalized_vx",
+    "normalized_vy",
+    "normalized_yaw_rate"
+  ],
+  "low_level_model": "third_party/booster_gym/deploy/models/T1.pt",
+  "validated_low_level_skill": "v032_rcss_free_walk",
+  "validated_ball_skill": "v033_rcss_walk_kick",
+  "dynamic_kick_model": "experiments/v034_dynamic_single_leg_kick/checkpoints/latest",
+  "dynamic_kick_enabled": false,
+  "dynamic_kick_reason": "v034 latest fixed-seed evaluation has fall_rate=1.0 and quality_passed=false",
+  "execution": "shared actor parameters, separate hidden/action state per player, local observation only",
+  "training": "behavior cloning warm-start followed by parameter-sharing IPPO and opponent snapshot self-play"
+}

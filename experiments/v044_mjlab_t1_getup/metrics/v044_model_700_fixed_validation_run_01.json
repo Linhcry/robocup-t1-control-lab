@@ -1,0 +1,194 @@
+{
+  "schema_version": "v044_rcss_getup_eval_v1",
+  "evaluation_split": "fixed_validation",
+  "seed_start": 440100,
+  "episodes_per_pose": 1,
+  "checkpoint": {
+    "path": "<LOCAL>/model_700.pt",
+    "sha256": "05473d2d72e8744b7bdaa0c38a5f23bceb17eb5a76f0ebc7d297657e134799e2"
+  },
+  "locomotion_model": {
+    "path": "<LOCAL>/T1.pt",
+    "sha256": "697cac61dbed2e76f25519c97ceb686f244d065dabf7d5d7ca386573143d215b"
+  },
+  "fixed_validation_proof": null,
+  "settle_s": 1.0,
+  "recovery_timeout_s": 8.0,
+  "episodes": [
+    {
+      "pose": "prone",
+      "seed": 440100,
+      "initial_pose_contract": {
+        "root_height_m": 0.1897845734911616,
+        "minimum_geom_clearance_m": 0.005,
+        "joint_limits_valid": true,
+        "finite_state": true
+      },
+      "settle_joint_limit_violation": true,
+      "recovered": false,
+      "recovery_elapsed_s": 7.999999999999917,
+      "continuous_stand_s": 0.0,
+      "maximum_height_m": 0.22812269847072633,
+      "maximum_upright": 0.07076253467243365,
+      "walk_evaluated": false,
+      "walk_success": false,
+      "walk_distance_m": 0.0,
+      "walk_fell": false,
+      "joint_limit_violation": true,
+      "nonfinite_action": false,
+      "unsafe_head_contact": false,
+      "unsafe_hand_or_torso_contact": true,
+      "maximum_contact_force_n": {
+        "head": 824.6352237203004,
+        "hand_or_torso": 1041.8532122169854,
+        "all": 1804.468907166497
+      },
+      "torque_saturation_fraction": 0.5065217391304345,
+      "success": false
+    },
+    {
+      "pose": "supine",
+      "seed": 440101,
+      "initial_pose_contract": {
+        "root_height_m": 0.09250325358014383,
+        "minimum_geom_clearance_m": 0.005,
+        "joint_limits_valid": true,
+        "finite_state": true
+      },
+      "settle_joint_limit_violation": true,
+      "recovered": false,
+      "recovery_elapsed_s": 7.999999999999917,
+      "continuous_stand_s": 0.0,
+      "maximum_height_m": 0.05325580281726622,
+      "maximum_upright": 0.12674524501974618,
+      "walk_evaluated": false,
+      "walk_success": false,
+      "walk_distance_m": 0.0,
+      "walk_fell": false,
+      "joint_limit_violation": true,
+      "nonfinite_action": false,
+      "unsafe_head_contact": false,
+      "unsafe_hand_or_torso_contact": true,
+      "maximum_contact_force_n": {
+        "head": 491.41505508742495,
+        "hand_or_torso": 1539.9375343493446,
+        "all": 2033.589628113734
+      },
+      "torque_saturation_fraction": 0.5840217391304329,
+      "success": false
+    },
+    {
+      "pose": "left_side",
+      "seed": 440102,
+      "initial_pose_contract": {
+        "root_height_m": 0.26485345552165684,
+        "minimum_geom_clearance_m": 0.005,
+        "joint_limits_valid": true,
+        "finite_state": true
+      },
+      "settle_joint_limit_violation": true,
+      "recovered": false,
+      "recovery_elapsed_s": 7.999999999999917,
+      "continuous_stand_s": 0.0,
+      "maximum_height_m": 0.05924234484577274,
+      "maximum_upright": 0.16622353812217724,
+      "walk_evaluated": false,
+      "walk_success": false,
+      "walk_distance_m": 0.0,
+      "walk_fell": false,
+      "joint_limit_violation": true,
+      "nonfinite_action": false,
+      "unsafe_head_contact": true,
+      "unsafe_hand_or_torso_contact": true,
+      "maximum_contact_force_n": {
+        "head": 968.7213315019239,
+        "hand_or_torso": 1496.3816376392886,
+        "all": 2399.9733479630895
+      },
+      "torque_saturation_fraction": 0.5597826086956507,
+      "success": false
+    },
+    {
+      "pose": "right_side",
+      "seed": 440103,
+      "initial_pose_contract": {
+        "root_height_m": 0.2509997438852878,
+        "minimum_geom_clearance_m": 0.005,
+        "joint_limits_valid": true,
+        "finite_state": true
+      },
+      "settle_joint_limit_violation": true,
+      "recovered": false,
+      "recovery_elapsed_s": 7.999999999999917,
+      "continuous_stand_s": 0.0,
+      "maximum_height_m": 0.06926057557071023,
+      "maximum_upright": 0.29334394102933886,
+      "walk_evaluated": false,
+      "walk_success": false,
+      "walk_distance_m": 0.0,
+      "walk_fell": false,
+      "joint_limit_violation": true,
+      "nonfinite_action": false,
+      "unsafe_head_contact": false,
+      "unsafe_hand_or_torso_contact": true,
+      "maximum_contact_force_n": {
+        "head": 463.51368567725694,
+        "hand_or_torso": 1792.3265731551126,
+        "all": 2403.743199139018
+      },
+      "torque_saturation_fraction": 0.5742391304347805,
+      "success": false
+    }
+  ],
+  "per_pose": {
+    "prone": {
+      "episodes": 1,
+      "recovery_rate": 0.0,
+      "success_rate": 0.0
+    },
+    "supine": {
+      "episodes": 1,
+      "recovery_rate": 0.0,
+      "success_rate": 0.0
+    },
+    "left_side": {
+      "episodes": 1,
+      "recovery_rate": 0.0,
+      "success_rate": 0.0
+    },
+    "right_side": {
+      "episodes": 1,
+      "recovery_rate": 0.0,
+      "success_rate": 0.0
+    }
+  },
+  "aggregate": {
+    "episodes": 4,
+    "recovery_rate": 0.0,
+    "post_recovery_walk_rate": 0.0,
+    "success_rate": 0.0,
+    "fall_rate": 0.0,
+    "joint_limit_violation_rate": 1.0,
+    "settle_joint_limit_violation_rate": 1.0,
+    "nonfinite_action_rate": 0.0,
+    "unsafe_head_contact_rate": 0.25,
+    "unsafe_hand_or_torso_contact_rate": 1.0,
+    "mean_torque_saturation_fraction": 0.5561413043478247
+  },
+  "gates": {
+    "required_episode_count": false,
+    "all_initial_poses_valid": true,
+    "overall_recovery_rate": false,
+    "per_pose_recovery_rate": false,
+    "post_recovery_walk_rate": false,
+    "fall_rate": true,
+    "joint_limit_violation_rate": false,
+    "nonfinite_action_rate": true,
+    "unsafe_head_contact_rate": false,
+    "unsafe_hand_or_torso_contact_rate": false,
+    "torque_saturation_fraction": false,
+    "walk_was_not_skipped": true
+  },
+  "validation_passed": false,
+  "quality_passed": false
+}
